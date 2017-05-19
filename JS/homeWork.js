@@ -19,7 +19,7 @@ result = true;  //Значение есть результат или нет. Е
 var entage = 20;
 var header = "Заголовок новой статьи";
 var zip_code = 983456;
-prompt('Введите хоть что-нибудь');
+prompt ('Введите хоть что-нибудь');
 alert ('Вы точно все ввели?');
 var var1 = 25;
 var var2 = 'Орехов';
@@ -69,11 +69,11 @@ var str1Legth = str1.length;
 var str2Legth = str2.length;
 var str3Legth = str3.length;
 /* результат из консоли
-str1Legth
+str1Legth;
 82
-str2Legth
+str2Legth;
 75
-str3Legth
+str3Legth;
 35
 */
 
@@ -86,11 +86,11 @@ var str4Ucase = str4.toUpperCase();
 var str5Ucase = str5.toUpperCase();
 var str6Ucase = str6.toUpperCase();
 /* результат из консоли
-str4Ucase
+str4Ucase;
 "CONSOLE.LOG"
-str5Ucase
+str5Ucase;
 "HELLO WORLD!"
-str6Ucase
+str6Ucase;
 "I NEED MORE CODE ON JAVASCRIPT"
 */
 
@@ -99,21 +99,21 @@ var str4Ucase = str4.toLowerCase();
 var str5Ucase = str5.toLowerCase();
 var str6Ucase = str6.toLowerCase();
 /* результат из консоли
-str4Ucase
+str4Ucase;
 "console.log"
-str5Ucase
+str5Ucase;
 "hello world!"
-str6Ucase
+str6Ucase;
 "i need more code on javascript"
 */
 var str4Ucase = str4Ucase.slice(0,1).toUpperCase() + str4Ucase.slice(1);
 var str5Ucase = str5Ucase.slice(0,1).toUpperCase() + str5Ucase.slice(1);
 var str6Ucase = str6Ucase.slice(0,1).toUpperCase() + str6Ucase.slice(1);
 /* результат из консоли
-str4Ucase
+str4Ucase;
 "Console.log"
-str5Ucase
+str5Ucase;
 "Hello world!"
-str6Ucase
+str6Ucase;
 "I need more code on javascript"
 */
