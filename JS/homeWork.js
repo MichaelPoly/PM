@@ -12,9 +12,9 @@ var isImage = true;
 var price = 1000;
 
 // Пункт3 - Ошибки исправил
-sad = 'This is Sparta!!!'
+var sad = 'This is Sparta!!!';
 
-result = true;  //Значение есть результат или нет. Если есть true, если значения нет
+var result = true;  //Значение есть результат или нет. Если есть true, если значения нет
                  // false
 var entage = 20;
 var header = "Заголовок новой статьи";
