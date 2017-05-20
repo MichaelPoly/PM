@@ -117,3 +117,18 @@ str5Ucase;
 str6Ucase;
 "I need more code on javascript"
 */
+//ДЗ из методички
+//Пункт 1
+var Tc = prompt('Введите температуру в градусах Цельсия', '');
+var Tf = Tc*9/5+32;
+alert('Температура по Фарегейту составит ' + Tf + ' градусов');
+
+//Пункт 3
+var admin;
+var name;
+name = 'Василий';
+admin = name;
+alert(admin);
+
+//Пункт 4
+// Выражение 1000 + '108'; будет равно 1000108
