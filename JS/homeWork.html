@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+        <script src="lesson3.js"></script>
+    <title>HW</title>
+  </head>
+  <body>
+    <header>
+      <h1>Домашнее задание по курсу JavaScript 1</h1>
+    </header>
+    <div class="content">
+            <div class="leftNav">
+        <a href="homeWork.html">Урок 3</a>
+        <a href="lesson4.html">Урок 4</a>
+      </div>
+      <div class="center1">
+        <h1>Урок 3</h1>
+        <h2>Пункт1</h2>
+        <pre>
+          var a = 1, b = 1, c, d;
+          c = ++a; alert(c); // 2 - уваеличение на единицу происходит до завершения операции
+          d = b++; alert(d); // 1 - увеличение на единицу происходит после завершения операции
+          c = (2+ ++a); alert(c); // 5 - а = 2 и увеличивается на единицу до завершения операции
+          d = (2+ b++); alert(d); // 4 - b = 2, но увеличивается на единицу только после завершения операции
+          alert(a); // 3 - было две операции увеличения на единицу
+          alert(b); // 3 - было две операции увеличения на единицу
+        </pre>
+        <h2>Пункт 2</h2>
+        <pre>
+          var a = 2;
+          var x = 1 + (a *= 2);
+        </pre>
+        <p>
+          <script type="text/javascript">
+          var a = 2;
+          var x = 1 + (a *= 2);
+          document.write('x = ' + x);
+          </script>
+        </p>
+        <h2>Пункт 3</h2>
+        <form action="#" method="post">
+          <p>Введите первое число</p>
+          <input type="number" id="firstNum">
+          <p>Введите второе число</p>
+          <input type="number" id="secondNum"><br>
+          <input type="button" value="Отправить" onclick="task_3();">
+        </form>
+        <h2>Пункт 4</h2>
+        <form action="#" method="post">
+          <p>Введите число от 0 до 15</p>
+          <input type="number" id="num1_15"><br>
+          <input type="button" value="Отправить" onclick="task_4();">
+        </form>
+        <h2>Пункт 5</h2>
+        <form action="#" method="post">
+          <p>Введите первое число</p>
+          <input type="number" id="firstNum1">
+          <p>Введите второе число</p>
+          <input type="number" id="secondNum1"><br>
+          <input type="button" value="Отправить" onclick="task_5();">
+        </form>
+        <p id="result5"></p>
+        <h2>Пункт 6</h2>
+        <form action="#" method="post">
+          <p>Введите первое число</p>
+          <input type="number" id="firstNum2">
+          <p>Введите второе число</p>
+          <input type="number" id="secondNum2">
+          <p>Выберите действие</p>
+          <input list="action1" id="action2">
+            <datalist id="action1">
+              <option>Сумма</option>
+              <option>Разность</option>
+              <option>Умножение</option>
+              <option>Деление</option>
+            </datalist><br>
+          <input type="button" value="Отправить" onclick="task_6();">
+        </form>
+        <p id="result6_2"></p>
+        <h2>Пункт 8</h2>
+        <pre>Функция возведения в степень с помощью рекурсии будет выглядить так:
+          function pow(x, n) {
+            if (n != 1) {
+              return x * pow(x, n - 1);
+            } else {
+              return x;
+            }
+          }
+        </pre>
+
+      </div>
+    </div>
+  </body>
+</html>
