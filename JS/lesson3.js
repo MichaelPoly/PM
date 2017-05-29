@@ -1,104 +1,145 @@
-//Пункт1
 
-var a = 1, b = 1, c, d;
-c = ++a; alert(c); // 2 - уваеличение на единицу происходит до завершения операции
-d = b++; alert(d); // 1 - увеличение на единицу происходит после завершения операции
-c = (2+ ++a); alert(c); // 5 - а = 2 и увеличивается на единицу до завершения операции
-d = (2+ b++); alert(d); // 4 - b = 2, но увеличивается на единицу только после завершения операции
-alert(a); // 3 - было две операции увеличения на единицу
-alert(b); // 3 - было две операции увеличения на единицу
-
-//Пункт 2
-var a = 2;
-var x = 1 + (a *= 2);
-// x=5
-//Пункт 3
-
-var a = prompt('Введите число a', '');
-var b = prompt('Введите число b', '');
-if (a >= 0 && b >= 0) alert(a-b);
-  else if (a < 0 && b < 0) {
-      alert(a*b);
-  }
-  else {
-    alert(a + b);
-  }
-  //Пункт 4
-
-  var num1=16;
-while (num1 < 0 || num1 >= 16) {
-  num1 = prompt('Введите число от 0 до 15', '');
+function task_3() {
+  var fNum = +document.getElementById('firstNum').value;
+  var sdNum = +document.getElementById('secondNum').value;
+  if (fNum >= 0 && sdNum >= 0) alert(fNum-sdNum);
+    else if (fNum < 0 && sdNum < 0) {
+        alert(fNum*sdNum);
+    }
+    else {
+      alert(fNum + sdNum);
+    }
 }
+
+  //Пункт 4
+function task_4() {
+  var num1= +document.getElementById('num1_15').value;
+  if (num1 < 0 || num1 >= 16)
+  alert('Вы ввели не правильное число');
+
+  else {
 switch (num1) {
-  case '15':
+  case 15:
     alert(num1);
     break;
-  case '14':
+  case 14:
     alert(num1 + ' ' + ++num1);
     break;
-  case '13':
+  case 13:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '12':
+  case 12:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '11':
+  case 11:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '10':
+  case 10:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '9':
+  case 9:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '8':
+  case 8:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '7':
+  case 7:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '6':
+  case 6:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1);
     break;
-  case '5':
+  case 5:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '4':
+  case 4:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '3':
+  case 3:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '2':
+  case 2:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1);
     break;
-  case '1':
+  case 1:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
      + ' ' + ++num1);
     break;
-}
-  case '0':
+
+  case 0:
     alert(num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
     + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1 + ' ' + ++num1
      + ' ' + ++num1 + ' ' + ++num1);
     break;
+  }
 }
-
-//Пункт 5
+}
+function sum(arg, arg1) {
+  var sum = arg + arg1;
+  return sum;
+}
+function sub(arg, arg1) {
+  var sub = arg - arg1;
+  return sub;
+}
+function mul(arg, arg1) {
+  var mul = arg * arg1;
+  return mul;
+}
+function divide(arg, arg1) {
+  var divide = arg / arg1;
+  return divide;
+}
+function oper(arg2,arg3,oper1) {
+  switch (oper1) {
+    case 'Сумма':
+      var result6 = sum(arg2,arg3);
+      break;
+    case 'Разность':
+      var result6 = sub(arg2,arg3);
+      break;
+    case 'Умножение':
+      var result6 = mul(arg2,arg3);
+      break;
+    case 'Деление':
+      var result6 = divide(arg2,arg3);
+      break;
+  }
+  return result6;
+}
+function task_5() {
+  var fNum1 = +document.getElementById('firstNum1').value;
+  var sdNum1 = +document.getElementById('secondNum1').value;
+  var contentp = document.getElementById('result5');
+  var sub1 = sub(fNum1,sdNum1);
+  var sum1 = sum(fNum1,sdNum1);
+  var mul1 = mul(fNum1,sdNum1);
+  var divide1 = divide(fNum1,sdNum1);
+  result5.innerHTML = 'Сумма чисел равна ' + sum1 + '<br>' + 'Разность чисел равна ' + sub1
+  + '<br>' + 'Произведение чисел равно' + mul1 + '<br>' + fNum1 + ' разделить на ' + sdNum1 + ' равно ' + divide1;
+}
+function task_6() {
+  var fNum2 = +document.getElementById('firstNum2').value;
+  var sdNum2 = +document.getElementById('secondNum2').value;
+  var act = document.getElementById('action2').value;
+  var contentp1 = document.getElementById('result6_2');
+  var result6_1 = oper(fNum2,sdNum2,act);
+  result6_2.innerHTML = 'Результат выражения ' + result6_1;
+}
