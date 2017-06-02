@@ -52,3 +52,7 @@ header h1 {
 .content .center1 input {
   margin-left: 10%;
 }
+.content .center1 input[id="action4"] {
+  margin-left: 10%;
+  width: 300px;
+}
