@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+        <script src="lesson4.js"></script>
+    <title>HW</title>
+  </head>
+  <body>
+    <header>
+      <h1>Домашнее задание по курсу JavaScript 1</h1>
+    </header>
+    <div class="content">
+            <div class="leftNav">
+        <a href="homeWork.html">Урок 3</a>
+        <a href="lesson4.html">Урок 4</a>
+      </div>
+      <div class="center1">
+        <h1>Урок 4</h1>
+        <h2>Пункт1</h2>
+          <script type="text/javascript">
+          var i=2;
+          function getDecimal(num) {
+            return num - Math.floor(num);
+          }
+              while (i != 100) {
+                var y=0;
+                for (var j = 2; j < i; j++) {
+                  var x = getDecimal(i/j);
+                  if (x == 0) {
+                    y++;
+                  }
+                }
+                if (y == 0) {
+                  document.write(i + '<br>');
+                }
+              i++;
+            }
+          </script>
+        <h2>Пункт 2</h2>
+          <script type="text/javascript">
+          var num2 = 0;
+          function getDecimal(num) {
+            return num - Math.floor(num);
+          }
+            do {
+              if (num2 == 0) {
+                document.write(num2 + ' - это ноль <br>');
+              } else if(getDecimal(num2/2) == 0){
+                document.write(num2 + ' - четное число <br>');
+              } else {
+                document.write(num2 + ' - нечетное число <br>');
+              }
+              num2++;
+            } while (num2 <=10);
+          </script>
+        <h2>Пункт 3</h2>
+          <script type="text/javascript">
+            for (var i = 0; i < 10; i++)
+            document.write(i + '<br>');
+          </script>
+        <h2>Пункт 4</h2>
+          <script type="text/javascript">
+            var i=0;
+            while (i <=20) {
+              for (var j = 1; j <= i; j++) {
+                document.write('x');
+              }
+              document.write('<br>');
+              i++;
+            }
+          </script>
+
+        <h2>Игра - Быки и коровы</h2>
+        <p>Компьютер загадал 4-значное число, состоящее из неповторяющихся цифр.</p>
+        <p>Ваша задача - угадать это число</p>
+        <p>В качестве подсказок выступают «коровы» (цифра угадана, но её позиция - нет) и «быки»
+          (когда совпадает и цифра и её позиция)</p>
+        <p>Выберите сложность игры</p>
+        <form action="#" method="post">
+          <input list="action3" id="action4" placeholder="Угадать за 40 попыток">
+            <datalist id="action3">
+              <option>Угадать за 10 попыток</option>
+              <option>Угадать за 20 попыток</option>
+              <option>Угадать за 30 попыток</option>
+              <option>Угадать за 40 попыток</option>
+            </datalist><br>
+          <input type="button" value="Начать игру" onclick="game1();">
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>
