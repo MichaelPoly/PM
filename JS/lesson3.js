@@ -143,3 +143,24 @@ function task_6() {
   var result6_1 = oper(fNum2,sdNum2,act);
   result6_2.innerHTML = 'Результат выражения ' + result6_1;
 }
+
+//Угадай число
+function game() {
+  var gameNum = Math.round(Math.random() * (9999 - 1000) + 1000);
+  var n = 0;
+    do {
+      var guessNum = prompt('Для выхода из игры нажмите Esc. \nВведите четырехзначное число', '');
+      if (guessNum == null) {
+        alert('Вы вышли из игры');
+        break;
+      } else if (gameNum < guessNum) {
+        alert('Ваше число больше загаданного');
+        ++n;
+      } else if (gameNum > guessNum) {
+        alert('Ваше число меньше загаданного');
+        ++n;
+      } else if (gameNum == guessNum) {
+        alert('Поздравлем Вас! Вы угадали число ' + guessNum, '\n Количество Ваших попыток ' + ++n);
+      }
+  } while (guessNum != gameNum);
+}
