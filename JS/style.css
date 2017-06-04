@@ -56,3 +56,6 @@ header h1 {
   margin-left: 10%;
   width: 300px;
 }
+.content .center1 .game input[id="begin"]{
+  margin-left: 10%;
+}
