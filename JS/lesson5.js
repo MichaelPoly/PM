@@ -223,3 +223,20 @@ function qwest() {
         }
     }
 }
+
+function sumNatural() {
+  var numNat = document.getElementById('num6').value;
+  var n = numNat.length;
+  function numNat1(y, n) {
+    if (n >= 0) {
+      var x = Math.round(y/10);
+      var z = Math.round((y/10 - Math.round(y/10))*10);
+      y = numNat1(Math.round((y/10 - Math.round(y/10))*10), n-1) + x;
+      alert(x + ' ' + z + ' ' + y);
+      return y;
+    }
+  }
+  var num8 = numNat1(numNat);
+
+res1.innerHTML = num8;
+}
