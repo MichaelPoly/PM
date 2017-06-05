@@ -226,15 +226,10 @@ function qwest() {
 
 function sumNatural() {
   var numNat = document.getElementById('num6').value;
-  var n = numNat.length;
-  function numNat1(y, n) {
-    if (n >= 0) {
-      var x = Math.round(y/10);
-      var z = Math.round((y/10 - Math.round(y/10))*10);
-      y = numNat1(Math.round((y/10 - Math.round(y/10))*10), n-1) + x;
-      alert(x + ' ' + z + ' ' + y);
-      return y;
-    }
+  numNat = parseInt(numNat);
+  function numNat1(y) {
+    if ((y / 10 | 0) != 0) return y % 10 + numNat1((y /10 |0));
+    else return y %10;
   }
   var num8 = numNat1(numNat);
 
