@@ -235,3 +235,27 @@ function sumNatural() {
 
 res1.innerHTML = num8;
 }
+
+function lisN() {
+  var nuMNat3 = document.getElementById('NumNat8').value;
+  var nuMNat5 = [];
+  nuMNat5[0] = nuMNat3[0];
+  for (var i = 1; i < nuMNat3.length; i++) {
+    if (i/2 - Math.round(i/2) == 0) {
+      nuMNat5[i] = nuMNat3[i];
+} else nuMNat5[i] = ' ';
+  }
+    NumNat10.innerHTML = 'Последовательность: ' + nuMNat5;
+}
+
+function lisN1() {
+  var numNat3 = document.getElementById('NumNat2').value;
+  var numNat5 = [];
+  for (var i = 0; i < numNat3.length; i++) {
+    if (parseInt(numNat3[i])/2 - Math.round(parseInt(numNat3[i])/2) == 0) {
+      numNat5[i] = numNat3[i];
+  //    NumNat4.innerHTML = 'Вы ввели число' + numNat5[i];
+} else numNat5[i] = ' ';
+  } NumNat7.innerHTML = 'Последовательность: ' + numNat5;
+
+}
