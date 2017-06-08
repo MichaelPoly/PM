@@ -32,6 +32,13 @@ header h1 {
   width: 20%;
   border: 1px solid #000000;
 }
+.content .moves {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid #000000;
+}
 .content .leftNav a {
   font-family: sans-serif;
   font-size: 30px;
