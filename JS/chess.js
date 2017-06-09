@@ -1,6 +1,6 @@
 
 function chess() {
-  function raw(char) {
+  function row(char) {
     var div1 = document.createElement('div');
     var att1 = document.createAttribute('id');
     att1.value = char;
@@ -10,14 +10,14 @@ function chess() {
     div1.setAttributeNode(style);
     document.querySelector('section.center1').appendChild(div1);
   }
-  raw('A');
-  raw('B');
-  raw('C');
-  raw('D');
-  raw('E');
-  raw('F');
-  raw('G');
-  raw('H');
+  row('A');
+  row('B');
+  row('C');
+  row('D');
+  row('E');
+  row('F');
+  row('G');
+  row('H');
   for (var i = 1; i < 9; i++) {
     var div = document.createElement('div');
     var att = document.createAttribute('id');
