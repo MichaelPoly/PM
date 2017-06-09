@@ -259,3 +259,22 @@ function lisN1() {
   } NumNat7.innerHTML = 'Последовательность: ' + numNat5;
 
 }
+
+
+function chess() {
+  var add = document.getElementsByClassName('center1');
+  var div = document.createElement('div');
+  document.querySelector('center1').appendChild(div);
+  var att = document.createAttribute('id');
+  att.value = 'A1';
+  div.setAttributeNode(att);
+  var style = document.createAttribute('width');
+  style.value = '100px';
+  div.setAttributeNode(style);
+  var style1 = document.createAttribute('height');
+  style1.value = '100px';
+  div.setAttributeNode(style1);
+  var bg = document.createAttribute('style');
+  bg.value = 'background-color: black';
+  div.setAttributeNode(bg);
+}

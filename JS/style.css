@@ -24,7 +24,7 @@ header h1 {
   margin-left: 10%;
   margin-top: 0;
   border: 1px solid #000000;
-}
+  }
 .content .leftNav {
   display: flex;
   display: -webkit-flex;
