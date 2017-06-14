@@ -45,6 +45,15 @@ header h1 {
   color: #000000;
   text-decoration: none;
 }
+.content .center2 {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 0;
+  border: 1px solid #000000;
+}
 .content h1 {
   font-family: sans-serif;
   font-size: 40px;
