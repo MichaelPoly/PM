@@ -10,25 +10,81 @@ function chess() {
     div1.setAttributeNode(style);
     document.querySelector('section.center2').appendChild(div1);
   }
-  function row(char) {
+  function columnNum(char) {
     var div1 = document.createElement('div');
     var att1 = document.createAttribute('id');
     att1.value = char;
     div1.setAttributeNode(att1);
     var style = document.createAttribute('style');
-    style.value = 'width: 100%; height: 102px; border: 1px solid blue; display: flex; display: -webkit-flex; flex-direction: row; justify-content: center;';
+    style.value = 'width: 25px; height: 800px; display: flex; display: -webkit-flex; flex-direction: column; justify-content: center;';
     div1.setAttributeNode(style);
-    document.querySelector('section.center1').appendChild(div1);
+    document.querySelector('section.center2').appendChild(div1);
   }
-  row('A');
-  row('B');
-  row('C');
-  row('D');
-  row('E');
-  row('F');
-  row('G');
-  row('H');
-  for (var i = 1; i < 9; i++) {
+  function drawRawName(rawName) {
+    for (var i = 9; i > 0; i--) {
+      var div = document.createElement('div');
+      var att = document.createAttribute('id');
+      att.value = rawName + i;
+      div.setAttributeNode(att);
+      var style = document.createAttribute('style');
+        if (i == 9) {
+          style.value = 'width: 25px; height: 25px; border: 1px solid black;';
+        } else {
+          style.value = 'width: 25px; height: 100px; border: 1px solid black; display: flex; display: -webkit-flex; justify-content: center; align-items: center;';
+        }
+      div.setAttributeNode(style);
+      var divRawName = 'div#' + rawName;
+      document.querySelector('section.center2').querySelector(divRawName).appendChild(div);
+      var p = document.createElement('p');
+      var style1 = document.createAttribute('style');
+      style1.value = 'font-size: 20px; font-weight: bold; text-align: center; color: #8c5e07;';
+      p.setAttributeNode(style1);
+      var divRawName1 = 'div#' + rawName + i;
+      document.querySelector('section.center2').querySelector(divRawName).querySelector(divRawName1).appendChild(p);
+      if (i == 9) {
+        p.innerHTML = '*';
+      } else {
+        p.innerHTML = i;
+      }
+    }
+  }
+  columnNum('NumsLeft');
+  column('A');
+  column('B');
+  column('C');
+  column('D');
+  column('E');
+  column('F');
+  column('G');
+  column('H');
+
+  function chars(char) {
+    var div = document.createElement('div');
+    var att = document.createAttribute('id');
+    att.value = char;
+    div.setAttributeNode(att);
+    var style = document.createAttribute('style');
+    style.value = 'width: 100px; height: 25px; background-color: wite; border: 1px solid black;';
+    div.setAttributeNode(style);
+    var divColumnName = 'div#' + char;
+    document.querySelector('section.center2').querySelector(divColumnName).appendChild(div);
+    var p = document.createElement('p');
+    var style1 = document.createAttribute('style');
+    style1.value = 'font-size: 20px; font-weight: bold; text-align: center; color: #8c5e07;';
+    p.setAttributeNode(style1);
+    document.querySelector('section.center2').querySelector(divColumnName).querySelector(divColumnName).appendChild(p);
+    p.innerHTML = char;
+  }
+  chars('A');
+  chars('B');
+  chars('C');
+  chars('D');
+  chars('E');
+  chars('F');
+  chars('G');
+  chars('H');
+function drawDiv1(columnName) {
+  for (var i = 8; i > 0; i--) {
     var div = document.createElement('div');
     var att = document.createAttribute('id');
     att.value = columnName + i;
@@ -79,16 +135,17 @@ function setFigure(figureName, position) {
   src.value = figureName;
   img.setAttributeNode(src);
   var pos = 'div#' + position;
-  document.querySelector(pos).appendChild(img);
   var style3 = document.createAttribute('style');
   style3.value = 'height: 90%;';
   img.setAttributeNode(style3);
+  document.querySelector(pos).appendChild(img);
 }
 
 function removeFigure(position) {
   var pos = 'div#' + position;
-  var img = document.querySelector(pos).getElementsByTagName('img');
-//  document.querySelector(pos).removeChild('img');
+  var img = document.querySelector(pos).querySelector('img');
+  var div = img.parentNode;
+  div.removeChild(img);
 }
 
 
@@ -110,7 +167,7 @@ setFigure('WElephant.png', 'F1');
 setFigure('WQueen.png', 'D1');
 setFigure('WKing.png', 'E1');
 
-removeFigure('A2');
+//removeFigure('A2');
 //black
 setFigure('BPawn.png', 'A7');
 setFigure('BPawn.png', 'B7');
@@ -128,4 +185,9 @@ setFigure('BElephant.png', 'C8');
 setFigure('BElephant.png', 'F8');
 setFigure('BQueen.png', 'D8');
 setFigure('BKing.png', 'E8');
+
+function moveFigure() {
+  
+}
+
 }
