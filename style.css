@@ -102,7 +102,7 @@ header {
   font-weight: normal;
   font-size: 15px;
   padding-bottom: 1%;
-  color: #000000;
+  color: #13762d;
 }
 @media screen and (max-width: 600px) {
   .content .center1 h1 {
@@ -112,7 +112,7 @@ header {
   }
   .content .center1 p{
     font-size: 12px;
-    color: #000000;
+    color: #13762d;
   }
   #second {
     display: flex;
