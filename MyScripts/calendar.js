@@ -28,7 +28,7 @@ function inputYear() {
   var action = document.createAttribute('oninput');
   action.value = 'setNewDate();';
   inputYear.setAttributeNode(action);
-  document.querySelector('div#' + 'calendarMain').appendChild(inputYear);
+  document.querySelector('div#' + 'calendarMainInput').appendChild(inputYear);
   var dataList = document.createElement('datalist');
   var atDataListId = document.createAttribute('id');
   atDataListId.value = 'year';
@@ -72,7 +72,7 @@ function inputMonth() {
   var action = document.createAttribute('oninput');
   action.value = 'setNewDate();';
   inputMonth.setAttributeNode(action);
-  document.querySelector('div#' + 'calendarMain').appendChild(inputMonth);
+  document.querySelector('div#' + 'calendarMainInput').appendChild(inputMonth);
   var dataList = document.createElement('datalist');
   var atDataListId = document.createAttribute('id');
   atDataListId.value = 'month';
@@ -150,7 +150,7 @@ console.log(newMonth1);
     att1.value = char;
     div1.setAttributeNode(att1);
     var style = document.createAttribute('style');
-    style.value = 'width: ' + width + '%; min-height: ' + width + 'px; display: flex; display: -webkit-flex; justify-content: center; -webkit-justify-content: center; border: 1px solid #000000;';
+    style.value = 'width: ' + width + '%; min-height: ' + width + 'px; display: flex; display: -webkit-flex; justify-content: center; -webkit-justify-content: center; align-items: center; -webkit-align-items: center; border: 1px solid #000000;';
     div1.setAttributeNode(style);
     document.querySelector('div#' + divId).appendChild(div1);
   }
@@ -166,11 +166,18 @@ console.log(newMonth1);
     document.querySelector('div#calendarMain').appendChild(div1);
   }
 var sizeDay = 100 / 7;
+box('calendarMainInput', 60, 'calendar')
 box('calendarMain', 60, 'calendar');
 
 inputYear();
 inputMonth();
 
 column('monday');
+column('tuesday');
+column('wednesday');
+column('thursday');
+column('friday');
+column('saturday');
+column('sunday');
 
 //}

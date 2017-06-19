@@ -21,8 +21,10 @@ h1 {
 #calendar {
   display: flex;
   display: -webkit-flex;
+  flex-direction: column;
   width: 80%;
   margin-left: 10%;
   margin-top: 0;
   border: 1px solid #000000;
+
 }
