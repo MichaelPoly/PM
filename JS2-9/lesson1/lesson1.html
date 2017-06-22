@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson1</title>
+    <script>
+        //'use strict';
+        var phone = {
+            color: 'black',
+            model: 'Iphone',
+            os: 'iOS',
+            memory: '128',
+            tel: function () {
+                console.log('Звонок успешен!');
+                return true;
+            },
+
+            show: function () {
+                console.log(this.color, this.model, this.os, this.memory);
+            }
+        };
+
+        //ES5 - window
+        //ES6 - undefined
+        function myFunf(info1, info2) {
+            console.log('myFunf()');
+            console.log(this);
+            this.show();
+            console.log(info1, info2);
+        }
+
+        myFunf.call(phone, 'My1', 'My2');
+        myFunf.call(phone, 'My1');
+        myFunf.apply(phone, ['My3', 'My4']);
+
+        var bintF = myFunf.bind(phone, 'FirstBindParam');
+        bintF('bind2');
+
+        console.log(phone, phone.tel(), phone.model);
+
+
+        function BasePerson(login) {
+            this.login = login;
+            this.authKey = Math.random();
+
+            function show() {
+                console.log(this.login, this.authKey);
+            }
+
+            this._show = show;
+        }
+
+        BasePerson.prototype.run = function () {
+            console.log('Бег');
+        };
+
+        function User(name, age) {
+            BasePerson.call(this, 'login:' + name);
+            this.name = name;
+            this.age = age;
+
+            var tel = '+7 000';
+
+            function getInfo() {
+                console.log('Name:', this.name, 'Age:', this.age, 'Tel:', tel);
+            }
+
+            this.getTel = function () {
+              return tel;
+            };
+
+            this.setTel = function (value) {
+                if(value.length > 0){
+                    tel = value;
+                }
+            };
+
+
+            this.getInfo = getInfo;
+        }
+
+        User.prototype = Object.create(BasePerson.prototype);
+        User.prototype.constructor = User;
+
+        User.prototype.go = function (h) {
+          console.log('Пройдено: ', h, 'м.');
+        };
+
+
+        var user1 = new User('Игорь', 25);
+        var user2 = new User('Ольга', 27);
+
+        user1.getInfo();
+        user2.getInfo();
+
+        console.log(user1.getTel());
+        user1.setTel('8 900 000-00-00');
+        console.log(user1.getTel());
+
+        console.log(user1);
+        console.log(user1._show());
+
+        user1.go(200);
+        user1.go(200);
+        user1.run();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

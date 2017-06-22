@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+    <script>
+        'use strict';
+
+        class BaseCar
+        {
+            constructor(model, color, year)
+            {
+                this.model = model;
+                this.color = color;
+                this.year= year;
+            }
+
+            show()
+            {
+                console.log('BaseCar');
+                console.log('Car', this.model, this.color, this.year);
+            }
+        }
+
+        class Car extends BaseCar
+        {
+            constructor(model, color, year, info){
+                super(model, color, year);
+                this.info = info;
+            }
+
+            show(){
+                super.show();
+                console.log('Car');
+                console.log('Car', this.model, this.color);
+            }
+        }
+
+        var car1 = new Car('Honda', 'black', 2015, 'Подарок');
+        car1.show();
+        console.log(car1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
