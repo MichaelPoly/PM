@@ -2,5 +2,5 @@
   {"href": "/Drones", "title": "Дроны", "folder": "Drones/"},
   {"href": "/spare", "title": "Запчасти", "folder": "spare/"},
   {"href": "/accessories", "title": "Аксессуары", "folder": "accessories/"},
-  {"href": "galary/galary.html", "title": "Фото галерея", "folder": "galary/"}
+  {"href": "galery/galery.html", "title": "Фото галерея", "folder": "galery/"}
 ]
