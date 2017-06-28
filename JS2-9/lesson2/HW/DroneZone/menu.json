@@ -1,5 +1,5 @@
 [
-  {"href": "/Drones", "title": "Drones"},
-  {"href": "/spare", "title": "spare"},
-  {"href": "/accessories", "title": "accessories"},
+  {"href": "/Drones", "title": "Дроны", "folder": "Drones/"},
+  {"href": "/spare", "title": "Запчасти", "folder": "spare/"},
+  {"href": "/accessories", "title": "Аксессуары", "folder": "accessories/"}
 ]

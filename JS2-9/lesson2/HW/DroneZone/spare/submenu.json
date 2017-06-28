@@ -1,0 +1,7 @@
+[
+  {"href": "/chassis", "title": "Шасси", "folder": "chassis/"},
+  {"href": "/control_panel", "title": "Пульты управления", "folder": "control_panel/"},
+  {"href": "/controller", "title": "Контроллеры", "folder": "controller/"},
+  {"href": "/motor", "title": "Моторы", "folder": "motor/"},
+  {"href": "/propeller", "title": "Пропеллеры", "folder": "propeller/"}
+]
