@@ -140,13 +140,7 @@ function addButton(parentId, buttonId, text) {
   atMouseOut.value = mouseOut;
   element1.setAttributeNode(atMouseOut);
 
-  // document.querySelector('div#' + buttonId).addEventListener('mouseover', function functionName() {
-  //   var element1 = document.querySelector('div#' + buttonId);
-  //       var Style = 'width: 20%; height: 100%; background-color: blue; display: -ms-flexbox; display: -webkit-flex;' +
-  //   ' display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center;' +
-  //   '  -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center;';
-  //   element1.style = Style;
-  // });
+//  document.document.querySelector('li#' + liButtonId).addEventListener('click', 'tmp.html');
 }
 
 function addSubMenu(parentId, buttonId, text) {
