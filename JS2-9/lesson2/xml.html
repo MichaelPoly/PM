@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XML</title>
+    <script>
+        window.onload = function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', './data.xml', false);
+            xhr.send();
+
+            if(xhr.status != 200){
+                console.log('Error', xhr.status, xhr.statusText);
+            } else {
+                var xml = xhr.responseXML;
+                console.log(xml);
+                var textObj = xml.getElementsByTagName('myanswer').item(0);
+                var data = textObj.firstChild.data;
+
+                var div = document.createElement('div');
+                div.innerText = 'Данные получены посредством AJAX: ' + data;
+                document.body.appendChild(div);
+            }
+        };
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

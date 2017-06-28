@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson2</title>
+    <script>
+        var userJson = '{"name": "Olga", \
+            "age": 27, "isMale": false}';
+
+        console.log(userJson);
+        var user = JSON.parse(userJson);
+        console.log(user, user.name, user.age, user.isMale);
+
+        user.friends = [
+            'Ilya',
+            'Anna'
+        ];
+
+        user.address = {
+            city: 'Moscow',
+            street: 'Butovskaya Street',
+            postalCode: '000000'
+        };
+
+        user.date = '2017-06-24';
+
+        console.log(user);
+
+        //var newJsonUser = JSON.stringify(user, ['name', 'age'], 4);
+        var newJsonUser = JSON.stringify(user, null, 4);
+        console.log(newJsonUser);
+
+
+        var objUserAndDate = JSON.parse(newJsonUser, function (key, value) {
+            console.log('!', key, value);
+            return (key == 'date') ? new Date(value) : value;
+        });
+
+        console.log(objUserAndDate, objUserAndDate.date, objUserAndDate.date.getDate());
+
+
+        //AJAX
+        //Синхронные запросы
+        console.log('---sync---');
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', './tel.json', false);
+        xhr.send();
+
+        if(xhr.status != 200){
+            console.log('Error', xhr.status, xhr.statusText);
+        } else {
+            var response = xhr.responseText;
+            console.log('ok', response);
+            var objData = JSON.parse(response);
+            console.log(objData);
+            console.log(objData.tel, objData.title);
+        }
+
+        //Ассинхронные запросы
+        console.log('---async---');
+        var xhr2 = new XMLHttpRequest();
+        xhr2.open('GET', './tel.json', true);
+        xhr2.send();
+        //xhr2.send('key1=value1&key2=value2'); //Для POST
+
+        xhr2.onreadystatechange = function () {
+            //xhr2.readyState
+            //0 - запрос не инициализирован
+            //1 - загрузка данных
+            //2 - запрос принят сервером
+            //3 - обмен данными
+            //4 - запрос выполнен
+            if(xhr2.readyState != 4) return;
+
+            if(xhr2.status != 200){
+                console.log('Error', xhr.status, xhr.statusText);
+            } else {
+                var response = xhr.responseText;
+                console.log('ok', response);
+                var objData = JSON.parse(response);
+                console.log(objData);
+                console.log(objData.tel, objData.title);
+
+                var div = document.createElement('div');
+                div.innerHTML = '<p>Описание: '+ objData.title +'</p><p>Телефон: '+ objData.tel +'</p>';
+                document.body.appendChild(div);
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

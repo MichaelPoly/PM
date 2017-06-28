@@ -1,0 +1,6 @@
+[
+  {"href": "/", "title": "Главная"},
+  {"href": "/blog", "title": "Блог"},
+  {"href": "/about", "title": "О нас"},
+  {"href": "/contacts", "title": "Контакты"}
+]

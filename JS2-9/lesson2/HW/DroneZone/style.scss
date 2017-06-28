@@ -1,0 +1,93 @@
+
+
+$defaultFont: 'Merriweather', serif;
+$defaultColor: green;
+$defaultFontSize: 25px;
+$heightFooter: 100px;
+$heightHeader: 100px;
+
+
+@mixin reference($decoration,$size,$weight,$color) {
+  text-decoration: $decoration;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+@mixin justify-content($pos1) {
+  -webkit-justify-content: $pos1;
+  -ms-flex-pack: $pos1;
+  justify-content: $pos1;
+}
+@mixin align-items($pos3) {
+  -webkit-align-items: $pos3;
+  -ms-flex-align: $pos3;
+  align-items: $pos3;
+}
+@mixin block($width,$height,$borderWidth,$borderStyle,$borderColor,$borderRadius) {
+  width: $width;
+  height: $height;
+  border-width: $borderWidth;
+  border-style: $borderStyle;
+  border-color: $borderColor;
+  border-radius: $borderRadius;
+}
+
+header {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include block(70%, 150px, 1px, solid, black,0);
+  margin-left: 15%;
+  background-image: url(img/header.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @include justify-content(space-between);
+
+}
+header img {
+  height: 150px;
+}
+header nav #topbar {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include justify-content(center);
+  @include align-items(flex-end);
+  @include flex-direction(column);
+}
+header nav #topbar #navbutton a {
+  @include reference(none,100%,bold,red);
+}
+header nav #topbar form {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+}
+header nav #topbar input {
+  @include block(80%,20%,1px,solid,blue,5px);
+  background-color: lightgreen;
+}
+header nav #topbar button {
+  background-color: lightgreen;
+  @include block(15%,15%,1px,solid,blue,5px);
+}
+nav[id="bar"] {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include block(70%, 30px, 1px, solid, black,0);
+  @include flex-wrap(wrap);
+  margin-left: 15%;
+  }

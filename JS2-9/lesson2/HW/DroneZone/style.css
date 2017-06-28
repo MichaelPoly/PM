@@ -1,0 +1,92 @@
+header {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 70%;
+  height: 150px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-left: 15%;
+  background-image: url(img/header.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+header img {
+  height: 150px;
+}
+
+header nav #topbar {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+header nav #topbar #navbutton a {
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: bold;
+  color: red;
+}
+
+header nav #topbar form {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header nav #topbar input {
+  width: 80%;
+  height: 20%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 5px;
+  background-color: lightgreen;
+}
+
+header nav #topbar button {
+  background-color: lightgreen;
+  width: 15%;
+  height: 15%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 5px;
+}
+
+nav[id="bar"] {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 70%;
+  height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 15%;
+}
+
+/*# sourceMappingURL=style.css.map */
