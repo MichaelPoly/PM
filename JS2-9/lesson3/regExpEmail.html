@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp Email</title>
+    <script>
+        //mail.mail.mail@mail.mail.mail.ru
+        var regExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+
+        console.log(regExp.test('mail.mail.mail@mail.mail.mail.ru'));
+        console.log(regExp.test('mail445@mail.com'));
+        console.log(regExp.test('mail-mail@mail.ru'));
+        console.log(regExp.test('mail.mail.mailmail.mail.mail.ru'));
+        console.log(regExp.test('mail.mail.ma%il@mail.mail.mail.ru'));
+        console.log(regExp.test('mail.mail.mail@mail.mail.mail.rurtyggf'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

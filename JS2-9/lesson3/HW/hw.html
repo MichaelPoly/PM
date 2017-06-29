@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>regExp</title>
+  </head>
+  <body>
+
+    <section id="text1">
+      <p>
+        Another extremely productive period is connected with Boldino, a family's estate near Nizhny Novgorod. There he wrote the so-called 'Little Tragedies' — 'Skupoy rytsar' (The Covetous Knight), 'Motsart i Salyeri' (Mozart and Salieri), 'Kamenny gost' (The Stone Guest), and 'Pir vo vremya chumy' (Feast in Time of the Plague) and the famous short story 'Pikovaya Dama' (The Queen of Spades).
+
+Eventually, he was allowed to return to St. Petersburg. Soon marriage to one of the leading beauties of the society brought its problems. Pushkin was mortally wounded defending his wife's honour in a duel. And died on February 10, 1837.
+
+Pushkin's use of the Russian language is astonishing in its simplicity and profundity. His novel in verse 'Yevgeny Onegin' was the first Russian work depicting contemporary society and pointing the way to the Russian realistic novel of the mid-19th century. Pushkin's importance as a great national poet was recognized even during his lifetime. Pushkin was the creator of the Russian literary language and stood as the cornerstone of Russian literature, 'the beginning of beginnings'. Pushkin has thus become an inseparable part of the literary world of the Russian people. He also exerted a profound influence on other aspects of Russian culture, most notably in opera.
+      </p>
+      <button type="button" id="button" style="width: 100%;">Исправить</button>
+    </section>
+<script type="text/javascript">
+  function replace1() {
+    document.getElementById('button').style = 'display: none;';
+    var str = document.getElementById('text1').innerText;
+    var regExp = /'/ig;
+    var str1 = str.replace(/\s'/g, ' "');
+    var str2 = str1.replace(/'\s/g, '" ');
+    var str3 = str2.replace(/'\./g, '"\.');
+    var str3 = str2.replace(/',/g, '",');
+    document.getElementById('text1').innerText = str3;
+  }
+document.getElementById('button').addEventListener('click', replace1);
+</script>
+
+  <input type="text" id="firstName" placeholder="Введите Ваше имя" style="width: 20%; margin: 1%;">
+  <input type="tel" id="phoneNumber" placeholder="Введите Ваш номер телефона" style="width: 30%; margin: 1%;">
+  <input type="email" id="Email" placeholder="Введите Ваш E-mail" style="width: 20%; margin: 1%;"><br>
+  <textarea id="someText" rows="8" cols="80"></textarea>
+  <button type="button" id="button1">Отправить</button>
+<script type="text/javascript">
+  function checkForm() {
+    var name = document.getElementById('firstName');
+    var phone = document.getElementById('phoneNumber');
+    var mail = document.getElementById('Email');
+    var message = document.getElementById('someText');
+    var telCheck = phone.value.match(/\D/g);
+    var telNumCheck = phone.value.match(/\d/g);
+    if (telCheck != null) {
+      phone.style = 'border-color: red; width: 30%; margin: 1%;';
+      phone.value = '';
+      phone.placeholder = 'В телефонном номере не должно быть букв';
+    } else if (telNumCheck == null) {
+        phone.style = 'border-color: red; width: 30%; margin: 1%;';
+        phone.value = '';
+        phone.placeholder = 'Вы не ввели телефон';
+    } else if (telNumCheck.join('').length < 11) {
+        phone.style = 'border-color: red; width: 30%; margin: 1%;';
+        phone.value = '';
+        phone.placeholder = 'Слишком короткий номер';
+    } else phone.style = 'border-color: none; width: 30%; margin: 1%;';
+    var nameCheck = name.value.match(/[a-zA-Zа-яА-я]/g);
+    var spaceNum = name.value.match(/\s/g);
+    if (nameCheck == null) {var nameChecklength = 0;} else {var nameChecklength = nameCheck.length;}
+    if (spaceNum == null) {var spaceNumlength = 0;} else {var spaceNumlength = spaceNum.length;}
+    if (name.value == '') {
+        name.style = 'border-color: red; width: 30%; margin: 1%;';
+        name.value = '';
+        name.placeholder = 'Вы не ввели имя';
+    } else if (nameChecklength + spaceNumlength < name.value.length) {
+        name.style = 'border-color: red; width: 30%; margin: 1%;';
+        name.value = '';
+        name.placeholder = 'В имени не должно быть цифр и спецсимволов';
+    } else name.style = 'border-color: none; width: 30%; margin: 1%;';
+
+    var regExp3 = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+    if (mail.value == '') {
+      mail.style = 'border-color: red; width: 30%; margin: 1%;';
+      mail.value = '';
+      mail.placeholder = 'Вы не ввели E-mail';
+    } else if (regExp3.test(mail.value) == false) {
+        mail.style = 'border-color: red; width: 30%; margin: 1%;';
+        mail.value = '';
+        mail.placeholder = 'Вы ввели не корректный E-mail';
+    } else mail.style = 'border-color: none; width: 30%; margin: 1%;';
+}
+document.getElementById('button1').addEventListener('click', checkForm);
+</script>
+  </body>
+</html>

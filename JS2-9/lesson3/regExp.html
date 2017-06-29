@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp</title>
+    <script>
+        //Синтарсис1
+        //var regExp = new RegExp('Регулярное выражение без разделителей', 'Флаги');
+
+        //Синтаксис 2
+        ///regExp/Флаги
+
+        //Флаги
+        //i - поиск по регулярному выражению без учета регистра
+        //g - множественный поиск
+        //m - многострочный поиск
+
+        var regExp1 = new RegExp('java', 'i');
+        console.log(regExp1);
+        var str = 'Язык JavaScript входит в 10-ку самых востребованных языков мира как и Java - он первый.';
+
+        //Ищет первое вхождение в строку по регулярному выражению
+        //Возвращает позицию первого символа или -1 - если ничего не найдено
+        //Флаг g он игнорирует
+        console.log(str.search(regExp1));
+        console.log(str.search(/java/ig)); //Флаг g не нужен
+
+
+        //Match очень зависит от флага g
+        //Если флага g нет, то он находит 1 совпадение и предоставляет расширенную информацию
+        //Если флаг g есть - то возвращает массив элементов без расширенных параметров
+        //null - если ничего не найдено
+        var find1 = str.match(/java/i);
+        console.log(find1, find1[0], find1.index, find1.input);
+
+        console.log(str.match(/java/ig));
+
+
+        console.log('aaa-bbb-ccc-ddd'.replace(/-/g, ':'));
+
+        var i = 0;
+        var funcExp = function (str, offset, s) {
+            console.log('Найдено:', str, 'на позиции', offset, 'в строке', s);
+            return ++i;
+        };
+        console.log('aaa-bbb-ccc-ddd'.replace(/-/g, funcExp));
+
+
+        //Методы со стороны регулярных выражений
+        //test - соответствует ли строка регулярному выражению
+        //Возвращает boolean
+        console.log(/java/i.test(str));
+        console.log(/java/.test(str));
+
+        //exec
+        //Зависит от флага g
+        //Если флаг g есть, работа метода exec эквивалентна работе метода match
+
+        //Если есть флаг g
+        //В этом случае, в свойстве регулярного выражения
+        //сохраняется позиция lastIndex, с которой поиск будет продолжен
+
+        console.log(/java/i.exec(str));
+
+        console.log('---exec---');
+        var regExp2 = /java/ig;
+        var result;
+
+        console.log('Начальный lastIndex', regExp2.lastIndex);
+        while (result = regExp2.exec(str))
+        {
+            console.log(result);
+            console.log('Найдено:', result[0], 'на позиции', result.index,
+            'в строке', result.input);
+            console.log('Текущий lastIndex', regExp2.lastIndex);
+        }
+        console.log('Конечный lastIndex', regExp2.lastIndex);
+        console.log('Переменная result', result);
+
+        //Регулярные выражения
+        //Классы
+        //Спецсимволы
+        //Наборы
+        //Диапазоны
+        //Квантификаторы
+        //^$
+        //Регулярное выражение для E-mail
+
+        //Классы
+        // \d - [0-9] - цифры
+        // \w [a-zA-Z] - буквы
+        // \s - space - пробел
+        // \b - граница слова
+        // \D - все, кроме цифры [^0-9]
+        // \W - не буквы
+        // \S - не пробельный символ
+        // \B - не граница слова
+
+        console.log('Язык HTML5 JS'.match(/\s\w\w\w\w\d/));
+        console.log('Язык HTML5 JS'.match(/\s\w{4}\d/));
+
+        console.log('Hello Java!'.match(/\bjava\b/i));
+        console.log('Hello JavaScript!'.match(/\bjava\b/i));
+
+        //Спецсимволы
+        //.[]\$^?*+()|
+        console.log('Пункт 5d8'.match(/\d\.\d/));
+        console.log('Пункт 5.8'.match(/\d\.\d/));
+
+        //Наборы
+        console.log('гоп топ воп'.match(/[гтв]оп/ig));
+
+        //Диапазовы
+        //[0-4]
+        //[a-z]
+        //[а-яё0-9А-ЯЁ]
+        console.log('Exception 0xA4 kglshlgkhsfg 0x01 0xA8'.match(/0x[0-9A-F]{2}/g));
+
+        //Квантификаторы
+        //{m} - число повторений равно m
+        //{m,n} - число повторений от m до n включительно
+        //{m,} - число повторений от m включительно и более
+        //{,n} - число повторений от 0 до n включительно
+        //Сокращения
+        //+ - {1,}
+        //* - {0,}
+        //? - {0,1}
+
+        console.log('+7 (000) 324-23-23'.match(/\d+/g).join(''));
+
+        console.log('color colour colotr'.match(/colou?r/g));
+        console.log('color colour colotr'.match(/colo[ut]?r/g));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
