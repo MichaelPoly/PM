@@ -140,11 +140,9 @@ function addButton(parentId, buttonId, text) {
   atMouseOut.value = mouseOut;
   element1.setAttributeNode(atMouseOut);
 
-//  document.document.querySelector('li#' + liButtonId).addEventListener('click', 'tmp.html');
 }
 
 function addSubMenu(parentId, buttonId, text) {
-  console.log('ParentId = ' + parentId);
   var buttonStyle = 'display:none;';
   var pStyle = 'font-size: 100%;' +
                'text-align: center;' +
@@ -186,12 +184,10 @@ function addSubMenu(parentId, buttonId, text) {
   var mouseOut = 'mouse2("' + liButtonId + '");';
   atMouseOut.value = mouseOut;
   element1.setAttributeNode(atMouseOut);
-
-  console.log(liButtonId);
 }
 var objData2 = [];
 var xhr = new XMLHttpRequest();
-xhr.open('GET', './menu.json', false);
+xhr.open('GET', '../menu.json', false);
 xhr.send();
 
 if(xhr.status != 200){
@@ -210,7 +206,7 @@ for (var i = 0; i < objData.length; i++) {
 
 var xhr2 = new XMLHttpRequest();
 var folder = objData[i].folder;
-xhr2.open('GET', './' + folder + 'submenu.json', false);
+xhr2.open('GET', '../' + folder + 'submenu.json', false);
 xhr2.send();
 
 if(xhr2.status != 200){
@@ -220,23 +216,41 @@ if(xhr2.status != 200){
     var objData1 = JSON.parse(response1);
     objData2.push(objData1);
 }
-
-console.log(objData1);
-console.log(i);
 for (var j = 0; j < objData2[i].length; j++) {
   var itemTitle1 = objData2[i];
   var itemTitle2 = itemTitle1[j].title;
   var subbuttonId = 'sub'+ i + j;
   var subParent = 'li#libutton' + i;
-  console.log(subParent, subbuttonId, itemTitle2);
-  console.log('j=' + j);
-  console.log('i=' + i);
   addSubMenu(subParent, subbuttonId, itemTitle2);
 
 }
-
-
 }
 
-// addSubMenu('li#libutton0', 'sub1', 'Syma');
-// addSubMenu('li#libutton0', 'sub2', 'Phantom');
+
+var imgXhr = new XMLHttpRequest();
+imgXhr.open('GET', './galery.json', false);
+imgXhr.send();
+if(imgXhr.status != 200){
+    console.log('Error', imgXhr.status, imgXhr.statusText);
+} else {
+    var response3 = imgXhr.responseText;
+    var objData3 = JSON.parse(response3);
+}
+
+var divStyle = 'width: 150px; height: 150px;';
+var imgDivId = objData3[0].title;
+addElem('div#galery', 'div', imgDivId, divStyle);
+var imgStyle = 'width: 100%;';
+var imgId = 'img' + objData3[0].title;
+addElem('div#' + imgDivId, 'img', imgId, divStyle);
+var imgId1 = document.createAttribute('src');
+imgId1.value = objData3[0].href;
+document.querySelector('img#' + imgId).setAttributeNode(imgId1);
+document.querySelector('div#' + imgDivId).addEventListener('mouseover', function () {
+  document.querySelector('div#' + imgDivId).style = 'width: 700px; height: 700px; position: absolute; top: 300px; left: 20%;';
+  document.querySelector('img#' + imgId).style = imgStyle;
+});
+document.querySelector('div#' + imgDivId).addEventListener('click', function () {
+  document.querySelector('div#' + imgDivId).style = 'width: 150px; height: 150px';
+  document.querySelector('img#' + imgId).style = imgStyle;
+});

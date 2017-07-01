@@ -89,4 +89,20 @@ nav[id="bar"] {
   margin-left: 15%;
 }
 
+#galery {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 70%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 15%;
+}
+
 /*# sourceMappingURL=style.css.map */

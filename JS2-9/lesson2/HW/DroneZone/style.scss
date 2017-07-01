@@ -91,3 +91,11 @@ nav[id="bar"] {
   @include flex-wrap(wrap);
   margin-left: 15%;
   }
+  #galery {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include block(70%, 100%, 1px, solid, black,0);
+    @include flex-wrap(wrap);
+    margin-left: 15%;
+  }

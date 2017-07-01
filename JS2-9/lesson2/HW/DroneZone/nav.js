@@ -144,7 +144,6 @@ function addButton(parentId, buttonId, text) {
 }
 
 function addSubMenu(parentId, buttonId, text) {
-  console.log('ParentId = ' + parentId);
   var buttonStyle = 'display:none;';
   var pStyle = 'font-size: 100%;' +
                'text-align: center;' +
@@ -187,7 +186,6 @@ function addSubMenu(parentId, buttonId, text) {
   atMouseOut.value = mouseOut;
   element1.setAttributeNode(atMouseOut);
 
-  console.log(liButtonId);
 }
 var objData2 = [];
 var xhr = new XMLHttpRequest();
@@ -221,22 +219,18 @@ if(xhr2.status != 200){
     objData2.push(objData1);
 }
 
-console.log(objData1);
-console.log(i);
 for (var j = 0; j < objData2[i].length; j++) {
   var itemTitle1 = objData2[i];
   var itemTitle2 = itemTitle1[j].title;
   var subbuttonId = 'sub'+ i + j;
   var subParent = 'li#libutton' + i;
-  console.log(subParent, subbuttonId, itemTitle2);
-  console.log('j=' + j);
-  console.log('i=' + i);
   addSubMenu(subParent, subbuttonId, itemTitle2);
 
 }
 
-
 }
-
-// addSubMenu('li#libutton0', 'sub1', 'Syma');
-// addSubMenu('li#libutton0', 'sub2', 'Phantom');
+document.querySelector('li#libutton3').addEventListener('click', function () {
+  console.log('Event');
+  href="galery/galery.html";
+});
+//href="galery/galery.html"
