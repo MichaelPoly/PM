@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        .decorate {
+            text-decoration: underline;
+        }
+        .d1 {
+            margin: 20px;
+            border: 1px solid green;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .opacity__container {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            border: 1px solid orangered;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+        console.log($, jQuery);
+
+        //window.onload
+
+        $(document).ready(function () {
+            $('p').css('color', 'orange');
+            $('p').css({
+                color: 'green',
+                fontSize: '18px'
+            });
+
+            $('#p1').addClass('decorate');
+            $('.p2').css({
+                color: 'red'
+            }).remove();
+            //empty - очищает элемент от вложенных элементов, при этом
+            //не удаляя его
+
+            $('.btn1').on('click', function () {
+                //$('.d1').hide(); //Скрывает мгновенно, без анимации
+                //$('.d1').slideUp(2000); //Скрывает элемент с эффектом смещения вверх
+                $('.d1').fadeOut(2000); //Скрывает элемент с уменьшением прозрачности
+            });
+
+            $('.btn2').on('click', function () {
+                //$('.d1').show(); //Показывает элемент мгновенно, без анимации
+                //$('.d1').slideDown(2000); //Показывает элемент с эффектом смещения вниз
+                $('.d1').fadeIn(2000); //Показывает элемент с добавлением прозрачности
+            });
+
+            $('.btn3').on('click', function () {
+                //$('.d1').slideToggle(2000); //Показывает/скрывает элемент с эффектом смещения вниз/вверх
+                $('.d1').fadeToggle(2000); //Показывает/скрывает элемент с эффектом изменения прозрачности
+            });
+
+            $('p:eq(0)').css('background-color', 'grey');
+            $('p').eq(1).css('background-color', 'lime');
+
+            $('h1,h2,h3').css('font-size', '18pt');
+            $(':header').css({
+                backgroundColor: 'lime'
+            });
+
+            $('.ajax__btn').on('click', function () {
+               $.ajax({
+                   type: 'GET', //GET или POST
+                   url: './tel.json',
+                   //async: true,
+                   dataType: 'json',
+                   success: function (data) {
+                       console.log(data);
+                       $('.ajax__container').text(data.tel);
+                       //$('.ajax__container').html(data.tel); //Если сервер возвращает html-код
+                   }
+               });
+            });
+
+            //Работа с прозрачностью
+            $('.opacity__btn').on('click', function () {
+                var value = $('.opacity__input').val();
+                $('.opacity__container').fadeTo(2000, value);
+            });
+
+        });
+    </script>
+</head>
+<body>
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius explicabo magni molestiae quisquam sed voluptate.
+    Assumenda, at dicta ea excepturi fugiat id incidunt itaque molestiae nobis obcaecati recusandae repellendus
+    sapiente.</p>
+<p class="p2">Eius exercitationem illo minima quaerat quam repudiandae, soluta ullam voluptates. Aliquam eos, harum. A aliquam aut
+    deleniti dicta, dignissimos, dolorem earum expedita illum mollitia nisi quo tempora totam, vitae voluptatum.</p>
+<p class="p2">Dolores illum nisi nobis nulla odio quis similique. Aliquam deleniti nesciunt sint? Et eveniet excepturi iure nemo
+    nisi provident unde vel veritatis. Aperiam architecto ea et illo libero praesentium quas.</p>
+<p>Asperiores aspernatur atque cumque et omnis temporibus velit vitae. A aspernatur corporis cumque, cupiditate facilis
+    id iusto necessitatibus pariatur recusandae repudiandae saepe similique sit, soluta. Ducimus praesentium quam
+    ratione repellendus!</p>
+<p>Cumque dolorum perspiciatis ratione saepe voluptatibus. Ad alias animi aperiam assumenda consequatur cumque,
+    delectus, doloremque exercitationem labore nesciunt, nobis odio sed vel! Ab, accusantium cum cumque dignissimos
+    explicabo nobis voluptas?</p>
+
+<h1>Заголовок первого уровня</h1>
+<h2>Заголовок второго уровня</h2>
+<h3>Заголовок третьего уровня</h3>
+<div class="d1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, asperiores commodi, est, eveniet facilis
+        ipsam minus molestiae molestias necessitatibus perferendis possimus quisquam reiciendis repellendus saepe sint
+        velit veritatis vitae voluptatum.</p>
+    <p>Alias cumque ullam velit voluptas! Aliquam animi architecto assumenda beatae dolor eligendi esse eveniet expedita
+        explicabo, fugiat itaque, libero nesciunt pariatur quasi quo, quos reiciendis temporibus vero! Eum, maxime,
+        officia.</p>
+    <p>Ad alias cumque incidunt ipsa nemo nisi numquam quibusdam soluta tenetur. Cum delectus distinctio dolorem, error
+        eveniet iure nobis quam rem sapiente tempora vel velit? Esse maiores placeat quam ratione?</p>
+</div>
+<button class="btn1">Скрыть элемент</button>
+<button class="btn2">Показать элемент</button>
+<button class="btn3">Скрыть/Показать элемент</button>
+
+<div class="ajax__container"></div>
+<button class="ajax__btn">Получить номер телефона посредством AJAX</button>
+
+<h2>Изменение прозрачности</h2>
+<div class="opacity__container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis officiis quasi suscipit. Aperiam architecto
+        deleniti fuga in iusto molestiae porro praesentium qui quis, suscipit? Aliquam error modi non officiis.</p>
+    <p>Animi expedita impedit iure laborum, minus mollitia neque? Cupiditate est modi numquam obcaecati odio placeat
+        quae reprehenderit rerum, sapiente soluta! Accusamus cumque dignissimos enim eveniet illum in nihil quam,
+        quia.</p>
+</div>
+<input type="number" min="0" max="1" step="0.1" class="opacity__input" value="0">
+<button class="opacity__btn">Изменить прозрачность</button>
+</body>
+</html>

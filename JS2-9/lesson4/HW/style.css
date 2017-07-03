@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 60%;
+  height: 100px;
+  margin-left: 20%;
+  border: 1px solid gray;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 30px;
+  margin-left: 20%;
+  /*border: 1px solid gray;*/
+}
+nav .navButton-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  height: 100%;
+  background-color: green;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+}
+nav .navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  height: 100%;
+  background-color: lightgray;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+}
+nav .navButton-active p {
+  font-size: 100%;
+  font-weight: bold;
+  color: lightgray;
+  text-align: center;
+}
+nav .navButton p {
+  font-size: 100%;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+.centerBlock-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 500px;
+  margin-left: 20%;
+  border: 1px solid darkgray;
+}
+.centerBlock-active h1 {
+  width: 100%;
+  text-align: center;
+  color: darkgray;
+}
+.centerBlock-active input {
+    width: 50%;
+}
+.centerBlock {
+  display: none;
+}

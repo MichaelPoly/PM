@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HW lesson 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.2.1.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var $mainButton = $('#main');
+        var $servicesButton = $('#services');
+        var $abutusButton = $('#abutus');
+        var $contactsButton = $('#contacts');
+
+        var $centerBlock = $('.centerBlock-active');
+        var $navButton = $('.navButton-active');
+        var ActiveButton = 'navButton-active';
+        var AktiveBlock = 'centerBlock-active';
+        var inActiveButton = 'navButton';
+        var inAktiveBlock = 'centerBlock';
+
+        $mainButton.on('click', function () {
+          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
+          $navButton = $('#main').removeClass(inActiveButton).addClass(ActiveButton);
+          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
+          $centerBlock = $('#mainblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
+        });
+        $servicesButton.on('click', function () {
+          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
+          $navButton = $('#services').removeClass(inActiveButton).addClass(ActiveButton);
+          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
+          $centerBlock = $('#servicesblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
+        });
+        $abutusButton.on('click', function () {
+          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
+          $navButton = $('#abutus').removeClass(inActiveButton).addClass(ActiveButton);
+          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
+          $centerBlock = $('#abutusblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
+        });
+        $contactsButton.on('click', function () {
+          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
+          $navButton = $('#contacts').removeClass(inActiveButton).addClass(ActiveButton);
+          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
+          $centerBlock = $('#contactsblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
+        });
+      });
+    </script>
+    <header>
+
+    </header>
+    <nav id="navBar">
+      <div id="main" class="navButton-active">
+        <p>Главная</p>
+      </div>
+      <div id="services" class="navButton">
+        <p>Услуги</p>
+      </div>
+      <div id="abutus" class="navButton">
+        <p>О нас</p>
+      </div>
+      <div id="contacts" class="navButton">
+        <p>Контакты</p>
+      </div>
+    </nav>
+    <section id="mainblock" class="centerBlock-active">
+      <h1>Главная</h1>
+    </section>
+    <section id="servicesblock" class="centerBlock">
+      <h1>Услуги</h1>
+    </section>
+    <section id="abutusblock" class="centerBlock">
+      <h1>О нас</h1>
+    </section>
+    <section id="contactsblock" class="centerBlock">
+      <h1>Контакты</h1>
+      <input type="text" id="firstName" placeholder="Введите Ваше имя" style="width: 30%; margin: 1%;">
+      <input type="tel" id="phoneNumber" placeholder="Введите Ваш номер телефона" style="width: 30%; margin: 1%;">
+      <input type="email" id="Email" placeholder="Введите Ваш E-mail" style="width: 20%; margin: 1%;"><br>
+      <textarea id="someText" rows="8" cols="80"></textarea>
+      <button type="button" id="button1">Отправить</button>
+      <script type="text/javascript">
+function checkForm() {
+  var name = document.getElementById('firstName');
+  var phone = document.getElementById('phoneNumber');
+  var mail = document.getElementById('Email');
+  var message = document.getElementById('someText');
+  var telCheck = phone.value.match(/\D/g);
+  var telNumCheck = phone.value.match(/\d/g);
+  if (telCheck != null) {
+    phone.style = 'border-color: red; width: 30%; margin: 1%;';
+    phone.value = '';
+    phone.placeholder = 'В телефонном номере не должно быть букв';
+  } else if (telNumCheck == null) {
+      phone.style = 'border-color: red; width: 30%; margin: 1%;';
+      phone.value = '';
+      phone.placeholder = 'Вы не ввели телефон';
+  } else if (telNumCheck.join('').length < 11) {
+      phone.style = 'border-color: red; width: 30%; margin: 1%;';
+      phone.value = '';
+      phone.placeholder = 'Слишком короткий номер';
+  } else phone.style = 'border-color: none; width: 30%; margin: 1%;';
+  var nameCheck = name.value.match(/[a-zA-Zа-яА-я]/g);
+  var spaceNum = name.value.match(/\s/g);
+  if (nameCheck == null) {var nameChecklength = 0;} else {var nameChecklength = nameCheck.length;}
+  if (spaceNum == null) {var spaceNumlength = 0;} else {var spaceNumlength = spaceNum.length;}
+  if (name.value == '') {
+      name.style = 'border-color: red; width: 30%; margin: 1%;';
+      name.value = '';
+      name.placeholder = 'Вы не ввели имя';
+  } else if (nameChecklength + spaceNumlength < name.value.length) {
+      name.style = 'border-color: red; width: 30%; margin: 1%;';
+      name.value = '';
+      name.placeholder = 'В имени не должно быть цифр и спецсимволов';
+  } else name.style = 'border-color: none; width: 30%; margin: 1%;';
+
+  var regExp3 = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+  if (mail.value == '') {
+    mail.style = 'border-color: red; width: 30%; margin: 1%;';
+    mail.value = '';
+    mail.placeholder = 'Вы не ввели E-mail';
+  } else if (regExp3.test(mail.value) == false) {
+      mail.style = 'border-color: red; width: 30%; margin: 1%;';
+      mail.value = '';
+      mail.placeholder = 'Вы ввели не корректный E-mail';
+  } else mail.style = 'border-color: none; width: 30%; margin: 1%;';
+}
+  var $button1 = $('#button1');
+  $button1.on('click', checkForm);
+// document.getElementById('button1').addEventListener('click', checkForm);
+</script>
+    </section>
+  </body>
+</html>
