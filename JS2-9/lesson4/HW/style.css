@@ -66,8 +66,11 @@ nav .navButton p {
   text-align: center;
   color: darkgray;
 }
-.centerBlock-active input {
-    width: 50%;
+.centerBlock-active .formBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .centerBlock {
   display: none;

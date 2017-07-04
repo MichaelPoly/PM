@@ -10,10 +10,6 @@
   <body>
     <script type="text/javascript">
       $(document).ready(function () {
-        var $mainButton = $('#main');
-        var $servicesButton = $('#services');
-        var $abutusButton = $('#abutus');
-        var $contactsButton = $('#contacts');
 
         var $centerBlock = $('.centerBlock-active');
         var $navButton = $('.navButton-active');
@@ -21,38 +17,22 @@
         var AktiveBlock = 'centerBlock-active';
         var inActiveButton = 'navButton';
         var inAktiveBlock = 'centerBlock';
-
-        $mainButton.on('click', function () {
-          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
-          $navButton = $('#main').removeClass(inActiveButton).addClass(ActiveButton);
-          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
-          $centerBlock = $('#mainblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
+        $('.centerBlock').hide();
+        var $button1 = $('.navButton');
+        $button1.on('click', function () {
+              var buttonId = '#' + this.id;
+               $navButton.removeClass(ActiveButton).addClass(inActiveButton);
+               $navButton = $(buttonId).removeClass(inActiveButton).addClass(ActiveButton);
+               $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
+               $centerBlock = $(buttonId + 'block').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
         });
-        $servicesButton.on('click', function () {
-          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
-          $navButton = $('#services').removeClass(inActiveButton).addClass(ActiveButton);
-          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
-          $centerBlock = $('#servicesblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
-        });
-        $abutusButton.on('click', function () {
-          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
-          $navButton = $('#abutus').removeClass(inActiveButton).addClass(ActiveButton);
-          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
-          $centerBlock = $('#abutusblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
-        });
-        $contactsButton.on('click', function () {
-          $navButton.removeClass(ActiveButton).addClass(inActiveButton);
-          $navButton = $('#contacts').removeClass(inActiveButton).addClass(ActiveButton);
-          $centerBlock.removeClass(AktiveBlock).fadeOut(500).addClass(inAktiveBlock);
-          $centerBlock = $('#contactsblock').removeClass(inAktiveBlock).fadeIn(500).addClass(AktiveBlock);
-        });
-      });
+       });
     </script>
     <header>
 
     </header>
     <nav id="navBar">
-      <div id="main" class="navButton-active">
+      <div id="main" class="navButton">
         <p>Главная</p>
       </div>
       <div id="services" class="navButton">
@@ -76,11 +56,78 @@
     </section>
     <section id="contactsblock" class="centerBlock">
       <h1>Контакты</h1>
-      <input type="text" id="firstName" placeholder="Введите Ваше имя" style="width: 30%; margin: 1%;">
-      <input type="tel" id="phoneNumber" placeholder="Введите Ваш номер телефона" style="width: 30%; margin: 1%;">
-      <input type="email" id="Email" placeholder="Введите Ваш E-mail" style="width: 20%; margin: 1%;"><br>
-      <textarea id="someText" rows="8" cols="80"></textarea>
-      <button type="button" id="button1">Отправить</button>
+      <div class="formBlock">
+        <label for="firstName">Введите имя</label>
+        <input type="text" id="firstName" placeholder="Введите Ваше имя" style="width: 50%; margin: 1%;">
+        <label for="phoneNumber">Введите телефон</label>
+        <input type="tel" id="phoneNumber" placeholder="Введите Ваш номер телефона" style="width: 50%; margin: 1%;">
+        <input type="email" id="Email" placeholder="Введите Ваш E-mail" style="width: 50%; margin: 1%;">
+        <div class="adress">
+          <input list="obl1" id="obl">
+            <datalist id="obl1">
+
+            </datalist>
+          <input list="city1" id="city">
+            <datalist id="city1">
+
+            </datalist>
+            <script type="text/javascript">
+$(document).ready(function () {
+            var oblArray = [];
+               $.ajax({
+                   type: 'GET', //GET или POST
+                   url: './Oblast.json',
+                   //async: true,
+                   dataType: 'json',
+                   success: function (data) {
+                     oblArray.push = data;
+                       for (var i = 0; i < data.length; i++) {
+                         var $option = data[i].OblName;
+                         $option = '"' + $option + '"';
+                         var $option1 = $('#obl1').append('<option value=' + $option + '></option>');
+                       }
+                   }
+               });
+               var cityArray = [];
+               $.ajax({
+                   type: 'GET', //GET или POST
+                   url: './city.json',
+                   //async: true,
+                   dataType: 'json',
+                   success: function (data) {
+                     cityArray = data;
+                       for (var i = 0; i < data.length; i++) {
+                         var $optionCity = data[i].CytyName;
+                         $optionCity = '"' + $optionCity + '"';
+                         var $oblClass = data[i].OblCode;
+                         var $optionCity1 = $('#city1').append('<option value=' + $optionCity + ' class="' + $oblClass + '"></option>');
+                       }
+                   }
+               });
+
+               var OblCode1;
+               $('#obl').on('input', function () {
+                 var OblName1 = this.value;
+                 for (var i = 0; i < cityArray.length; i++) {
+                   if (cityArray[i].OblName == OblName1) {
+                     OblCode1 = cityArray[i].OblCode;
+                   break;
+                   }
+                 }
+console.log(OblCode1);
+               });
+               var $CityName = $('#city').on('click', function () {
+                 if (OblCode1 != null) {
+                   var $city2 = document.querySelector('datalist#city1').getElementsByTagName('option');
+                   $city2.not('.' + OblCode1).hide();
+                 }
+               });
+});
+            </script>
+        </div>
+        <textarea id="someText" rows="8" cols="80"></textarea><br>
+        <button type="button" id="button1">Отправить</button>
+      </div>
       <script type="text/javascript">
 function checkForm() {
   var name = document.getElementById('firstName');
@@ -129,7 +176,7 @@ function checkForm() {
 }
   var $button1 = $('#button1');
   $button1.on('click', checkForm);
-// document.getElementById('button1').addEventListener('click', checkForm);
+
 </script>
     </section>
   </body>
