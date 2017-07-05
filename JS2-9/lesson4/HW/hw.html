@@ -82,7 +82,7 @@ $(document).ready(function () {
                    //async: true,
                    dataType: 'json',
                    success: function (data) {
-                     oblArray.push = data;
+                     oblArray = data;
                        for (var i = 0; i < data.length; i++) {
                          var $option = data[i].OblName;
                          $option = '"' + $option + '"';
@@ -102,7 +102,7 @@ $(document).ready(function () {
                          var $optionCity = data[i].CytyName;
                          $optionCity = '"' + $optionCity + '"';
                          var $oblClass = data[i].OblCode;
-                         var $optionCity1 = $('#city1').append('<option value=' + $optionCity + ' class="' + $oblClass + '"></option>');
+                //         var $optionCity1 = $('#city1').append('<option value=' + $optionCity + ' class="' + $oblClass + '"></option>');
                        }
                    }
                });
@@ -116,13 +116,27 @@ $(document).ready(function () {
                    break;
                    }
                  }
-console.log(OblCode1);
+
                });
-               var $CityName = $('#city').on('click', function () {
+               var $CityName = $('#city').on('mouseover', function () {
                  if (OblCode1 != null) {
-                   var $city2 = document.querySelector('datalist#city1').getElementsByTagName('option');
-                   $city2.not('.' + OblCode1).hide();
+                   for (var i = 0; i < cityArray.length; i++) {
+                     if (cityArray[i].OblCode == OblCode1) {
+                       var $optionCity3 = cityArray[i].CytyName;
+                          $optionCity3 = '"' + $optionCity3 + '"';
+                       var $oblClass3 = cityArray[i].OblCode;
+                       var $optionCity3 = $('#city1').append('<option value=' + $optionCity3 + ' class="' + $oblClass3 + '"></option>');
+                     }
+                   }
+                 } else {
+                   for (var i = 0; i < cityArray.length; i++) {
+                        var $optionCity3 = cityArray[i].CytyName;
+                        $optionCity3 = '"' + $optionCity3 + '"';
+                        var $oblClass3 = cityArray[i].OblCode;
+                        var $optionCity3 = $('#city1').append('<option value=' + $optionCity3 + ' class="' + $oblClass3 + '"></option>');
+                  }
                  }
+
                });
 });
             </script>
