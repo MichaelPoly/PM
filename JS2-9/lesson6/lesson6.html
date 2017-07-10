@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson6</title>
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+    <script>
+        //Взаимодействия
+        $(document).ready(function () {
+            $('.draggable').draggable({
+                //axis: 'x', //y
+                scroll: true,
+                //revert: true,
+                //helper: 'clone',
+                cursor: 'move',
+                cursorAt: {top: 50, left: 50},
+                //containment: 'parent',
+                containment: '.parent-draggable',
+                opacity: 0.35
+
+            });
+
+            //События
+            var $startCounter = $('#e-start'),
+                $dragCounter = $('#e-drag'),
+                $stopCounter = $('#e-stop'),
+                counts = [0, 0, 0];
+
+            function updateCounter($eventCounter, newCount) {
+                if(!$eventCounter.hasClass('ui-state-hover')){
+                    $eventCounter.addClass('ui-state-hover')
+                        .siblings().removeClass('ui-state-hover');
+                }
+                $('span.count', $eventCounter).text(newCount);
+            }
+
+            $('#draggable').draggable({
+                start: function () {
+                    counts[0]++;
+                    updateCounter($startCounter, counts[0]);
+                },
+                drag: function () {
+                    counts[1]++;
+                    updateCounter($dragCounter, counts[1]);
+                },
+
+                stop: function () {
+                    counts[2]++;
+                    updateCounter($stopCounter, counts[2]);
+                },
+            });
+
+            //datepicker
+            $('.date').datepicker({
+                dateFormat: "dd.mm.yy",
+                firstDay: 1
+            });
+        });
+    </script>
+
+    <style>
+        .draggable {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            border: 1px solid green;
+            border-radius: 10px;
+        }
+
+        .parent-draggable {
+            width: 500px;
+            height: 500px;
+            background-color: coral;
+            border: 1px solid orangered;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="parent-draggable">
+    <div class="draggable"></div>
+</div>
+
+<div id="draggable" class="ui-widget ui-widget-content">
+    <ul class="ui-helper-reset">
+        <li id="e-start" class="ui-state-default ui-corner-all">
+            Start: <span class="count">0</span>
+        </li>
+        <li id="e-drag" class="ui-state-default ui-corner-all">
+            Draggable: <span class="count">0</span>
+        </li>
+        <li id="e-stop" class="ui-state-default ui-corner-all">
+            Stop: <span class="count">0</span>
+        </li>
+    </ul>
+</div>
+<input type="text" class="date">
+</body>
+</html>

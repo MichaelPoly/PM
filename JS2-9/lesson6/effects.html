@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Effects jQuery UI</title>
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn1').on('click', function () {
+                $('.test').hide($('#effect').val(), {}, 2000);
+            });
+
+            $('#btn2').on('click', function () {
+                $('.test').show($('#effect').val(), {}, 2000);
+            });
+
+            $('#btn3').on('click', function () {
+                $('.test').effect($('#effect').val(), {}, 2000);
+            });
+        });
+    </script>
+
+    <style>
+        .test {
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
+            border: 1px solid green;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="test">
+    <h1>Тест-блок</h1>
+    <p>Данный элемент помогает тестировать эффекты</p>
+</div>
+
+<p><label for="effect">Выберите эффект из списка:</label></p>
+<select name="effect" id="effect">
+    <option value="blind">Ослепления</option>
+    <option value="bounce">Подпрыгивание</option>
+    <option value="clip">Обрезание</option>
+    <option value="drop">Падение</option>
+    <option value="explode">Взрыв</option>
+    <option value="fade">Исчезновение</option>
+    <option value="fold">Складывание</option>
+    <option value="highlight">Подсветка</option>
+    <option value="puff">Рассеивание</option>
+    <option value="pulsate">Пульсирование</option>
+    <option value="shake">Тряска</option>
+    <option value="slide">Выскальзывание</option>
+</select>
+<p>Выберите желаемое действие с &laquo;Тест-блоком&raquo;:</p>
+<input type="button" id="btn1" value="Скрыть элемент">
+<input type="button" id="btn2" value="Показать элемент">
+<input type="button" id="btn3" value="Применить эффект">
+</body>
+</html>

@@ -116,18 +116,25 @@ $(document).ready(function () {
                    break;
                    }
                  }
-
-               });
-               var $CityName = $('#city').on('mouseover', function () {
-                 if (OblCode1 != null) {
-                   for (var i = 0; i < cityArray.length; i++) {
-                     if (cityArray[i].OblCode == OblCode1) {
-                       var $optionCity3 = cityArray[i].CytyName;
-                          $optionCity3 = '"' + $optionCity3 + '"';
-                       var $oblClass3 = cityArray[i].OblCode;
-                       var $optionCity3 = $('#city1').append('<option value=' + $optionCity3 + ' class="' + $oblClass3 + '"></option>');
-                     }
+                 for (var i = 0; i < cityArray.length; i++) {
+                   if (cityArray[i].OblCode == OblCode1) {
+                     var $optionCity3 = cityArray[i].CytyName;
+                        $optionCity3 = '"' + $optionCity3 + '"';
+                     var $oblClass3 = cityArray[i].OblCode;
+                     var $optionCity3 = $('#city1').append('<option value=' + $optionCity3 + ' class="' + $oblClass3 + '"></option>');
                    }
+                 }
+               });
+               var $CityName = $('#city').on('dblclick', function () {
+                 if (OblCode1 != null) {
+                  //  for (var i = 0; i < cityArray.length; i++) {
+                  //    if (cityArray[i].OblCode == OblCode1) {
+                  //      var $optionCity3 = cityArray[i].CytyName;
+                  //         $optionCity3 = '"' + $optionCity3 + '"';
+                  //      var $oblClass3 = cityArray[i].OblCode;
+                  //      var $optionCity3 = $('#city1').append('<option value=' + $optionCity3 + ' class="' + $oblClass3 + '"></option>');
+                  //    }
+                  //  }
                  } else {
                    for (var i = 0; i < cityArray.length; i++) {
                         var $optionCity3 = cityArray[i].CytyName;
@@ -138,6 +145,7 @@ $(document).ready(function () {
                  }
 
                });
+
 });
             </script>
         </div>

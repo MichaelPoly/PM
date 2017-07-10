@@ -1,0 +1,152 @@
+header {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 80%;
+  height: 150px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-left: 10%;
+  overflow: hidden;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  background-color: lightblue;
+}
+
+header img {
+  margin-left: 1%;
+}
+
+header p {
+  font-size: 50px;
+  font-weight: bold;
+  color: green;
+  font-family: "Cormorant Infant", serif;
+}
+
+.content {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#leftSide {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 300px;
+  width: 15%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+#centerBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 300px;
+  width: 49%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin: 4px;
+}
+
+#centerBlock .itemsBlocks {
+  width: 20%;
+  max-height: 250px;
+  margin: 1%;
+  overflow: hidden;
+  border: 1px solid green;
+  border-radius: 5px;
+  box-shadow: 0 0 3px lightgreen;
+  font-family: "Cormorant Infant", serif;
+  font-weight: bold;
+  color: green;
+  font-size: 100%;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#centerBlock .itemsBlocks .itemBtn {
+  width: 90%;
+  height: 25px;
+}
+
+#centerBlock .itemsBlocks img {
+  height: 100px;
+  overflow: hidden;
+}
+
+#rightSide {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 300px;
+  width: 15%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#rightSide #basket {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#rightSide #basket img {
+  width: 50%;
+}
+
+.content #itemWindow {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 300px;
+  width: 49%;
+  height: 500px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-left: 24.8%;
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
