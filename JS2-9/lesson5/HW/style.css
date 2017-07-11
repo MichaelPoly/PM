@@ -138,15 +138,184 @@ header p {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   min-height: 300px;
   width: 49%;
-  height: 500px;
+  height: 70vh;
   border-width: 1px;
   border-style: solid;
-  border-color: black;
-  border-radius: 0;
+  border-color: green;
+  border-radius: 5;
+  box-shadow: 0 0 3px lightgreen;
   margin-left: 24.8%;
   background-color: white;
+  overflow-y: scroll;
+}
+
+.content #itemWindow .subItem {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 99%;
+  height: 99%;
+}
+
+.content #itemWindow .subItem h3 {
+  position: relative;
+  font-size: 2em;
+  font-family: "Cormorant Infant", serif;
+  color: green;
+  text-align: center;
+  line-height: normal;
+}
+
+.content #itemWindow .subItem #infoBlock {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-width: 0px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 0;
+  text-align: justify;
+}
+
+.content #itemWindow .subItem #infoBlock img {
+  position: relative;
+  width: 50%;
+  border: 1px solid green;
+  border-radius: 5px;
+  float: left;
+  margin-top: 1%;
+}
+
+.content #itemWindow .subItem #infoBlock p {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Cormorant Infant", serif;
+  color: green;
+  text-align: left;
+  line-height: normal;
+}
+
+.content #itemWindow .subItem #infoBlock p[id="describtion"] {
+  position: relative;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: "Cormorant Infant", serif;
+  color: lightgreen;
+  text-align: left;
+  line-height: normal;
+}
+
+.content #itemWindow .subItem #btnBlock {
+  position: relative;
+  width: 90%;
+}
+
+.content #itemWindow .subItem #messageBlock {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 0;
+}
+
+.content #itemWindow .subItem #messageBlock #messageForm {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.content #moderatorWindow {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 300px;
+  width: 49%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 5;
+  box-shadow: 0 0 3px lightgreen;
+  margin-left: 24.8%;
+  background-color: white;
+}
+
+.content #moderatorWindow #messageContent {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 5;
+}
+
+.content #moderatorWindow .messageRaw {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  width: 99%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,11 @@
+[
+  {"itemCode": "0001", "userName": "Someone", "moderate": "true","message": "Хороший слон!"},
+  {"itemCode": "0001", "userName": "Someone1", "moderate": "true","message": "Очень Хороший слон!"},
+  {"itemCode": "0001", "userName": "Someone2", "moderate": "true","message": "Замечательный Хороший слон!"},
+  {"itemCode": "0002", "userName": "Someone", "moderate": "true","message": "Хороший слон!"},
+  {"itemCode": "0002", "userName": "Someone1", "moderate": "true","message": "Очень Хороший слон!"},
+  {"itemCode": "0002", "userName": "Someone2", "moderate": "true","message": "Замечательный Хороший слон!"},
+  {"itemCode": "0003", "userName": "Someone", "moderate": "true","message": "Хороший слон!"},
+  {"itemCode": "0003", "userName": "Someone1", "moderate": "true","message": "Очень Хороший слон!"},
+  {"itemCode": "0003", "userName": "Someone2", "moderate": "true","message": "Замечательный Хороший слон!"}
+]
