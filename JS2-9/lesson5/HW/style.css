@@ -60,6 +60,51 @@ header p {
   margin-left: 10%;
 }
 
+#leftSide #feedback {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 90%;
+  height: 5%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 5px;
+  box-shadow: 0 0 3px lightgreen;
+  color: green;
+  text-align: center;
+  margin: 5%;
+}
+
+#leftSide #banner {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 90%;
+  height: 80%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 5px;
+  min-height: 250px;
+  box-shadow: 0 0 3px lightgreen;
+  color: green;
+  text-align: center;
+  margin: 5%;
+}
+
 #centerBlock {
   display: -ms-flexbox;
   display: -webkit-flex;

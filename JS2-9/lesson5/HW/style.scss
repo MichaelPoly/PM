@@ -76,6 +76,31 @@ header p {
     @include flex-direction(column);
     margin-left: 10%;
   }
+  #leftSide #feedback {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(90%, 5%, 1px, solid, green, 5px);
+    box-shadow: 0 0 3px lightgreen;
+    color: green;
+    text-align: center;
+    margin: 5%;
+  }
+  #leftSide #banner {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(90%, 80%, 1px, solid, green, 5px);
+    min-height: 250px;
+    box-shadow: 0 0 3px lightgreen;
+    color: green;
+    text-align: center;
+    margin: 5%;
+  }
   #centerBlock {
     display: -ms-flexbox;
     display: -webkit-flex;
