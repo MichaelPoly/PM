@@ -2,6 +2,7 @@ $(document).ready(function() {
   var basket3 = new Basket2();
     $('#itemWindow').hide();
     $('#moderatorWindow').hide();
+    $('#basketWindow').hide();
 function basketRefresh() {
   var quantity = $('#quantity');
   quantity.empty();
@@ -50,8 +51,7 @@ function basketRefresh() {
              var $priceId = $btnId.slice(7);
              var $price1 = $basket1[parseInt($priceId)-1].price;
              basket3.cost = parseInt(basket3.cost) + parseInt($price1);
-             console.log(basket3.amount);
-             console.log(basket3.cost);
+             basket3.basketItems.push($basket1[parseInt($priceId)-1]);
              basketRefresh();
            });
            $('.subItemsBlocks').on('click', function() {
@@ -84,6 +84,7 @@ function basketRefresh() {
                var $priceId1 = $btnId1.slice(11);
                var $price2 = $basket1[parseInt($priceId1)-1].price;
                basket3.cost = parseInt(basket3.cost) + parseInt($price2);
+               basket3.basketItems.push($basket1[parseInt($priceId1)-1]);
                basketRefresh();
              });
              $('#' + $subBlockId).append('<div id="messageBlock"></div>');
@@ -111,6 +112,7 @@ function basketRefresh() {
            });
        }
   });
+  //Окно модератора
   $('#moderator').on('click', function() {
     $('#moderatorWindow').show();
     $('#moderatorWindow').append('<div id="messageContent"></div>');
@@ -148,4 +150,56 @@ function basketRefresh() {
     });
   });
 
+//Корзина
+$('#basket').on('click', function() {
+  $('#basketWindow').show();
+  $('#basketWindow').append('<div id="basketContent"></div>');
+  $('#basketContent').append('<h3>Ваша корзина</h3>');
+  $basketItems1 = basket3.basketItems;
+  $('#basketContent').append('<div id="itemRawName" class="itemRaw"></div>');
+  $('#itemRawName').append('<p class="nn">п/п</p>');
+  $('#itemRawName').append('<p class="itemInBasket">Наименование товара</p>');
+  $('#itemRawName').append('<p class="priceInBasket">Цена</p>');
+    for (var i = 0; i < $basketItems1.length; i++) {
+      $('#basketContent').append('<div id="itemRaw' + i + '" class="itemRaw"></div>');
+      var j = i+1;
+      $('#itemRaw' + i).append('<p class="nn">' + j + ': </p>');
+      $('#itemRaw' + i).append('<p class="itemInBasket">' + $basketItems1[i].name + '</p>');
+      $('#itemRaw' + i).append('<p class="priceInBasket">' + $basketItems1[i].price + '</p>');
+      $('#itemRaw' + i).append('<button type="button" id="btnDel' + i + '" class="btnDel">Удалить из корзины</button>');
+    }
+    $('#basketContent').append('<div id="itemRawAll" class="itemRaw"></div>');
+    $('#itemRawAll').append('<p class="nn"></p>');
+    $('#itemRawAll').append('<p class="itemInBasket">Всего товаров в корзине:' + basket3.amount + '</p>');
+    $('#itemRawAll').append('<p class="priceInBasket">Сумма: ' + basket3.cost + '</p>');
+    $('#basketContent').append('<button type="button" id="btnClose1">Вернуться к покупкам</button>');
+        $('#btnClose1').on('click', function() {
+          $('#basketWindow').fadeOut();
+          $('#basketContent').remove();
+        });
+
+        $('.btnDel').on('click', function() {
+          var $itemInBasketNum = parseInt(this.id.slice(6));
+          var $basketArray = [];
+          for (var i = 0; i < basket3.basketItems.length; i++) {
+            if (i != $itemInBasketNum) {
+              $basketArray.push(basket3.basketItems[i]);
+            }
+          }
+          basket3.basketItems = [];
+          basket3.basketItems = $basketArray;
+          console.log($basketArray[$itemInBasketNum]);
+          --basket3.amount;
+          console.log(basket3.amount);
+          basket3.cost = basket3.cost - $basketItems1[$itemInBasketNum].price;
+          console.log(basket3.cost);
+          $('#itemRaw' + $itemInBasketNum).remove();
+          $('#itemRawAll').remove();
+          $('#basketContent').append('<div id="itemRawAll" class="itemRaw"></div>');
+          $('#itemRawAll').append('<p class="nn"></p>');
+          $('#itemRawAll').append('<p class="itemInBasket">Всего товаров в корзине:' + basket3.amount + '</p>');
+          $('#itemRawAll').append('<p class="priceInBasket">Сумма: ' + basket3.cost + '</p>');
+          basketRefresh();
+        });
+    });
 });

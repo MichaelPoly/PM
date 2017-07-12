@@ -1,3 +1,7 @@
+* {
+  font-family: "Cormorant Infant", serif;
+}
+
 header {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -223,7 +227,17 @@ header p {
 
 .content #itemWindow .subItem #btnBlock {
   position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
   width: 90%;
+  margin: 1%;
 }
 
 .content #itemWindow .subItem #messageBlock {
@@ -301,6 +315,111 @@ header p {
   border-radius: 5;
 }
 
+.content #basketWindow {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 300px;
+  width: 49%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 5;
+  box-shadow: 0 0 3px lightgreen;
+  margin-left: 24.8%;
+  background-color: white;
+}
+
+.content #basketWindow #basketContent {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 5;
+}
+
+.content #basketWindow #basketContent h3 {
+  width: 100%;
+  font-family: "Cormorant Infant", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+.content #basketWindow #basketContent .itemRaw .nn {
+  width: 5%;
+  font-family: "Cormorant Infant", serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+.content #basketWindow #basketContent .itemRaw .itemInBasket {
+  width: 50%;
+  font-family: "Cormorant Infant", serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: green;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.content #basketWindow #basketContent .itemRaw .priceInBasket {
+  width: 20%;
+  font-family: "Cormorant Infant", serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+.content #basketWindow #basketContent .itemRaw {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  width: 97%;
+  margin-left: 1%;
+  height: auto;
+}
+
 .content #moderatorWindow .messageRaw {
   position: relative;
   display: -ms-flexbox;
@@ -315,7 +434,8 @@ header p {
   -webkit-flex-direction: raw;
   -ms-flex-direction: raw;
   flex-direction: raw;
-  width: 99%;
+  width: 97%;
+  margin-left: 1%;
 }
 
 /*# sourceMappingURL=style.css.map */
