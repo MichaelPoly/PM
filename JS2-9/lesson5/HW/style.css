@@ -105,6 +105,13 @@ header p {
   margin: 5%;
 }
 
+#leftSide #banner #banner1 {
+  font-weight: bold;
+  font-family: "Cormorant Infant", serif;
+  font-size: 2em;
+  color: red;
+}
+
 #centerBlock {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -481,6 +488,44 @@ header p {
   flex-direction: raw;
   width: 97%;
   margin-left: 1%;
+}
+
+.content #feedbacktWindow {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: fkex-start;
+  -ms-flex-pack: fkex-start;
+  justify-content: fkex-start;
+  min-height: 300px;
+  width: 49%;
+  height: 70vh;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  border-radius: 5;
+  box-shadow: 0 0 3px lightgreen;
+  margin-left: 24.8%;
+  background-color: white;
+}
+
+.content #feedbacktWindow #UserNames {
+  margin: 2%;
+}
+
+.content #feedbacktWindow #contactData {
+  margin: 2%;
+}
+
+.content #feedbacktWindow #submitt {
+  margin: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */
