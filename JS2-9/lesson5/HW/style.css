@@ -528,4 +528,8 @@ header p {
   margin: 2%;
 }
 
+.content #feedbacktWindow .dialog {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
