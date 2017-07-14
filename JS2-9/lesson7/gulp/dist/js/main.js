@@ -1,0 +1,1 @@
+function main(n){console.log("Main",n)}function user(n){console.log("User",n)}main("Gulp work!"),main("Gulp work!23"),main("Gulp work!23344"),user("Ok!");
