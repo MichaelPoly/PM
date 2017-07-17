@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jasmine</title>
+    <link rel="stylesheet" href="bower_components/jasmine-core/lib/jasmine-core/jasmine.css">
+    <script src="bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="bower_components/jasmine-core/lib/jasmine-core/boot.js"></script>
+    <script>
+        describe('Соответствие значений', function () {
+            it('Проверка a == 5', function () {
+                var a = 5;
+                expect(a).toBe(5); //5 - эталонное значение
+                a = 6;
+                expect(a).toBe(6);
+            });
+
+            it('Проверка a == 6', function () {
+                var a = 5;
+                expect(a).toBe(5); //5 - эталонное значение
+                a = 6;
+                expect(a).toBe(6);
+            });
+
+            it('Проверка a === 5', function () {
+                var a = 5;
+                expect(a).toEqual(5);
+            });
+
+            it('Проверка a != 5', function () {
+                var a = 7;
+                expect(a).not.toBe(5);
+            });
+
+            it('Проверка a !== 5', function () {
+                var a = 7;
+                expect(a).not.toEqual(5);
+            });
+        });
+
+        describe('Дополнительные функции', function () {
+            it('Сравнение объектов', function () {
+                var a1 = {
+                    name: 'Igor',
+                    email: '1@2.ru',
+                };
+                var a2 = {
+                    name: 'Igor',
+                    email: '1@2.ru',
+                };
+
+                expect(a1).toEqual(a2);
+            });
+
+            it('Сравнение с null', function () {
+                expect(null).toBeNull();
+            });
+
+            it('Сравнение с undefined', function () {
+                expect(undefined).toBeUndefined();
+            });
+
+            it('Сравнение с NaN', function () {
+                expect(NaN).toBeNaN();
+                expect(1).not.toBeNaN();
+            });
+
+            it('Сравнение с false', function () {
+                expect(false).toBeFalsy();
+                expect(true).not.toBeFalsy();
+            });
+
+            it('Сравнение с true', function () {
+                expect(true).toBeTruthy();
+                expect(false).not.toBeTruthy();
+            });
+
+            it('Работа с регулярными выражениями', function () {
+                var str = 'New abc 34324 324 6 d  dfg dg dfgdfg';
+                expect(str).toMatch(/abc/i);
+                expect(str).not.toMatch(/^abc/i);
+            });
+        });
+
+        describe('Работа с массивами', function () {
+            var array = ['abc', 'like', 'js', 'javaScript', 555];
+            it('Поиск элемента javaScript в массиве', function () {
+                expect(array).toContain('javaScript');
+                expect(array).not.toContain('javascript');
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

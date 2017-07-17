@@ -1,0 +1,16 @@
+{
+  "name": "lesson8",
+  "authors": [
+    "Igor"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jasmine-core": "^2.6.4",
+    "mocha": "^3.4.2",
+    "chai": "^4.1.0"
+  }
+}
