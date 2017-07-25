@@ -1,0 +1,10 @@
+[
+  {"kitName": "Маша", "city": "Санкт-Петербург", "region": "Юговосточная-Азия", "country1": "Таиланд", "flag1Href": "img/tailand.svg",
+    "country2": "Вьетнам", "flag2Href": "img/vietnam.svg", "country3": "", "flag3Href": "", "country4": "", "flag4Href": "", "qNights": "7-14", "qFullAge": "2", "qChild": "2",
+  "costFrom": "50000", "costTo": "150000", "starsFrom": "4", "rateFrom": "4.0", "meal": "Любой", "positionType": "Пляжные, 1-я линия"},
+  {"kitName": "Федя35", "city": "Москва", "region": "Юговосточная-Азия", "country1": "Вьетнам", "flag1Href": "img/vietnam.svg",
+    "country2": "", "flag2Href": "", "country3": "", "flag3Href": "", "country4": "", "flag4Href": "", "qNights": "7-14", "qFullAge": "1", "qChild": "0",
+  "costFrom": "50000", "costTo": "200000", "starsFrom": "4", "rateFrom": "4.0", "meal": "Любой", "positionType": "Пляжные, 1-я линия"}
+
+
+]

@@ -1,0 +1,817 @@
+* {
+  font-family: "sans-serif", sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+header {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 49px;
+  background-color: #0099cc;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#topBar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 1205px;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#topBar a {
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: 100;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding-left: 5%;
+}
+
+#topBar a:hover {
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: bolder;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding-left: 5%;
+}
+
+#centralBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 63.2%;
+  height: 790px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-left: 18.45%;
+}
+
+#centralBlock h3 {
+  font-size: 1.5em;
+  margin-left: 15%;
+}
+
+#centralBlock #interests {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 76%;
+  height: 80%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-left: 12%;
+  background-color: white;
+}
+
+#kit {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #cccccc;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+#kit #addKit {
+  width: 30% x;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-right: 10%;
+  color: #3399cc;
+}
+
+#kit #kitShow {
+  width: 60% x;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+}
+
+#kitHead {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  width: 95%;
+  height: 95px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+}
+
+#kitHead .Input {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+  width: 25%;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+}
+
+#kitHead .Input .kitNameBox {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 98%;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
+
+#kitHead .Input label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+
+#kitHead .Input input[name="kitName"] {
+  width: 98%;
+  height: 45px;
+  border: none;
+  text-align: center;
+}
+
+#kitHead .Input .cityBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
+
+#kitHead .spanDiv {
+  width: 5%;
+}
+
+#kitHead .Input .cityBlock input[name="cityName1"] {
+  width: 90%;
+  height: 45px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+
+#kitHead .Input .cityBlock p {
+  font-size: 2em;
+  color: #cccccc;
+  text-align: center;
+  margin-right: 1%;
+}
+
+#showResults {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 25%;
+  height: 50px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 25%;
+  background-color: #ff9933;
+  font-size: 90%;
+  color: white;
+}
+
+#country {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 95%;
+  height: 135px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-top: 2%;
+}
+
+#country h5 {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 1em;
+}
+
+#country #countrySelect {
+  width: 100%;
+  height: 115px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+}
+
+#country #countrySelect h4 {
+  margin-left: 5%;
+  font-size: 1em;
+}
+
+#selectedCity {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+}
+
+#selectedCity #firstCountry {
+  width: 20%;
+  height: 35px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  margin-left: 5%;
+}
+
+#chengSelect {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  margin-top: 3%;
+}
+
+#chengSelect .btnSelect {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20%;
+  height: 35px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3399cc;
+  border-radius: 50px;
+  background-color: white;
+  margin-left: 5%;
+  color: #3399cc;
+  text-align: center;
+}
+
+#chengSelect .btnSelect:hover {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20%;
+  height: 35px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3399cc;
+  border-radius: 50px;
+  background-color: #3399cc;
+  margin-left: 5%;
+  color: white;
+  text-align: center;
+}
+
+#chengSelect .btnSelect p {
+  color: #3399cc;
+  text-align: center;
+  margin: 0;
+}
+
+#chengSelect .btnSelect p:hover {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+#tourDetails {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+  margin-top: 1%;
+}
+
+#startEndDate {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 30%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#startEndDate label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+
+#numOfDays {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#numOfDays label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+
+#people {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#people label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+
+#costRange {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 30%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#costRange label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+
+#tourDetails .tourDetailsItems {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#tourDetails .tourDetailsInput {
+  width: 96%;
+  height: 96%;
+  border: none;
+}
+
+#hotelDesc {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+  margin-top: 1%;
+}
+
+#hotelStar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#hotelDesc .hotels {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 1em;
+}
+
+#stars {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#stars p {
+  color: #cccccc;
+  text-align: center;
+  font-size: 120%;
+}
+
+#hotelRate {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#rate {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#rateNum {
+  color: #00a551;
+}
+
+#meal {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 12%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#mealType {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#position {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 25%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#positionType {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+#delKit {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+  width: 28%;
+  height: 85px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+  padding-top: 3%;
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

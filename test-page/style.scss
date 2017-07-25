@@ -1,0 +1,468 @@
+$defaultFont: 'sans-serif', sans-serif;
+$defaultColor: green;
+$defaultFontSize: 25px;
+
+
+* {
+  font-family: $defaultFont;
+}
+@mixin reference($decoration,$size,$weight,$color) {
+  text-decoration: $decoration;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+@mixin justify-content($pos1) {
+  -webkit-justify-content: $pos1;
+  -ms-flex-pack: $pos1;
+  justify-content: $pos1;
+}
+@mixin align-items($pos3) {
+  -webkit-align-items: $pos3;
+  -ms-flex-align: $pos3;
+  align-items: $pos3;
+}
+@mixin block($width,$height,$borderWidth,$borderStyle,$borderColor,$borderRadius) {
+  width: $width;
+  height: $height;
+  border-width: $borderWidth;
+  border-style: $borderStyle;
+  border-color: $borderColor;
+  border-radius: $borderRadius;
+}
+body{
+  background-color: #f2f2f2;
+}
+header {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 49px;
+  background-color: #0099cc;
+  @include justify-content(center);
+  @include align-items(center);
+}
+#topBar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include block(1205px, 100%, 0px, solid, black, 0);
+  @include align-items(center);
+}
+#topBar a {
+  @include reference(none, 90%, 100, white);
+  font-family: sans-serif;
+  text-align: center;
+  padding-left: 5%;
+}
+#topBar a:hover {
+  @include reference(none, 90%, bolder, white);
+  font-family: sans-serif;
+  text-align: center;
+  padding-left: 5%;
+}
+
+#centralBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include block(63.2%, 790px, 1px, solid, black,0);
+  margin-left: 18.45%;
+}
+#centralBlock h3 {
+  font-size: 1.5em;
+  margin-left: 15%;
+}
+#centralBlock #interests {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include block(76%, 80%, 0px, solid, black,0);
+  margin-left: 12%;
+  background-color: white;
+}
+#kit {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #cccccc;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+#kit #addKit {
+  @include block(30%x, 100%, 0px, solid, black, 0);
+  margin-right: 10%;
+  color: #3399cc;
+}
+#kit #kitShow{
+  @include block(60%x, 100%, 1px, solid, black, 0);
+}
+#kitHead {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(flex-end);
+  @include block(95%, 95px, 0px, solid, black, 0);
+}
+#kitHead .Input {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(flex-end);
+  @include block(25%, 100%, 0px, solid, black, 0);
+}
+#kitHead .Input .kitNameBox {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include block(98%, 50px, 1px, solid, #cccccc, 5px);
+  box-shadow: 1px 1px 2px black;
+}
+#kitHead .Input label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+#kitHead .Input input[name="kitName"] {
+  width: 98%;
+  height: 45px;
+  border: none;
+  text-align: center;
+
+}
+#kitHead .Input .cityBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include block(90%, 50px, 1px, solid, #cccccc, 5px);
+  box-shadow: 1px 1px 2px black;
+}
+#kitHead .spanDiv {
+  width: 5%;
+}
+#kitHead .Input .cityBlock input[name="cityName1"] {
+  width: 90%;
+  height: 45px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+#kitHead .Input .cityBlock p {
+  font-size: 2em;
+  color: #cccccc;
+  text-align: center;
+  margin-right: 1%;
+}
+#showResults {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(25%, 50px, 0px, solid, black, 5px);
+  text-align: center;
+  margin-left: 25%;
+  background-color: #ff9933;
+  font-size: 90%;
+  color: white;
+}
+#country {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(95%, 135px, 0px, solid, black, 0);
+  margin-top: 2%;
+}
+#country h5 {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 1em;
+}
+#country #countrySelect {
+  @include block(100%, 115px, 1px, solid, #cccccc, 5px);
+}
+#country #countrySelect h4 {
+  margin-left: 5%;
+  font-size: 1em;
+}
+#selectedCity {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(flex-start);
+  @include flex-wrap(wrap);
+  @include block(100%, 85px, 0px, solid, #cccccc, 5px);
+}
+#selectedCity #firstCountry {
+  @include block(20%, 35px, 0px, solid, #cccccc, 50px);
+  background-color: #f2f2f2;
+  margin-left: 5%;
+}
+#chengSelect {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(flex-start);
+  @include flex-wrap(wrap);
+  @include block(100%, 85px, 0px, solid, #cccccc, 5px);
+  margin-top: 3%;
+}
+#chengSelect .btnSelect {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+    @include justify-content(center);
+  @include block(20%, 35px, 1px, solid, #3399cc, 50px);
+  background-color: white;
+  margin-left: 5%;
+  color: #3399cc;
+  text-align: center;
+}
+#chengSelect .btnSelect:hover {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(20%, 35px, 1px, solid, #3399cc, 50px);
+  background-color: #3399cc;
+  margin-left: 5%;
+  color: white;
+  text-align: center;
+}
+#chengSelect .btnSelect p {
+  color: #3399cc;
+  text-align: center;
+  margin: 0;
+}
+#chengSelect .btnSelect p:hover {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+#tourDetails {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-wrap(wrap);
+  @include block(100%, 85px, 0px, solid, #cccccc, 0px);
+  margin-top: 1%;
+}
+#startEndDate {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(30%, 85px, 0px, solid, #cccccc, 0px);
+}
+#startEndDate label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+
+#numOfDays {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(15%, 85px, 0px, solid, #cccccc, 0px);
+}
+#numOfDays label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+#people {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(20%, 85px, 0px, solid, #cccccc, 0px);
+}
+#people label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+#costRange {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(30%, 85px, 0px, solid, #cccccc, 0px);
+}
+#costRange label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+#tourDetails .tourDetailsItems {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
+}
+#tourDetails .tourDetailsInput {
+  width: 96%;
+  height: 96%;
+  border: none;
+}
+#hotelDesc {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-wrap(wrap);
+  @include block(100%, 85px, 0px, solid, #cccccc, 0px);
+  margin-top: 1%;
+}
+#hotelStar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(15%, 85px, 0px, solid, #cccccc, 0px);
+}
+#hotelDesc .hotels {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 1em;
+}
+#stars {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
+}
+#stars p {
+  color: #cccccc;
+  text-align: center;
+  font-size: 120%;
+}
+#hotelRate {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(15%, 85px, 0px, solid, #cccccc, 0px);
+}
+#rate {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
+}
+#rateNum {
+  color: #00a551;
+}
+#meal {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(12%, 85px, 0px, solid, #cccccc, 0px);
+}
+#mealType {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
+}
+#position {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(center);
+  @include block(25%, 85px, 0px, solid, #cccccc, 0px);
+}
+#positionType {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
+}
+#delKit {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(flex-end);
+  @include block(28%, 85px, 0px, solid, #cccccc, 0px);
+  padding-top: 3%;
+  color: red;
+}

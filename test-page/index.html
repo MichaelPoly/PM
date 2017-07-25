@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/tourkit.js" charset="utf-8"></script>
+    <title>Тестовое задание</title>
+  </head>
+  <body>
+    <header>
+      <nav id="topBar">
+        <img src="img/mytour.png" alt="">
+        <a href="#">Моя лента</a>
+        <a href="#">Интересы</a>
+        <a href="#">Направления</a>
+        <a href="#">Подбор тура</a>
+        <a href="#">Заявка</a>
+      </nav>
+    </header>
+
+    <section id="centralBlock">
+      <h3>Настройки интересов</h3>
+      <section id="interests">
+        <nav id="kit">
+          <div id="kitShow">
+
+          </div>
+          <div id="addKit">
+            <p><i class="fa fa-plus-circle" aria-hidden="true"></i> ДОБАВИТЬ ПОДБОРКУ</p>
+          </div>
+        </nav>
+        <div id="kitHead">
+          <div class="Input">
+            <label for="kitName">Название подборки</label>
+            <div class="kitNameBox">
+              <input type="text" id="kitName" name="kitName" placeholder="Введите название подборки">
+            </div>
+          </div>
+          <div class="spanDiv">
+
+          </div>
+          <div class="Input">
+            <label for="cityName">Ваш город</label>
+            <div class="cityBlock">
+              <input type="text" id="cityName1" name="cityName1" placeholder="Выберете город" list="cityName">
+              <p>&#10006;</p>
+              <datalist id="cityName">
+                <option value="MSK">Москва</option>
+                <option value="SPB">Санкт-Петербург</option>
+              </datalist>
+
+            </div>
+          </div>
+          <div id="showResults">
+            <p>СМОТРЕТЬ РЕЗЕЛЬТАТЫ <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>
+          </div>
+        </div>
+        <div id="country">
+          <h5>Вы можете задать несколько стран или регионов для одной подборки</h5>
+          <div id="countrySelect">
+            <h4 id="regionName">Юговосточная-Азия</h4>
+            <div id="selectedCity">
+              <div id="firstCountry">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="chengSelect">
+          <div id="addRegionBtn" class="btnSelect">
+            <p>ДОБАВИТЬ РЕГИОН</p>
+          </div>
+          <div id="addCountryBtn" class="btnSelect">
+            <p>ДОБАВИТЬ СТРАНЫ</p>
+          </div>
+        </div>
+          <div id="tourDetails">
+            <div id="startEndDate">
+              <label for="SEDate">Дата вылета</label>
+              <div class="tourDetailsItems">
+                <input type="text" name="SEDate" value="" id="startEndDateInput" class="tourDetailsInput">
+              </div>
+            </div>
+            <div id="numOfDays">
+              <label for="days">На сколько</label>
+              <div class="tourDetailsItems">
+                <input type="text" name="days" value="" id="numOfDaysInput" class="tourDetailsInput">
+              </div>
+            </div>
+            <div id="people">
+                <label for="peopleNum">Количество гостей</label>
+                <div class="tourDetailsItems">
+                  <input type="text" name="peopleNum" value="" id="numOfPeopleInput" class="tourDetailsInput">
+                </div>
+            </div>
+            <div id="costRange">
+              <label for="cost">Стоимость тура</label>
+              <div class="tourDetailsItems">
+                <input type="text" name="cost" value="" id="costRangeInput" class="tourDetailsInput">
+              </div>
+            </div>
+          </div>
+          <div id="hotelDesc">
+            <div id="hotelStar">
+              <p class="hotels">Категория отелей от</p>
+              <div id="stars">
+                <p id="oneStar">&#9733;</p>
+                <p id="twoStar">&#9733;</p>
+                <p id="threeStar">&#9733;</p>
+                <p id="fourStar">&#9733;</p>
+                <p id="fiveStar">&#9733;</p>
+              </div>
+            </div>
+            <div id="hotelRate">
+              <p class="hotels">Рейтинг TopHotels</p>
+              <div id="rate">
+                <pre>Не ниже </pre>
+                <img src="img/crown.svg" alt="" style="height: 40%;">
+                <pre> </pre>
+                <p id="rateNum">4.0</p>
+              </div>
+            </div>
+            <div id="meal">
+              <p class="hotels">Тип питания</p>
+              <div id="mealType">
+                <p id="mealType1">Любой</p>
+              </div>
+            </div>
+            <div id="position">
+              <p class="hotels">Расположение</p>
+              <div id="positionType">
+                <p id="positionType1">Пляжные, 1-я линия</p>
+              </div>
+            </div>
+            <div id="delKit">
+              <p id="delKitBtn"><i class="fa fa-times-circle" aria-hidden="true"></i> УДАЛИТЬ ПОДБОРКУ</p>
+            </div>
+          </div>
+
+      </section>
+    </section>
+
+  </body>
+</html>
