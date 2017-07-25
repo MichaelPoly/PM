@@ -1,0 +1,101 @@
+$defaultFont: 'Cormorant Infant', serif;
+$defaultColor: green;
+$defaultFontSize: 25px;
+$heightFooter: 100px;
+$heightHeader: 100px;
+
+
+@mixin reference($decoration,$size,$weight,$color) {
+  text-decoration: $decoration;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+@mixin justify-content($pos1) {
+  -webkit-justify-content: $pos1;
+  -ms-flex-pack: $pos1;
+  justify-content: $pos1;
+}
+@mixin align-items($pos3) {
+  -webkit-align-items: $pos3;
+  -ms-flex-align: $pos3;
+  align-items: $pos3;
+}
+@mixin block($width,$height,$borderWidth,$borderStyle,$borderColor,$borderRadius) {
+  width: $width;
+  height: $height;
+  border-width: $borderWidth;
+  border-style: $borderStyle;
+  border-color: $borderColor;
+  border-radius: $borderRadius;
+}
+header {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include block(80%, 150px, 1px, solid, black,0);
+  margin-left: 10%;
+  overflow: hidden;
+  @include justify-content(space-between);
+  @include align-items(flex-end);
+  background-color: lightblue;
+}
+header img {
+  margin-left: 1%;
+}
+header p {
+  font-size: 50px;
+  font-weight: bold;
+  color: green;
+  }
+  .content {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+  }
+  #leftSide {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 300px;
+    @include block(15%, 100%, 1px, solid, black,0);
+    @include flex-direction(column);
+    margin-left: 10%;
+  }
+  #centerBlock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 300px;
+    @include block(49%, 100%, 1px, solid, black,0);
+    margin: 4px;
+  }
+  #rightSide {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 300px;
+    @include block(15%, 100%, 1px, solid, black,0);
+    @include flex-direction(column);
+  }
+  #rightSide #basket {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+  #rightSide #basket img {
+    width: 50%;
+  }

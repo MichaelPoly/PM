@@ -1,0 +1,5 @@
+[
+  {"itemCode": "0001", "imgHref": "img/elefant1.png", "describtion": "Слон фарфоровый инкрустированный кристаллами Сваровски", "name": "Слон ушастый", "price": "4990"},
+  {"itemCode": "0002", "imgHref": "img/elefant2.png", "describtion": "Слон фарфоровый обыкновенный", "name": "Слон фарфоровый", "price": "990"},
+  {"itemCode": "0003", "imgHref": "img/elefant3.png", "describtion": "Композиция из двух слонов", "name": "Слоники", "price": "1190"}
+]
