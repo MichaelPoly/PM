@@ -77,6 +77,44 @@ header {
   margin-left: 15%;
 }
 
+#mainBlock5 {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#interests .mainBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 #centralBlock #interests {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -126,15 +164,42 @@ header {
 }
 
 #kit #kitShow {
-  width: 60% x;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  width: 58%;
   height: 100%;
-  border-width: 1px;
+  border-width: 0px;
   border-style: solid;
   border-color: black;
   border-radius: 0;
+  margin-left: 1%;
 }
 
-#kitHead {
+#kit #kitShow .kitBtn {
+  width: 25%;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0;
+}
+
+#kit #kitShow .kitBtn p {
+  color: #cccccc;
+  text-align: center;
+}
+
+#kitHead5 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -144,6 +209,30 @@ header {
   -webkit-align-items: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 95%;
+  height: 95px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+}
+
+.kitHead {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 95%;
   height: 95px;
   border-width: 0px;
@@ -173,7 +262,54 @@ header {
   border-radius: 0;
 }
 
+.kitHead .Input {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+  width: 25%;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+}
+
+.kitHead .Input label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 3em;
+}
+
 #kitHead .Input .kitNameBox {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 98%;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.kitHead .Input .kitNameBox {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -206,7 +342,33 @@ header {
   text-align: center;
 }
 
+.kitHead .Input input[name="kitName"] {
+  width: 98%;
+  height: 45px;
+  border: none;
+  text-align: center;
+}
+
 #kitHead .Input .cityBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.kitHead .Input .cityBlock {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -229,6 +391,10 @@ header {
   width: 5%;
 }
 
+.kitHead .spanDiv {
+  width: 5%;
+}
+
 #kitHead .Input .cityBlock input[name="cityName1"] {
   width: 90%;
   height: 45px;
@@ -237,7 +403,22 @@ header {
   border: none;
 }
 
+.kitHead .Input .cityBlock input[name="cityName1"] {
+  width: 90%;
+  height: 45px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+
 #kitHead .Input .cityBlock p {
+  font-size: 2em;
+  color: #cccccc;
+  text-align: center;
+  margin-right: 1%;
+}
+
+.kitHead .Input .cityBlock p {
   font-size: 2em;
   color: #cccccc;
   text-align: center;
@@ -267,7 +448,30 @@ header {
   color: white;
 }
 
-#country {
+.kitHead .showResults {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 25%;
+  height: 50px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 25%;
+  background-color: #ff9933;
+  font-size: 90%;
+  color: white;
+}
+
+#country5 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -289,11 +493,58 @@ header {
   margin-top: 2%;
 }
 
-#country h5 {
+.country {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 95%;
+  height: 135px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  margin-top: 2%;
+}
+
+#country5 h5 {
   margin-left: 5%;
   font-size: 0.7em;
   color: #cccccc;
   line-height: 1em;
+}
+
+.country h5 {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 1em;
+}
+
+#country #regionSelect {
+  width: 100%;
+  height: 35px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+}
+
+.country .region {
+  width: 100%;
+  height: 35px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
 }
 
 #country #countrySelect {
