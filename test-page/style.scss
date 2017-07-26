@@ -131,6 +131,30 @@ header {
   @include align-items(center);
   @include justify-content(space-between);
 }
+.kitBtn {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 25%;
+  height: 50px;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #cccccc;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+.kitBtnActive {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 25%;
+  height: 50px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #3399cc;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
 #kit #addKit {
   @include block(30%x, 100%, 0px, solid, black, 0);
   margin-right: 10%;
@@ -146,11 +170,18 @@ header {
   @include block(58%, 100%, 0px, solid, black, 0);
   margin-left: 1%;
 }
-#kit #kitShow .kitBtn {
-  @include block(25%, 100%, 0px, solid, #cccccc, 0);
-}
+// #kit #kitShow .kitBtnActive {
+//   @include block(25%, 100%, 0px, solid, #cccccc, 0);
+// }
+// #kit #kitShow .kitBtn {
+//   @include block(25%, 100%, 0px, solid, #cccccc, 0);
+// }
 #kit #kitShow .kitBtn p {
   color: #cccccc;
+  text-align: center;
+}
+#kit #kitShow .kitBtnActive p {
+  color: #3399cc;
   text-align: center;
 }
 #kitHead5 {

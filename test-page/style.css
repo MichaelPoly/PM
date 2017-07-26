@@ -152,6 +152,40 @@ header {
   justify-content: space-between;
 }
 
+.kitBtn {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 25%;
+  height: 50px;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #cccccc;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+.kitBtnActive {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 25%;
+  height: 50px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #3399cc;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
 #kit #addKit {
   width: 30% x;
   height: 100%;
@@ -185,17 +219,13 @@ header {
   margin-left: 1%;
 }
 
-#kit #kitShow .kitBtn {
-  width: 25%;
-  height: 100%;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0;
-}
-
 #kit #kitShow .kitBtn p {
   color: #cccccc;
+  text-align: center;
+}
+
+#kit #kitShow .kitBtnActive p {
+  color: #3399cc;
   text-align: center;
 }
 

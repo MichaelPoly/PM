@@ -124,12 +124,28 @@ $.ajax({
          $('#hotelDesc' + i).append('<div id="delKit' + i + '" class="delKit"></div>');
          $('#delKit' + i).append('<p id="delKitBtn' + i + '" class="delKitBtn"><i class="fa fa-times-circle" aria-hidden="true"></i> УДАЛИТЬ ПОДБОРКУ</p>');
 
-
-
          $('#mainBlock' + i).hide();
+
+         $('#kit' + i).on('click', function () {
+           var $idNum = this.id[3];
+           console.log($idNum);
+           $('.kitBtnActive').removeClass("kitBtnActive").addClass("kitBtn");
+           $('#' + this.id).removeClass("kitBtn");
+           $('#' + this.id).addClass("kitBtnActive");
+           for (var nn = 0; nn < data.length; nn++) {
+             $('#mainBlock' + nn).hide();
+             $('#mainBlock' + $idNum).show();
+           }
+         });
+
+
+         
        }
        var j = parseInt(data.length)-1;
        $('#mainBlock' + j).show();
+       $('#kit' + j).removeClass("kitBtn").addClass("kitBtnActive");
+
+
 
       }
     });
