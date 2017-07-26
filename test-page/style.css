@@ -398,25 +398,6 @@ header {
   box-shadow: 1px 1px 2px black;
 }
 
-.kitHead .Input .cityBlock {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 90%;
-  height: 50px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px black;
-}
-
 #kitHead .spanDiv {
   width: 5%;
 }
@@ -433,12 +414,75 @@ header {
   border: none;
 }
 
-.kitHead .Input .cityBlock input[name="cityName1"] {
-  width: 90%;
-  height: 45px;
+.select {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
+  width: 30%;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+}
+
+.select label {
+  margin-left: 5%;
+  font-size: 0.7em;
+  color: #cccccc;
+  line-height: 1em;
+}
+
+.select .cityBlock {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
   border-radius: 5px;
-  text-align: center;
+  box-shadow: 1px 1px 2px black;
+}
+
+.select .cityBlock .citySelect {
+  width: 90%;
+  height: 98%;
   border: none;
+}
+
+.dialog {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.overflow {
+  width: 90%;
+  height: 200px;
+  background-color: white;
+  font-size: 80%;
 }
 
 #kitHead .Input .cityBlock p {

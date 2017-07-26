@@ -1,8 +1,16 @@
 $(document).ready(function () {
 
 var $tourKit = [];
-
+var $cityes = [];
 $('#mainBlock5').hide();
+$.ajax({
+      type: 'GET',
+      url: './citys.json',
+      dataType: 'json',
+      success: function (data) {
+        $cityes = data;
+     }
+});
 
 $.ajax({
       type: 'GET',
@@ -21,11 +29,17 @@ $.ajax({
          $('#kitHead' + i + 'Input').append('<div id="kitName' + i + '" class="kitNameBox"></div>');
          $('#kitName' + i).append('<input type="text" id="kitName' + i + 'Input" name="kitName" value="' + data[i].kitName + '">');
          $('#kitHead' + i).append('<div class="spanDiv"></div>');
-         $('#kitHead' + i).append('<div id="kitCity' + i + 'Input" class="Input"></div>');
-         $('#kitCity' + i + 'Input').append('<label for="cityName' + i + 'Input">Ваш город</label>');
+         $('#kitHead' + i).append('<div id="kitCity' + i + 'Input" class="select"></div>');
+         $('#kitCity' + i + 'Input').append('<label for="cityName' + i + 'select">Ваш город</label>');
          $('#kitCity' + i + 'Input').append('<div id="cityName' + i + '" class="cityBlock"></div>');
-         $('#cityName' + i).append('<input type="text" id="cityName' + i + 'Input" name="cityName1" value="' + data[i].city + '">');
-         $('#cityName' + i).append('<p>&#10006;</p>');
+         $('#cityName' + i).append('<select id="cityName' + i + 'select" class="citySelect" name="cityName' + i + 'select"></select>');
+         for (var k = 0; k < $cityes.length; k++) {
+           $('#cityName' + i + 'select').append('<option value="' + $cityes[k].city + '">' + $cityes[k].city + '</option>');
+         }
+         $('#cityName' + i + 'select').selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+        //  $('#cityName' + i + 'select').append('<option value="' + data[i].city + '" selected>' + data[i].city + '</option>');
+        //  $('#cityName' + i).append('<input type="text" id="cityName' + i + 'Input" class="cityInput" name="cityName1" value="' + data[i].city + '">');
+        //  $('#cityName' + i).append('<p>&#10006;</p>');
 
 // Вставить selection
          $('#kitHead' + i).append('<div id="showResults' + i + '" class="showResults"></div>');
@@ -128,25 +142,41 @@ $.ajax({
 
          $('#kit' + i).on('click', function () {
            var $idNum = this.id[3];
-           console.log($idNum);
            $('.kitBtnActive').removeClass("kitBtnActive").addClass("kitBtn");
            $('#' + this.id).removeClass("kitBtn");
            $('#' + this.id).addClass("kitBtnActive");
            for (var nn = 0; nn < data.length; nn++) {
              $('#mainBlock' + nn).hide();
              $('#mainBlock' + $idNum).show();
+             $('.dialog').remove();
            }
          });
 
-
-         
        }
+
        var j = parseInt(data.length)-1;
        $('#mainBlock' + j).show();
        $('#kit' + j).removeClass("kitBtn").addClass("kitBtnActive");
 
+       $('.btnSelect').on('click', function () {
+         for (var k = 0; k < data.length; k++) {
+           if (this.id == 'addRegionBtn' + k) {
+             var $parentBlock = $('#' + this.id);
+             $('#mainBlock' + k).append('<div id="dialogBox' + k + '" class="dialog"></div>');
+             console.log($parentBlock);
+             console.log(k);
 
+           } else if (this.id == 'addCountryBtn' + k) {
+             var $parentBlock = $('#' + this.id);
+             console.log($parentBlock);
+             console.log(k);
 
+           }
+         }
+
+       });
       }
     });
+
+
 });
