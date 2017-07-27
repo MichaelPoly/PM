@@ -326,23 +326,31 @@ header {
 }
 .dialog {
   position: absolute;
-  @include block(50%, 50%, 1px, solid, #cccccc, 5px);
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-wrap(wrap);
+  @include block(35%, 25%, 1px, solid, #cccccc, 5px);
   background-color: white;
 }
-// .kitHead .Input .cityBlock .cityInput {
-//   width: 90%;
-//   height: 45px;
-//   border-radius: 5px;
-//   text-align: center;
-//   border: none;
-// }
-// .citySelect {
-//   width: 90%;
-//   height: 45px;
-//   border-radius: 5px;
-//   text-align: center;
-//   border: none;
-// }
+.dialog h2 {
+  width: 100%;
+  font-size: 120%;
+  color: #3399cc;
+  text-align: center;
+}
+.dialog .regionId {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(29%, 50px, 1px, solid, #cccccc, 5px);
+  margin: 1%;
+  color: #3399cc;
+
+}
+
 .overflow {
   width: 90%;
   height: 200px;
@@ -432,6 +440,9 @@ header {
   @include block(100%, 35px, 1px, solid, #cccccc, 5px);
   border-bottom: none;
 }
+.country .region h4 {
+  display: inline;
+}
 #country #countrySelect {
   @include block(100%, 115px, 1px, solid, #cccccc, 5px);
 }
@@ -446,6 +457,17 @@ header {
   border-top: none;
 }
 .country .countrySelected .countrySelectedBtn {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(space-around);
+  @include block(20%, 35px, 0px, solid, #cccccc, 50px);
+  background-color: #f2f2f2;
+  margin-left: 5%;
+}
+.countrySelectedBtn1 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;

@@ -2,6 +2,8 @@ $(document).ready(function () {
 
 var $tourKit = [];
 var $cityes = [];
+var $regions = [];
+var $countries = [];
 $('#mainBlock5').hide();
 $.ajax({
       type: 'GET',
@@ -9,6 +11,22 @@ $.ajax({
       dataType: 'json',
       success: function (data) {
         $cityes = data;
+     }
+});
+$.ajax({
+      type: 'GET',
+      url: './country.json',
+      dataType: 'json',
+      success: function (data) {
+        $countries = data;
+     }
+});
+$.ajax({
+      type: 'GET',
+      url: './regions.json',
+      dataType: 'json',
+      success: function (data) {
+        $regions = data;
      }
 });
 
@@ -37,19 +55,23 @@ $.ajax({
            $('#cityName' + i + 'select').append('<option value="' + $cityes[k].city + '">' + $cityes[k].city + '</option>');
          }
          $('#cityName' + i + 'select').selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
-        //  $('#cityName' + i + 'select').append('<option value="' + data[i].city + '" selected>' + data[i].city + '</option>');
-        //  $('#cityName' + i).append('<input type="text" id="cityName' + i + 'Input" class="cityInput" name="cityName1" value="' + data[i].city + '">');
-        //  $('#cityName' + i).append('<p>&#10006;</p>');
 
-// Вставить selection
          $('#kitHead' + i).append('<div id="showResults' + i + '" class="showResults"></div>');
          $('#showResults' + i).append('<p>СМОТРЕТЬ РЕЗЕЛЬТАТЫ <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>');
 
          $('#mainBlock' + i).append('<div id="country' + i + '" class="country"></div>');
          $('#country' + i).append('<h5>Вы можете задать несколько стран или регионов для одной подборки</h5>');
          $('#country' + i).append('<div id="regionSelect' + i + '" class="region"></div>');
-         $('#regionSelect' + i).append('<h4 id="region1Name' + i + '">' + data[i].region1 + '</h4>');
-         $('#regionSelect' + i).append('<h4 id="region2Name' + i + '">' + data[i].region2 + '</h4>');
+         if (data[i].region1 != ""){
+           $('#regionSelect' + i).append('<p id="region1Name' + i + '">' + data[i].region1 + ' <b id="region1Name' + i + '" class="close">&#10006;</b></p>');
+         }
+         if (data[i].region2 != ""){
+           $('#regionSelect' + i).append('<p id="region2Name' + i + '">' + data[i].region2 + ' <b id="region2Name' + i + '" class="close">&#10006;</b></p>');
+         }
+         if (data[i].region3 != ""){
+            $('#regionSelect' + i).append('<p id="region3Name' + i + '">' + data[i].region3 + ' <b id="region3Name' + i + '" class="close">&#10006;</b></p>');
+            console.log(data[i].region3);
+         }
          $('#country' + i).append('<div id="selectedCountry' + i + '" class="countrySelected"></div>');
 
 
@@ -57,25 +79,25 @@ $.ajax({
              $('#selectedCountry' + i).append('<div id="firstCountry' + i + '" class="countrySelectedBtn"></div>');
              $('#firstCountry' + i).append('<img src="' + data[i].flag1Href + '" alt="" style="height: 40%;">');
              $('#firstCountry' + i).append('<p>' + data[i].country1 + '</p>');
-             $('#firstCountry' + i).append('<p class="close">&#10006;</p>');
+             $('#firstCountry' + i).append('<p id="firstCountry' + i + '" class="close">&#10006;</p>');
            }
            if (data[i].country2 != "") {
              $('#selectedCountry' + i).append('<div id="secondCountry' + i + '" class="countrySelectedBtn"></div>');
              $('#secondCountry' + i).append('<img src="' + data[i].flag2Href + '" alt="" style="height: 40%;">');
              $('#secondCountry' + i).append('<p>' + data[i].country2 + '</p>');
-             $('#secondCountry' + i).append('<p class="close">&#10006;</p>');
+             $('#secondCountry' + i).append('<p id="secondCountry' + i + '" class="close">&#10006;</p>');
            }
            if (data[i].country3 != "") {
              $('#selectedCountry' + i).append('<div id="thirdCountry' + i + '" class="countrySelectedBtn"></div>');
              $('#thirdCountry' + i).append('<img src="' + data[i].flag3Href + '" alt="" style="height: 40%;">');
              $('#thirdCountry' + i).append('<p>' + data[i].country3 + '</p>');
-             $('#thirdCountry' + i).append('<p class="close">&#10006;</p>');
+             $('#thirdCountry' + i).append('<p id="thirdCountry' + i + '" class="close">&#10006;</p>');
            }
            if (data[i].country4 != "") {
              $('#selectedCountry' + i).append('<div id="fourthCountry' + i + '" class="countrySelectedBtn"></div>');
              $('#fourthCountry' + i).append('<img src="' + data[i].flag4Href + '" alt="" style="height: 40%;">');
              $('#fourthCountry' + i).append('<p>' + data[i].country4 + '</p>');
-             $('#fourthCountry' + i).append('<p class="close">&#10006;</p>');
+             $('#fourthCountry' + i).append('<p id="fourthCountry' + i + '" class="close">&#10006;</p>');
            }
 
          $('#mainBlock' + i).append('<div id="chengeSelect' + i + '" class="chengeSelect"></div>');
@@ -157,22 +179,150 @@ $.ajax({
        var j = parseInt(data.length)-1;
        $('#mainBlock' + j).show();
        $('#kit' + j).removeClass("kitBtn").addClass("kitBtnActive");
-
+       var $nt = 0;
        $('.btnSelect').on('click', function () {
          for (var k = 0; k < data.length; k++) {
            if (this.id == 'addRegionBtn' + k) {
-             var $parentBlock = $('#' + this.id);
              $('#mainBlock' + k).append('<div id="dialogBox' + k + '" class="dialog"></div>');
-             console.log($parentBlock);
-             console.log(k);
+             $('#dialogBox' + k).append('<h2>Выберете направление</h2>');
+             for (var kk = 0; kk < $regions.length; kk++) {
+               $('#dialogBox' + k).append('<div id="regionId' + kk + '" class="regionId"></div>');
+               $('#regionId' + kk).append('<p>' + $regions[kk].region + '</p>');
+             }
+              $nt = k;
+             $('.regionId').on('click', function () {
+               var idNum = k - 1;
+               var content = this.id;
+               content = parseInt(content[8]);
+
+
+               if ($tourKit[$nt].region1 == ""){
+                 $('#regionSelect' + $nt).append('<p id="region1Name' + $nt + '">' + $regions[content].region + ' <b id="region1Name' + $nt + '" class="close">&#10006;</b></p>');
+                 $('#region1Name' + $nt).on('click', function () {
+                 $('#' + this.id).remove();
+                 $tourKit[$nt].region1 = "";
+                 });
+                 $tourKit[$nt].region1 = $regions[content].region;
+                 $('.dialog').remove();
+               } else if ($tourKit[$nt].region2 == "") {
+                 $('#regionSelect' + $nt).append('<p id="region2Name' + $nt + '">' + $regions[content].region + ' <b id="region2Name' + $nt + '" class="close">&#10006;</b></p>');
+                 $('#region2Name' + $nt).on('click', function () {
+                 $('#' + this.id).remove();
+                 $tourKit[$nt].region2 = "";
+                 });
+                 $tourKit[$nt].region2 = $regions[content].region;
+                 $('.dialog').remove();
+               } else if ($tourKit[$nt].region3 == "") {
+                 $('#regionSelect' + $nt).append('<p id="region3Name' + $nt + '">' + $regions[content].region + ' <b id="region3Name' + $nt + '" class="close">&#10006;</b></p>');
+                 $('#region3Name' + $nt).on('click', function () {
+                 $('#' + this.id).remove();
+                 $tourKit[$nt].region3 = "";
+                 });
+                 $tourKit[$nt].region3 = $regions[content].region;
+                 $('.dialog').remove();
+               } else {
+                 alert('Достигнуто максимальное количество регионов');
+                 $('.dialog').remove();
+               }
+
+             });
+
+
 
            } else if (this.id == 'addCountryBtn' + k) {
-             var $parentBlock = $('#' + this.id);
-             console.log($parentBlock);
-             console.log(k);
+             $('#mainBlock' + k).append('<div id="dialogBox' + k + '" class="dialog"></div>');
+             $('#dialogBox' + k).append('<h2>Выберете Страну</h2>');
+    //----------------
+            var $t = k;
+             if ($tourKit[k].region1 != "") {
+               for (var c = 0; c < $countries.length; c++) {
+                 if ($tourKit[k].region1 == $countries[c].region) {
+                   $('#dialogBox' + k).append('<div id="CountryS' + c + '" class="countrySelectedBtn1"></div>');
+                   $('#CountryS' + c).append('<p>' + $countries[c].country + '</p>');
+                 }
+                 if ($tourKit[k].region2 == $countries[c].region) {
+                   $('#dialogBox' + k).append('<div id="CountryS' + c + '" class="countrySelectedBtn1"></div>');
+                   $('#CountryS' + c).append('<p>' + $countries[c].country + '</p>');
+                 }
+                 if ($tourKit[k].region3 == $countries[c].region) {
+                   $('#dialogBox' + k).append('<div id="CountryS' + c + '" class="countrySelectedBtn1"></div>');
+                   $('#CountryS' + c).append('<p>' + $countries[c].country + '</p>');
+                 }
+               }
+               $('.countrySelectedBtn1').on('click', function () {
+                 var $countryId = this.id;
+                 $countryId = $countryId.slice(8);
 
+                 if ($tourKit[$t].country1 == "") {
+                   $('#selectedCountry' + $t).append('<div id="firstCountry' + $t + '" class="countrySelectedBtn"></div>');
+                  // //  $('#firstCountry' + i).append('<img src="' + data[i].flag1Href + '" alt="" style="height: 40%;">');
+                   $('#firstCountry' + $t).append('<p>' + $countries[$countryId].country + '</p>');
+                   $('#firstCountry' + $t).append('<p id="firstCountry' + $t + '" class="close">&#10006;</p>');
+                   $tourKit[$t].country1 = $countries[$countryId].country;
+                   $('#firstCountry' + $t).on('click', function () {
+                   $('#' + this.id).remove();
+                   $tourKit[$t].country1 = "";
+                   $('.dialog').remove();
+                  });
+                } else if ($tourKit[$t].country2 == ""){
+                   $('#selectedCountry' + $t).append('<div id="secondCountry' + $t + '" class="countrySelectedBtn"></div>');
+                  // //  $('#firstCountry' + i).append('<img src="' + data[i].flag1Href + '" alt="" style="height: 40%;">');
+                   $('#secondCountry' + $t).append('<p>' + $countries[$countryId].country + '</p>');
+                   $('#secondCountry' + $t).append('<p id="secondCountry' + $t + '" class="close">&#10006;</p>');
+                   $tourKit[$t].country2 = $countries[$countryId].country;
+                   $('#secondCountry' + $t).on('click', function () {
+                   $('#' + this.id).remove();
+                   $tourKit[$t].country2 = "";
+                   });
+                  $('.dialog').remove();
+                } else if ($tourKit[$t].country3 == ""){
+                   $('#selectedCountry' + $t).append('<div id="thirdCountry' + $t + '" class="countrySelectedBtn"></div>');
+                  // //  $('#firstCountry' + i).append('<img src="' + data[i].flag1Href + '" alt="" style="height: 40%;">');
+                   $('#thirdCountry' + $t).append('<p>' + $countries[$countryId].country + '</p>');
+                   $('#thirdCountry' + $t).append('<p id="thirdCountry' + $t + '" class="close">&#10006;</p>');
+                   $tourKit[$t].country3 = $countries[$countryId].country;
+                   $('#thirdCountry' + $t).on('click', function () {
+                   $('#' + this.id).remove();
+                   $tourKit[$t].country3 = "";
+                   });
+                  $('.dialog').remove();
+                } else if ($tourKit[$t].country4 == ""){
+                   $('#selectedCountry' + $t).append('<div id="fourthCountry' + $t + '" class="countrySelectedBtn"></div>');
+                  // //  $('#firstCountry' + i).append('<img src="' + data[i].flag1Href + '" alt="" style="height: 40%;">');
+                   $('#fourthCountry' + $t).append('<p>' + $countries[$countryId].country + '</p>');
+                   $('#fourthCountry' + $t).append('<p id="fourthCountry' + $t + '" class="close">&#10006;</p>');
+                   $tourKit[$t].country4 = $countries[$countryId].country;
+                   $('#fourthCountry' + $t).on('click', function () {
+                   $('#' + this.id).remove();
+                   $tourKit[$t].country4 = "";
+                   });
+                  $('.dialog').remove();
+                } else {
+                  alert('Достигнуто максимальное количество стран');
+                  $('.dialog').remove();
+                }
+               });
+             }
+    //----------------
+              $('.dialog').on('click', function () {
+
+              });
            }
          }
+
+       });
+       $('.close').on('click', function () {
+         var $x = this.id;
+         console.log(this.id);
+         if ($x[6] == 1) {
+           $tourKit[$x[11]].region1 = "";
+         } else if ($x[6] == 2) {
+           $tourKit[$x[11]].region2 = "";
+         } else if ($x[6] == 3) {
+           $tourKit[$x[11]].region3 = "";
+         }
+         console.log(this.id);
+         $('#' + this.id).remove();
 
        });
       }
