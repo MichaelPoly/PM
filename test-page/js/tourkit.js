@@ -232,9 +232,11 @@ $.ajax({
            } else if (this.id == 'addCountryBtn' + k) {
              $('#mainBlock' + k).append('<div id="dialogBox' + k + '" class="dialog"></div>');
              $('#dialogBox' + k).append('<h2>Выберете Страну</h2>');
+             console.log($tourKit);
+             console.log(k);
     //----------------
             var $t = k;
-             if ($tourKit[k].region1 != "") {
+            //  if ($tourKit[k].region1 != "") {
                for (var c = 0; c < $countries.length; c++) {
                  if ($tourKit[k].region1 == $countries[c].region) {
                    $('#dialogBox' + k).append('<div id="CountryS' + c + '" class="countrySelectedBtn1"></div>');
@@ -249,6 +251,7 @@ $.ajax({
                    $('#CountryS' + c).append('<p>' + $countries[c].country + '</p>');
                  }
                }
+            //  }
                $('.countrySelectedBtn1').on('click', function () {
                  var $countryId = this.id;
                  $countryId = $countryId.slice(8);
@@ -262,8 +265,8 @@ $.ajax({
                    $('#firstCountry' + $t).on('click', function () {
                    $('#' + this.id).remove();
                    $tourKit[$t].country1 = "";
-                   $('.dialog').remove();
                   });
+                  $('.dialog').remove();
                 } else if ($tourKit[$t].country2 == ""){
                    $('#selectedCountry' + $t).append('<div id="secondCountry' + $t + '" class="countrySelectedBtn"></div>');
                   // //  $('#firstCountry' + i).append('<img src="' + data[i].flag1Href + '" alt="" style="height: 40%;">');
@@ -308,7 +311,7 @@ $.ajax({
 
               });
            }
-         }
+
 
        });
        $('.close').on('click', function () {
@@ -320,10 +323,18 @@ $.ajax({
            $tourKit[$x[11]].region2 = "";
          } else if ($x[6] == 3) {
            $tourKit[$x[11]].region3 = "";
+         } else if ($x[1] == 'i') {
+           $tourKit[$x[12]].country1 = "";
+         } else if ($x[1] == 'e') {
+           $tourKit[$x[13]].country2 = "";
+         } else if ($x[1] == 'h') {
+           $tourKit[$x[12]].country3 = "";
+         } else if ($x[1] == '0') {
+           $tourKit[$x[13]].country4 = "";
          }
+
          console.log(this.id);
          $('#' + this.id).remove();
-
        });
       }
     });
