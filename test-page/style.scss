@@ -623,6 +623,71 @@ header {
   color: #cccccc;
   line-height: 3em;
 }
+.dialogDate {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-wrap(wrap);
+  @include block(35%, 25%, 1px, solid, #cccccc, 5px);
+  background-color: white;
+  @include align-items(center);
+  @include justify-content(space-around);
+}
+.dialogDate h2 {
+  width: 100%;
+  font-size: 120%;
+  color: #3399cc;
+  text-align: center;
+}
+.dialogDate .dialogDateBox {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(35%, 80px, 0px, solid, #cccccc, 5px);
+}
+.dialogDate .dialogDateBtn {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(35%, 30px, 1px, solid, #cccccc, 5px);
+  box-shadow: 1px 1px 2px black;
+}
+.dialogDate .dialogDateBtn p {
+  width: 100%;
+  font-size: 100%;
+  color: #3399cc;
+  text-align: center;
+}
+.dialogDate .dialogDateBox .dialogDateInput {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(100%, 50px, 1px, solid, #cccccc, 5px);
+  box-shadow: 1px 1px 2px black;
+}
+.dialogDateInput input {
+  width: 90%;
+  height: 92%;
+  text-align: center;
+  border: none;
+}
+.dialogDateBox p {
+  width: 100%;
+  font-size: 80%;
+  font-weight: bold;
+  color: #3399cc;
+  text-align: center;
+}
 
 #numOfDays {
   display: -ms-flexbox;
@@ -654,6 +719,14 @@ header {
   color: #cccccc;
   line-height: 3em;
 }
+.dialogDayPeack {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(space-around);
+  @include block(100%, 60%, 0px, solid, #cccccc, 0px);
+}
 #people {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -672,6 +745,39 @@ header {
   @include justify-content(center);
   @include block(20%, 85px, 0px, solid, #cccccc, 0px);
 }
+.dialogPeople {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-wrap(wrap);
+  @include block(35%, 40%, 1px, solid, #cccccc, 5px);
+  background-color: white;
+  @include align-items(center);
+  @include justify-content(space-around);
+}
+.dialogPeople .dialogDateBtn {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(35%, 30px, 1px, solid, #cccccc, 5px);
+  box-shadow: 1px 1px 2px black;
+}
+.dialogPeople .dialogDateBtn p {
+  width: 100%;
+  font-size: 100%;
+  color: #3399cc;
+  text-align: center;
+}
+.dialogPeople h2 {
+  width: 100%;
+  font-size: 120%;
+  color: #3399cc;
+  text-align: center;
+}
 #people label {
   margin-left: 5%;
   font-size: 0.7em;
@@ -684,6 +790,62 @@ header {
   color: #cccccc;
   line-height: 3em;
 }
+.dialogFullAge {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(flex-start);
+  @include block(90%, 35%, 0px, solid, #cccccc, 0px);
+}
+.dialogFullAge h6 {
+  font-size: 80%;
+  color: #3399cc;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.dialogFullAge .person {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(20%, 100%, 0px, solid, #cccccc, 0px);
+}
+.dialogFullAge .person:hover > .personT {
+  font-size: 130%;
+  color: #3399cc;
+  text-align: center;
+}
+.personT {
+  font-size: 120%;
+  color: #cccccc;
+  text-align: center;
+}
+.personTActive {
+  font-size: 130%;
+  color: lightgreen;
+  text-align: center;
+}
+.personT:hover {
+  font-size: 130%;
+  color: #3399cc;
+  text-align: center;
+}
+
+.dialogFullAge .FullAgee {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(100%, 60%, 0px, solid, #cccccc, 0px);
+  border-bottom: 1px solid #cccccc;
+}
+
 #costRange {
   display: -ms-flexbox;
   display: -webkit-flex;

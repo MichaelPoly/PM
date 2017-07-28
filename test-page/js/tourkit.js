@@ -110,17 +110,17 @@ $.ajax({
          $('#tourDetails' + i).append('<div id="startEndDate' + i + '" class="startEndDate"></div>');
          $('#startEndDate' + i).append('<label for="SEDate' + i + 'Input">Дата вылета</label>');
          $('#startEndDate' + i).append('<div id="tourDetailsDate' + i + '" class="tourDetailsItems"></div>');
-         $('#tourDetailsDate' + i).append('<input type="text" id="SEDate' + i + 'Input" name="SEDate" value="">');
+         $('#tourDetailsDate' + i).append('<input type="text" id="SEDate' + i + 'Input" name="SEDate" value="" class="SEDate1">');
 
          $('#tourDetails' + i).append('<div id="numOfDays' + i + '" class="numOfDays"></div>');
          $('#numOfDays' + i).append('<label for="days' + i + 'Input">На сколько</label>');
          $('#numOfDays' + i).append('<div id="tourDetailsDays' + i + '" class="tourDetailsItems"></div>');
-         $('#tourDetailsDays' + i).append('<input type="text" id="days' + i + 'Input" name="days" value="' + data[i].qNights + '">');
+         $('#tourDetailsDays' + i).append('<input type="text" id="days' + i + 'Input" name="days" value="' + data[i].qNights + ' ночей" class="nDays">');
 
          $('#tourDetails' + i).append('<div id="people' + i + '" class="people"></div>');
          $('#people' + i).append('<label for="peopleNum' + i + 'Input">Количество гостей</label>');
          $('#people' + i).append('<div id="tourDetailsPeople' + i + '" class="tourDetailsItems"></div>');
-         $('#tourDetailsPeople' + i).append('<input type="text" id="peopleNum' + i + 'Input" name="peopleNum" value="' + data[i].qFullAge + ' взрослых, ' + data[i].qChild + ' детей">');
+         $('#tourDetailsPeople' + i).append('<input type="text" id="peopleNum' + i + 'Input" name="peopleNum" value="' + data[i].qFullAge + ' взрослых, ' + data[i].qChild + ' детей" class="peopleNum">');
 
          $('#tourDetails' + i).append('<div id="costRange' + i + '" class="costRange"></div>');
          $('#costRange' + i).append('<label for="costRange' + i + 'Input">Стоимость тура</label>');
@@ -307,12 +307,7 @@ $.ajax({
                });
              }
     //----------------
-              $('.dialog').on('click', function () {
-
-              });
            }
-
-
        });
        $('.close').on('click', function () {
          var $x = this.id;
@@ -332,11 +327,141 @@ $.ajax({
          } else if ($x[1] == '0') {
            $tourKit[$x[13]].country4 = "";
          }
-
-         console.log(this.id);
          $('#' + this.id).remove();
        });
+//---------------------
+       $('.SEDate1').on('click', function () {
+         var $dId1 = this.id;
+         var $dId = $dId1[6];
+         $('#mainBlock' + $dId).append('<div id="dialogBoxDate' + $dId + '" class="dialogDate"></div>');
+         $('#dialogBoxDate' + $dId).append('<h2>Выберете дату вылета и дату прилета</h2>');
+         $('#dialogBoxDate' + $dId).append('<div id="startDateBox' + $dId + '" class="dialogDateBox"></div>');
+         $('#startDateBox' + $dId).append('<p>Выберите дату вылета</p>');
+         $('#startDateBox' + $dId).append('<div id="startDate' + $dId + '" class="dialogDateInput"></div>');
+         $('#startDate' + $dId).append('<input type="text" id="start">');
+         $('#dialogBoxDate' + $dId).append('<div id="endDateBox' + $dId + '" class="dialogDateBox"></div>');
+         $('#endDateBox' + $dId).append('<p>Выберите дату прилета</p>');
+         $('#endDateBox' + $dId).append('<div id="endDate' + $dId + '" class="dialogDateInput"></div>');
+         $('#endDate' + $dId).append('<input type="text" id="end">');
+         $('#dialogBoxDate' + $dId).append('<div id="endBtn' + $dId + '" class="dialogDateBtn"></div>');
+         $('#endBtn' + $dId).append('<p>Готово</p>');
+        $('#start').datepicker({
+          dateFormat: "dd.mm.yy",
+          firstDay: 1
+        });
+        $('#end').datepicker({
+          dateFormat: "dd.mm.yy",
+          firstDay: 1
+        });
+        $('#endBtn' + $dId).on('click', function () {
+          var $startD = document.querySelector('#start').value;
+          var $endD = document.querySelector('#end').value;
+          document.querySelector('#' + $dId1).value = $startD + ' - ' + $endD;
+          $('.dialogDate').remove();
+        });
+
+       });
+
+       $('.nDays').on('click', function () {
+         var $daysId = this.id;
+         var $idD = $daysId[4];
+         $('#mainBlock' + $idD).append('<div id="dialogBoxDays' + $idD + '" class="dialogDate"></div>');
+         $('#dialogBoxDays' + $idD).append('<h2>Выберете количество дней</h2>');
+         $('#dialogBoxDays' + $idD).append('<div id="dialogDays' + $idD + '" class="dialogDayPeack"></div>');
+         $('#dialogDays' + $idD).append('<label for="radio-1">1 - 6</label>');
+         $('#dialogDays' + $idD).append('<input type="radio" name="radio-1" id="radio-1">');
+         $('#dialogDays' + $idD).append('<label for="radio-2">7 - 14</label>');
+         $('#dialogDays' + $idD).append('<input type="radio" name="radio-2" id="radio-2">');
+         $('#dialogDays' + $idD).append('<label for="radio-3">15 - 20</label>');
+         $('#dialogDays' + $idD).append('<input type="radio" name="radio-3" id="radio-3">');
+         $( "input[type='radio']" ).checkboxradio();
+         $( "input[type='radio']" ).on('click', function () {
+           var $DaysN = this.id;
+           $DaysN = $DaysN[6];
+           if ($DaysN == 1) {
+             document.querySelector('#' + $daysId).value = '1 - 6 ночей';
+             $tourKit[$idD].qNights = "1 - 6";
+           } else if ($DaysN == 2) {
+             document.querySelector('#' + $daysId).value = '7 - 14 ночей';
+             $tourKit[$idD].qNights = "7 - 14";
+           } else if ($DaysN == 3) {
+             document.querySelector('#' + $daysId).value = '15 - 20 ночей';
+             $tourKit[$idD].qNights = "15 - 20";
+           }
+           $('.dialogDate').remove();
+         });
+       });
+
+       $('.peopleNum').on('click', function () {
+         var $PId = this.id;
+         var $idP = $PId[9];
+         $('#mainBlock' + $idP).append('<div id="dialogBoxPeople' + $idP + '" class="dialogPeople"></div>');
+         $('#dialogBoxPeople' + $idP).append('<h2>Выберете количество человек</h2>');
+         $('#dialogBoxPeople' + $idP).append('<div id="BoxPeopleFullAge' + $idP + '" class="dialogFullAge"></div>');
+         $('#BoxPeopleFullAge' + $idP).append('<h6>Выберете количество взрослых</h6>');
+         $('#BoxPeopleFullAge' + $idP).append('<div id="PeopleFullAge' + $idP + '" class="FullAgee"></div>');
+         $('#PeopleFullAge' + $idP).append('<div id="pers1n' + $idP + '" class="person"></div>');
+         $('#pers1n' + $idP).append('<p id="per1n' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleFullAge' + $idP).append('<div id="pers2n' + $idP + '" class="person"></div>');
+         $('#pers2n' + $idP).append('<p id="per2n' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleFullAge' + $idP).append('<div id="pers3n' + $idP + '" class="person"></div>');
+         $('#pers3n' + $idP).append('<p id="per3n' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleFullAge' + $idP).append('<div id="pers4n' + $idP + '" class="person"></div>');
+         $('#pers4n' + $idP).append('<p id="per4n' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleFullAge' + $idP).append('<div id="pers5n' + $idP + '" class="person"></div>');
+         $('#pers5n' + $idP).append('<p id="per5n' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+//Дети
+         $('#dialogBoxPeople' + $idP).append('<div id="BoxPeopleChild' + $idP + '" class="dialogFullAge"></div>');
+         $('#BoxPeopleChild' + $idP).append('<h6>Выберете количество детей</h6>');
+         $('#BoxPeopleChild' + $idP).append('<div id="PeopleChilde' + $idP + '" class="FullAgee"></div>');
+         $('#PeopleChilde' + $idP).append('<div id="pers1h' + $idP + '" class="person"></div>');
+         $('#pers1h' + $idP).append('<p id="per1h' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleChilde' + $idP).append('<div id="pers2h' + $idP + '" class="person"></div>');
+         $('#pers2h' + $idP).append('<p id="per2h' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleChilde' + $idP).append('<div id="pers3h' + $idP + '" class="person"></div>');
+         $('#pers3h' + $idP).append('<p id="per3h' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleChilde' + $idP).append('<div id="pers4h' + $idP + '" class="person"></div>');
+         $('#pers4h' + $idP).append('<p id="per4h' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#PeopleChilde' + $idP).append('<div id="pers5h' + $idP + '" class="person"></div>');
+         $('#pers5h' + $idP).append('<p id="per5h' + $idP + '" class="personT"><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i><i class="fa fa-male" aria-hidden="true"></i></p>');
+         $('#dialogBoxPeople' + $idP).append('<div id="endBtn' + $idP + '" class="dialogDateBtn"></div>');
+         $('#endBtn' + $idP).append('<p>Готово</p>');
+         var $fullAges = 0;
+         var $childrens = 0;
+         $('.person').on('click', function () {
+           var $PersId = this.id;
+           var $check = $PersId[5];
+           if ($PersId[5] == "h") {
+             $childrens = $PersId[4];
+             var $perName = '#per' + $PersId[4] + $PersId[5];
+             for (var z = 0; z < 6; z++) {
+               $('#per' + z + $PersId[5] + $idP).removeClass("personTActive").addClass("personT");
+             }
+             $('#per' + $PersId[4] + $PersId[5] + $idP).removeClass("personT").addClass("personTActive");
+           }
+           if ($PersId[5] == "n") {
+             $fullAges = $PersId[4];
+             var $perName = '#per' + $PersId[4] + $PersId[5];
+             for (var z = 0; z < 6; z++) {
+               $('#per' + z + $PersId[5] + $idP).removeClass("personTActive").addClass("personT");
+             }
+             $('#per' + $PersId[4] + $PersId[5] + $idP).removeClass("personT").addClass("personTActive");
+           }
+
+         });
+         $('#endBtn' + $idP).on('click', function () {
+           $tourKit[$idP].qFullAge = $fullAges;
+           $tourKit[$idP].qChild = $childrens;
+           document.querySelector('#peopleNum' + $idP + 'Input').value = $fullAges + ' Взрослых, ' + $childrens + ' детей';
+           $('.dialogPeople').remove();
+         });
+        //  <i class="fa fa-male" aria-hidden="true"></i>
+
+       });
+
       }
+//---------------------
+
     });
 
 

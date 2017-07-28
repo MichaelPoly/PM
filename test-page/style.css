@@ -1027,6 +1027,123 @@ header {
   line-height: 3em;
 }
 
+.dialogDate {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 35%;
+  height: 25%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.dialogDate h2 {
+  width: 100%;
+  font-size: 120%;
+  color: #3399cc;
+  text-align: center;
+}
+
+.dialogDate .dialogDateBox {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 35%;
+  height: 80px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+}
+
+.dialogDate .dialogDateBtn {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 35%;
+  height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.dialogDate .dialogDateBtn p {
+  width: 100%;
+  font-size: 100%;
+  color: #3399cc;
+  text-align: center;
+}
+
+.dialogDate .dialogDateBox .dialogDateInput {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.dialogDateInput input {
+  width: 90%;
+  height: 92%;
+  text-align: center;
+  border: none;
+}
+
+.dialogDateBox p {
+  width: 100%;
+  font-size: 80%;
+  font-weight: bold;
+  color: #3399cc;
+  text-align: center;
+}
+
 #numOfDays {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1083,6 +1200,24 @@ header {
   line-height: 3em;
 }
 
+.dialogDayPeack {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  width: 100%;
+  height: 60%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
 #people {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1125,6 +1260,65 @@ header {
   border-radius: 0px;
 }
 
+.dialogPeople {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 35%;
+  height: 40%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.dialogPeople .dialogDateBtn {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 35%;
+  height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.dialogPeople .dialogDateBtn p {
+  width: 100%;
+  font-size: 100%;
+  color: #3399cc;
+  text-align: center;
+}
+
+.dialogPeople h2 {
+  width: 100%;
+  font-size: 120%;
+  color: #3399cc;
+  text-align: center;
+}
+
 #people label {
   margin-left: 5%;
   font-size: 0.7em;
@@ -1137,6 +1331,99 @@ header {
   font-size: 0.7em;
   color: #cccccc;
   line-height: 3em;
+}
+
+.dialogFullAge {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  height: 35%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+.dialogFullAge h6 {
+  font-size: 80%;
+  color: #3399cc;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.dialogFullAge .person {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+.dialogFullAge .person:hover > .personT {
+  font-size: 130%;
+  color: #3399cc;
+  text-align: center;
+}
+
+.personT {
+  font-size: 120%;
+  color: #cccccc;
+  text-align: center;
+}
+
+.personTActive {
+  font-size: 130%;
+  color: lightgreen;
+  text-align: center;
+}
+
+.personT:hover {
+  font-size: 130%;
+  color: #3399cc;
+  text-align: center;
+}
+
+.dialogFullAge .FullAgee {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: raw;
+  -ms-flex-direction: raw;
+  flex-direction: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 60%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+  border-bottom: 1px solid #cccccc;
 }
 
 #costRange {
