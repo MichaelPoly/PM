@@ -125,7 +125,7 @@ $.ajax({
          $('#tourDetails' + i).append('<div id="costRange' + i + '" class="costRange"></div>');
          $('#costRange' + i).append('<label for="costRange' + i + 'Input">Стоимость тура</label>');
          $('#costRange' + i).append('<div id="tourDetailsCost' + i + '" class="tourDetailsItems"></div>');
-         $('#tourDetailsCost' + i).append('<input type="text" id="costRange' + i + 'Input" name="costRange" value="' + data[i].costFrom + ' Р - ' + data[i].costTo + ' Р">');
+         $('#tourDetailsCost' + i).append('<input type="text" id="costRange' + i + 'Input" name="costRange" value="' + data[i].costFrom + ' Р - ' + data[i].costTo + ' Р" class="costRangeI">');
 
          $('#mainBlock' + i).append('<div id="hotelDesc' + i + '" class="hotelDesc"></div>');
          $('#hotelDesc' + i).append('<div id="hotelStar' + i + '" class="hotelStar"></div>');
@@ -361,7 +361,7 @@ $.ajax({
         });
 
        });
-
+//---------------------
        $('.nDays').on('click', function () {
          var $daysId = this.id;
          var $idD = $daysId[4];
@@ -391,7 +391,7 @@ $.ajax({
            $('.dialogDate').remove();
          });
        });
-
+//---------------------
        $('.peopleNum').on('click', function () {
          var $PId = this.id;
          var $idP = $PId[9];
@@ -447,7 +447,6 @@ $.ajax({
              }
              $('#per' + $PersId[4] + $PersId[5] + $idP).removeClass("personT").addClass("personTActive");
            }
-
          });
          $('#endBtn' + $idP).on('click', function () {
            $tourKit[$idP].qFullAge = $fullAges;
@@ -455,9 +454,25 @@ $.ajax({
            document.querySelector('#peopleNum' + $idP + 'Input').value = $fullAges + ' Взрослых, ' + $childrens + ' детей';
            $('.dialogPeople').remove();
          });
-        //  <i class="fa fa-male" aria-hidden="true"></i>
-
        });
+//---------------------
+      $('.costRangeI').on('click', function () {
+        var $idP = this.id;
+        var $idC = $idP[9];
+        $('#mainBlock' + $idC).append('<div id="dialogBoxCost' + $idC + '" class="dialogDate"></div>');
+        $('#dialogBoxCost' + $idC).append('<h2>Выберете диапазон цен</h2>');
+        $('#dialogBoxCost' + $idC).append('<div id="dialogCost' + $idC + '" class="dialogCost"></div>');
+        $('#dialogCost' + $idC).slider({
+                values: [0, 1000000],
+                range: true,
+                // create: function() {
+                //     $('#rangeMin').val($('#rangeslider').slider("values", 0));
+                //     $('#rangeMax').val($('#rangeslider').slider("values", 1));
+                // }
+            });
+        console.log($idC);
+      });
+
 
       }
 //---------------------
