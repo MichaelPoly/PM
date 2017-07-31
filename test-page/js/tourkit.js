@@ -480,7 +480,31 @@ $.ajax({
             });
         console.log($idC);
       });
+//--------------------------------
 
+            $('#rangeslider').slider({
+                values: [35, 65],
+                range: true,
+                create: function() {
+                    $('#rangeMin').val($('#rangeslider').slider("values", 0));
+                    $('#rangeMax').val($('#rangeslider').slider("values", 1));
+                }
+            })
+
+            $('.costInput').change(function(e) {
+                switch (this.id) {
+                    case 'startCost' + $idC + 'Input':
+                    case 'endtCost' + $idC + 'Input':
+                        var index = (this.id == 'endtCost' + $idC + 'Input') ? 1 : 0;
+                        $('#dialogCost' + $idC).slider("values", index, $(this).val())
+                        break;
+                    case "slideVal":
+                        $('#slider').slider("value", $(this).val())
+                        break;
+                }
+            })
+        });
+//-------------------------------
 
       }
 //---------------------
