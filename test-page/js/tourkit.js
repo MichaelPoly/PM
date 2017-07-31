@@ -469,45 +469,85 @@ $.ajax({
         $('#dialogCostInputEnd' + $idC).append('<p class="startCost">Конечная цена</p>');
         $('#dialogCostInputEnd' + $idC).append('<input type="text" id="endtCost' + $idC + 'Input" class="costInput">');
         $('#dialogBoxCost' + $idC).append('<div id="dialogCost' + $idC + '" class="dialogCost"></div>');
+        $('#dialogBoxCost' + $idC).append('<div id="endBtn' + $idC + '" class="dialogDateBtn"></div>');
+        $('#endBtn' + $idC).append('<p>Готово</p>');
+        var $costStart;
+        var $costEnd;
+        function displaySliderValues() {
+          $('#startCost' + $idC + 'Input').val($('#dialogCost' + $idC).slider("values", 0));
+          $('#endtCost' + $idC + 'Input').val($('#dialogCost' + $idC).slider("values", 1));
+          $costStart = document.querySelector('#startCost' + $idC + 'Input').value;
+          $costEnd = document.querySelector('#endtCost' + $idC + 'Input').value;
+          document.querySelector('#startCost' + $idC + 'Input').value = $costStart * 5000;
+          document.querySelector('#endtCost' + $idC + 'Input').value = $costEnd * 5000;
 
+         }
+         var $costItem0 = parseInt($tourKit[$idC].costFrom) / 5000;
+         var $costItem1 = parseInt($tourKit[$idC].costTo) / 5000;
         $('#dialogCost' + $idC).slider({
-                values: [0, 1000000],
+                values: [$costItem0, $costItem1],
                 range: true,
-                create: function() {
-                    $('#startCost' + $idC + 'Input').val($('#dialogCost' + $idC).slider("values", 0));
-                    $('#endtCost' + $idC + 'Input').val($('#dialogCost' + $idC).slider("values", 1));
-                }
+                create: displaySliderValues,
+                slide: displaySliderValues
             });
-        console.log($idC);
-      });
-//--------------------------------
 
-            $('#rangeslider').slider({
-                values: [35, 65],
-                range: true,
-                create: function() {
-                    $('#rangeMin').val($('#rangeslider').slider("values", 0));
-                    $('#rangeMax').val($('#rangeslider').slider("values", 1));
-                }
-            })
-
-            $('.costInput').change(function(e) {
+            $('.costInput').change(function() {
                 switch (this.id) {
                     case 'startCost' + $idC + 'Input':
                     case 'endtCost' + $idC + 'Input':
                         var index = (this.id == 'endtCost' + $idC + 'Input') ? 1 : 0;
-                        $('#dialogCost' + $idC).slider("values", index, $(this).val())
+                        var $cost = $(this).val() / 5000;
+                        $('#dialogCost' + $idC).slider("values", index, $cost)
                         break;
                     case "slideVal":
-                        $('#slider').slider("value", $(this).val())
+                        var $cost = $(this).val() / 5000;
+                        $('#slider').slider("value", $cost)
                         break;
                 }
-            })
-        });
-//-------------------------------
+            });
+            $('#endBtn' + $idC).on('click', function () {
+              $tourKit[$idC].costFrom = $costStart * 5000;
+              $tourKit[$idC].qChild = $costEnd * 5000;
+              document.querySelector('#costRange' + $idC + 'Input').value = $costStart * 5000 + ' Р - ' + $costEnd * 5000 + ' Р';
+              $('.dialogDate').remove();
+            });
+      });
+//--------------------------------
+      $('.hotelStar').on('click', function () {
+        var $idh = this.id;
+        var $idh1 = $idh[9];
+        $('#mainBlock' + $idh1).append('<div id="dialogBoxStars' + $idh1 + '" class="dialogDate"></div>');
+        $('#dialogBoxStars' + $idh1).append('<h2>Выберете звездность отеля</h2>');
+        $('#dialogBoxStars' + $idh1).append('<div id="dialogStars' + $idh1 + '" class="dialogStars"></div>');
+        $('#dialogStars' + $idh1).append('<div id="Star1s' + $idh1 + '" class="Stars"></div>');
+        $('#dialogStars' + $idh1).append('<div id="Star2s' + $idh1 + '" class="Stars"></div>');
+        $('#dialogStars' + $idh1).append('<div id="Star3s' + $idh1 + '" class="Stars"></div>');
+        $('#dialogStars' + $idh1).append('<div id="Star4s' + $idh1 + '" class="Stars"></div>');
+        $('#dialogStars' + $idh1).append('<div id="Star5s' + $idh1 + '" class="Stars"></div>');
+        $('#Star1s' + $idh1).append('<p id="Sta1r' + $idh1 + '" class="starActive">&#9733;</p>');
+        $('#Star2s' + $idh1).append('<p id="Sta2r' + $idh1 + '" class="starActive">&#9733;&#9733;</p>');
+        $('#Star3s' + $idh1).append('<p id="Sta3r' + $idh1 + '" class="starActive">&#9733;&#9733;&#9733;</p>');
+        $('#Star4s' + $idh1).append('<p id="Sta4r' + $idh1 + '" class="starActive">&#9733;&#9733;&#9733;&#9733;</p>');
+        $('#Star5s' + $idh1).append('<p id="Sta5r' + $idh1 + '" class="starActive">&#9733;&#9733;&#9733;&#9733;&#9733;</p>');
+        $('.starActive').on('click', function () {
+          var $starId = this.id[3];
+           $tourKit[$idh1].starsFrom = $starId;
+           $('#stars' + $idh1).remove();
+           $('#hotelStar' + $idh1).append('<div id="stars' + $idh1 + '" class="stars"></div>');
 
-      }
+           for (var n = 0; n < 5; n++) {
+             if (n < $starId) {
+               $('#stars' + $idh1).append('<p id="Star'+ n + $idh1 + '" style=" color: #ffcc00;">&#9733;</p>');
+             } else {
+               $('#stars' + $idh1).append('<p id="Star'+ n + $idh1 + '">&#9733;</p>');
+             }
+           }
+          $('.dialogDate').remove();
+        });
+      });
 //---------------------
+      }
+
 
     });
 

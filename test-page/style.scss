@@ -885,7 +885,7 @@ header {
   display: flex;
   @include flex-direction(raw);
   @include align-items(center);
-  @include justify-content(space-araund);
+  @include justify-content(center);
   @include block(95%, 30%, 1px, solid, #cccccc, 0px);
 }
 .dialogCostInput p {
@@ -895,6 +895,8 @@ header {
 }
 .costInput {
   width: 95%;
+  text-align: center;
+  font-weight: bold;
   border: none;
 }
 #tourDetails .tourDetailsItems {
@@ -963,6 +965,30 @@ header {
   @include align-items(flex-start);
   @include justify-content(center);
   @include block(18%, 85px, 0px, solid, #cccccc, 0px);
+}
+.dialogStars {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(95%, 30%, 0px, solid, #cccccc, 0px);
+}
+.Stars {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(19%, 50%, 1px, solid, #3399cc, 50px);
+}
+
+.starActive {
+  color: #ffcc00;
+  font-size: 1em;
+  text-align: center;
 }
 #hotelDesc .hotels {
   margin-left: 5%;
