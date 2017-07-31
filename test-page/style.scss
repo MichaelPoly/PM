@@ -879,6 +879,24 @@ header {
 .dialogCost {
   width: 80%;
 }
+.dialogCostInput {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(space-araund);
+  @include block(95%, 30%, 1px, solid, #cccccc, 0px);
+}
+.dialogCostInput p {
+  font-size: 80%;
+  color: #3399cc;
+  text-align: center;
+}
+.costInput {
+  width: 95%;
+  border: none;
+}
 #tourDetails .tourDetailsItems {
   display: -ms-flexbox;
   display: -webkit-flex;

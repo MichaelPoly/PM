@@ -461,14 +461,22 @@ $.ajax({
         var $idC = $idP[9];
         $('#mainBlock' + $idC).append('<div id="dialogBoxCost' + $idC + '" class="dialogDate"></div>');
         $('#dialogBoxCost' + $idC).append('<h2>Выберете диапазон цен</h2>');
+        $('#dialogBoxCost' + $idC).append('<div id="dialogCostInput' + $idC + '" class="dialogCostInput"></div>');
+        $('#dialogCostInput' + $idC).append('<div id="dialogCostInputStart' + $idC + '" class="dialogCostInputStart"></div>');
+        $('#dialogCostInputStart' + $idC).append('<p class="startCost">Начальная цена</p>');
+        $('#dialogCostInputStart' + $idC).append('<input type="text" id="startCost' + $idC + 'Input" class="costInput">');
+        $('#dialogCostInput' + $idC).append('<div id="dialogCostInputEnd' + $idC + '" class="dialogCostInputEnd"></div>');
+        $('#dialogCostInputEnd' + $idC).append('<p class="startCost">Конечная цена</p>');
+        $('#dialogCostInputEnd' + $idC).append('<input type="text" id="endtCost' + $idC + 'Input" class="costInput">');
         $('#dialogBoxCost' + $idC).append('<div id="dialogCost' + $idC + '" class="dialogCost"></div>');
+
         $('#dialogCost' + $idC).slider({
                 values: [0, 1000000],
                 range: true,
-                // create: function() {
-                //     $('#rangeMin').val($('#rangeslider').slider("values", 0));
-                //     $('#rangeMax').val($('#rangeslider').slider("values", 1));
-                // }
+                create: function() {
+                    $('#startCost' + $idC + 'Input').val($('#dialogCost' + $idC).slider("values", 0));
+                    $('#endtCost' + $idC + 'Input').val($('#dialogCost' + $idC).slider("values", 1));
+                }
             });
         console.log($idC);
       });
