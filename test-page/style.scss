@@ -1067,6 +1067,15 @@ header {
   @include block(100%, 100%, 1px, solid, #cccccc, 0px);
   font-size: 90%;
 }
+.dialogRate {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(80%, 50%, 1px, solid, #cccccc, 0px);
+}
 #rateNum {
   color: #00a551;
 }
@@ -1074,6 +1083,13 @@ header {
   color: #00a551;
   font-size: 90%;
 }
+.rateNum1 {
+  width: 15%;
+  color: #00a551;
+  font-size: 90%;
+  text-align: center;
+}
+
 #meal {
   display: -ms-flexbox;
   display: -webkit-flex;

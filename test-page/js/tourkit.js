@@ -546,6 +546,35 @@ $.ajax({
         });
       });
 //---------------------
+    $('.hotelRate').on('click', function () {
+      var $rid = this.id[9];
+      $('#mainBlock' + $rid).append('<div id="dialogBoxRate' + $rid + '" class="dialogDate"></div>');
+      $('#dialogBoxRate' + $rid).append('<h2>Выберете рейтинг TopHotels</h2>');
+      $('#dialogBoxRate' + $rid).append('<div id="dialogRate' + $rid + '" class="dialogRate"></div>');
+      $('#dialogRate' + $rid).append('<pre>Не ниже </pre><img src="img/crown.svg" alt="" style="height: 20%;"><pre> </pre>');
+      $('#dialogRate' + $rid).append('<input id="rate1Num' + $rid + '" class="rateNum1" value=""></input>');
+      $('#rate1Num' + $rid).spinner({
+               step: 0.5,
+               min: 0,
+               max: 5,
+             });
+      $('#rate1Num' + $rid).spinner("value", 4);
+      $('#dialogBoxRate' + $rid).append('<div id="endBtn' + $rid + '" class="dialogDateBtn"></div>');
+      $('#endBtn' + $rid).append('<p>Готово</p>');
+      $('#endBtn' + $rid).on('click', function () {
+        var $rateFrom = document.querySelector('#rate1Num' + $rid).value;
+        $tourKit[$rid].rateFrom = $rateFrom;
+        document.querySelector('#rateNum' + $rid).remove();
+        $('#rate' + $rid).append('<p id="rateNum' + $rid + '" class="rateNum">' + $rateFrom + '</p>');
+        $('.dialogDate').remove();
+      });
+    });
+
+
+//---------------------
+
+
+//---------------------
       }
 
 
