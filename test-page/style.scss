@@ -1195,6 +1195,15 @@ header {
   @include justify-content(center);
   @include block(100%, 100%, 1px, solid, #cccccc, 0px);
 }
+.dialogPos {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-wrap(raw);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(95%, 50%, 0px, solid, #cccccc, 0px);
+}
 .positionType Input {
   width: 96%;
   height: 96%;

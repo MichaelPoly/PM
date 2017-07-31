@@ -155,7 +155,7 @@ $.ajax({
          $('#hotelDesc' + i).append('<div id="position' + i + '" class="position"></div>');
          $('#position' + i).append('<p id="hotelsPosition' + i + '" class="hotels">Расположение</p>');
          $('#position' + i).append('<div id="positionType' + i + '" class="positionType"></div>');
-         $('#positionType' + i).append('<input type="text" id="position' + i + 'Input" name="position" value="' + data[i].positionType + '">');
+         $('#positionType' + i).append('<input type="text" id="position' + i + 'Input" name="position" value="' + data[i].positionType + '" class="positionInput">');
 
          $('#hotelDesc' + i).append('<div id="delKit' + i + '" class="delKit"></div>');
          $('#delKit' + i).append('<p id="delKitBtn' + i + '" class="delKitBtn"><i class="fa fa-times-circle" aria-hidden="true"></i> УДАЛИТЬ ПОДБОРКУ</p>');
@@ -623,9 +623,29 @@ $.ajax({
     console.log($mid);
   });
 //---------------------
-
-
-
+  $('.positionInput').on('click', function () {
+    var $posid = this.id;
+    var $posid1 = $posid[8];
+    $('#mainBlock' + $posid1).append('<div id="dialogBoxPos' + $posid1 + '" class="dialogDate"></div>');
+    $('#dialogBoxPos' + $posid1).append('<h2>Выберете тип расположения</h2>');
+    $('#dialogBoxPos' + $posid1).append('<div id="dialogPos' + $posid1 + '" class="dialogPos"></div>');
+    $('#dialogPos' + $posid1).append('<div id="pos' + $posid1 + 'Input" class="posInput" value=""></div>');
+    $('#pos' + $posid1 + 'Input').append('<select id="pos' + $posid1 + 'Select" class="posSelect" name="pos' + $posid1 + 'Select"></select>');
+    $('#pos' + $posid1 + 'Select').append('<option value="Пляжная, 1-я линия">Пляжная, 1-я линия</option>');
+    $('#pos' + $posid1 + 'Select').append('<option value="Пляжная, 2-я линия">Пляжная, 2-я линия</option>');
+    $('#pos' + $posid1 + 'Select').append('<option value="Пляжная, 3-я линия">Пляжная, 3-я линия</option>');
+    $('#pos' + $posid1 + 'Select').selectmenu().selectmenu( "menuWidget" ).addClass( "overflow" );
+    $('#dialogBoxPos' + $posid1).append('<div id="endBtn' + $posid1 + '" class="dialogDateBtn"></div>');
+    $('#endBtn' + $posid1).append('<p>Готово</p>');
+    $('#endBtn' + $posid1).on('click', function () {
+      var $posValue = document.querySelector('#pos' + $posid1 + 'Select').value;
+      $tourKit[$posid1].positionType = $posValue;
+      document.querySelector('#' + $posid).value = $posValue;
+      console.log($posValue);
+      $('.dialogDate').remove();
+    });
+  });
+//---------------------
 
 
 //---------------------

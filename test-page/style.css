@@ -2124,6 +2124,27 @@ header {
   border-radius: 0px;
 }
 
+.dialogPos {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: raw;
+  -ms-flex-wrap: raw;
+  flex-wrap: raw;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 95%;
+  height: 50%;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
 .positionType Input {
   width: 96%;
   height: 96%;
