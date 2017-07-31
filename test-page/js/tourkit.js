@@ -150,7 +150,7 @@ $.ajax({
          $('#hotelDesc' + i).append('<div id="meal' + i + '" class="meal"></div>');
          $('#meal' + i).append('<p id="hotelsMeal' + i + '" class="hotels">Тип питания</p>');
          $('#meal' + i).append('<div id="mealType' + i + '" class="mealType"></div>');
-         $('#mealType' + i).append('<input type="text" id="meal' + i + 'Input" name="meal" value="' + data[i].meal + '">');
+         $('#mealType' + i).append('<input type="text" id="meal' + i + 'Input" name="meal" value="' + data[i].meal + '" class="mealInput">');
 
          $('#hotelDesc' + i).append('<div id="position' + i + '" class="position"></div>');
          $('#position' + i).append('<p id="hotelsPosition' + i + '" class="hotels">Расположение</p>');
@@ -554,11 +554,12 @@ $.ajax({
       $('#dialogRate' + $rid).append('<pre>Не ниже </pre><img src="img/crown.svg" alt="" style="height: 20%;"><pre> </pre>');
       $('#dialogRate' + $rid).append('<input id="rate1Num' + $rid + '" class="rateNum1" value=""></input>');
       $('#rate1Num' + $rid).spinner({
+               numberFormat: "n.n",
                step: 0.5,
-               min: 0,
-               max: 5,
-             });
-      $('#rate1Num' + $rid).spinner("value", 4);
+               min: 0.0,
+               max: 5.0
+               });
+      $('#rate1Num' + $rid).spinner("value", $tourKit[$rid].rateFrom);
       $('#dialogBoxRate' + $rid).append('<div id="endBtn' + $rid + '" class="dialogDateBtn"></div>');
       $('#endBtn' + $rid).append('<p>Готово</p>');
       $('#endBtn' + $rid).on('click', function () {
@@ -572,6 +573,59 @@ $.ajax({
 
 
 //---------------------
+  $('.mealInput').on('click', function () {
+    var $midInput = this.id;
+    var $mid = $midInput[4];
+    $('#mainBlock' + $mid).append('<div id="dialogBoxMeal' + $mid + '" class="dialogDate"></div>');
+    $('#dialogBoxMeal' + $mid).append('<h2>Выберете тип питания</h2>');
+    $('#dialogBoxMeal' + $mid).append('<div id="dialogMeal' + $mid + '" class="dialogMeal"></div>');
+    $('#dialogMeal' + $mid).append('<div id="dialogMeal1Type' + $mid + '" class="MealType"></div>');
+    $('#dialogMeal1Type' + $mid).append('<p>Любой</p>');
+    $('#dialogMeal' + $mid).append('<div id="dialogMeal2Type' + $mid + '" class="MealType"></div>');
+    $('#dialogMeal2Type' + $mid).append('<p>Только завтрак</p>');
+    $('#dialogMeal' + $mid).append('<div id="dialogMeal3Type' + $mid + '" class="MealType"></div>');
+    $('#dialogMeal3Type' + $mid).append('<p>Завтрак и ужин</p>');
+    $('#dialogMeal' + $mid).append('<div id="dialogMeal4Type' + $mid + '" class="MealType"></div>');
+    $('#dialogMeal4Type' + $mid).append('<p>Завтрак, обед, ужин</p>');
+    $('#dialogMeal' + $mid).append('<div id="dialogMeal5Type' + $mid + '" class="MealType"></div>');
+    $('#dialogMeal5Type' + $mid).append('<p>Все включено</p>');
+    $('.MealType').on('click', function () {
+      if (this.id[10] == '1') {
+        $tourKit[$mid].meal = 'Любой';
+        document.querySelector('#' + $midInput).value = 'Любой';
+        $('.dialogDate').remove();
+      }
+      if (this.id[10] == '2') {
+        $tourKit[$mid].meal = 'Только завтрак';
+        document.querySelector('#' + $midInput).value = 'Только завтрак';
+        $('.dialogDate').remove();
+      }
+      if (this.id[10] == '3') {
+        $tourKit[$mid].meal = 'Завтрак и ужин';
+        document.querySelector('#' + $midInput).value = 'Завтрак и ужин';
+        $('.dialogDate').remove();
+      }
+      if (this.id[10] == '4') {
+        $tourKit[$mid].meal = 'Завтрак, обед, ужин';
+        document.querySelector('#' + $midInput).value = 'Завтрак, обед, ужин';
+        $('.dialogDate').remove();
+      }
+      if (this.id[10] == '5') {
+        $tourKit[$mid].meal = 'Все включено';
+        document.querySelector('#' + $midInput).value = 'Все включено';
+        $('.dialogDate').remove();
+      }
+
+      console.log(this.id);
+
+      $('.dialogDate').remove();
+    });
+    console.log($mid);
+  });
+//---------------------
+
+
+
 
 
 //---------------------

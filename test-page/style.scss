@@ -1067,6 +1067,9 @@ header {
   @include block(100%, 100%, 1px, solid, #cccccc, 0px);
   font-size: 90%;
 }
+.rate pre {
+  font-size: 80%;
+}
 .dialogRate {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1106,7 +1109,30 @@ header {
   @include flex-direction(column);
   @include align-items(flex-start);
   @include justify-content(center);
-  @include block(12%, 85px, 0px, solid, #cccccc, 0px);
+  @include block(18%, 85px, 0px, solid, #cccccc, 0px);
+}
+.dialogMeal {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(95%, 50%, 1px, solid, #cccccc, 0px);
+}
+.MealType {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(30%, 30%, 1px, solid, #3399cc, 50px);
+}
+
+.MealType p {
+  font-size: 80%;
+  color: #3399cc;
+  text-align: center;
 }
 #mealType {
   display: -ms-flexbox;
@@ -1127,10 +1153,11 @@ header {
   @include block(100%, 100%, 1px, solid, #cccccc, 0px);
 }
 .mealType Input {
-  width: 96%;
+  width: 98%;
   height: 96%;
   border: none;
   text-align: center;
+  font-size: 80%;
 }
 #position {
   display: -ms-flexbox;
@@ -1148,7 +1175,7 @@ header {
   @include flex-direction(column);
   @include align-items(flex-start);
   @include justify-content(center);
-  @include block(25%, 85px, 0px, solid, #cccccc, 0px);
+  @include block(20%, 85px, 0px, solid, #cccccc, 0px);
 }
 #positionType {
   display: -ms-flexbox;

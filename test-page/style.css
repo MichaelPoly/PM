@@ -1862,6 +1862,10 @@ header {
   font-size: 90%;
 }
 
+.rate pre {
+  font-size: 80%;
+}
+
 .dialogRate {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1933,12 +1937,57 @@ header {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 12%;
+  width: 18%;
   height: 85px;
   border-width: 0px;
   border-style: solid;
   border-color: #cccccc;
   border-radius: 0px;
+}
+
+.dialogMeal {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 95%;
+  height: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 0px;
+}
+
+.MealType {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 30%;
+  height: 30%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3399cc;
+  border-radius: 50px;
+}
+
+.MealType p {
+  font-size: 80%;
+  color: #3399cc;
+  text-align: center;
 }
 
 #mealType {
@@ -1984,10 +2033,11 @@ header {
 }
 
 .mealType Input {
-  width: 96%;
+  width: 98%;
   height: 96%;
   border: none;
   text-align: center;
+  font-size: 80%;
 }
 
 #position {
@@ -2024,7 +2074,7 @@ header {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 25%;
+  width: 20%;
   height: 85px;
   border-width: 0px;
   border-style: solid;
