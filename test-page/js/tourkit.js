@@ -673,6 +673,17 @@ $('.kitName').on('input', function () {
   document.querySelector('#nameInput' + $kitNameId1).innerHTML = $newKitName;
   $tourKit[$kitNameId1].kitName = $newKitName;
 });
+
+$('.delKitBtn').on('click', function () {
+  $delId = this.id[9];
+  $('#mainBlock' + $delId).remove();
+  $('.kitBtnActive').remove();
+  $tourKit.splice($delId, 1);
+  $newIdKit = parseInt($delId) - 1;
+  $('#kit' + $newIdKit).removeClass("kitBtn").addClass("kitBtnActive");
+  $('#mainBlock' + $newIdKit).show();
+  console.log($tourKit);
+});
 //---------------------
 $('.addKit').on('click', function () {
   var $newId = $tourKit.length;
@@ -731,15 +742,15 @@ $('.addKit').on('click', function () {
   $('#country' + $newId).append('<h5>Вы можете задать несколько стран или регионов для одной подборки</h5>');
   $('#country' + $newId).append('<div id="regionSelect' + $newId + '" class="region"></div>');
   if ($tourKit[$newId].region1 != ""){
-    $('#regionSelect' + i).append('<p id="region1Name' + $newId + '">' + $tourKit[$newId].region1 + ' <b id="region1Name' + $newId + '" class="close">&#10006;</b></p>');
+    $('#regionSelect' + $newId).append('<p id="region1Name' + $newId + '">' + $tourKit[$newId].region1 + ' <b id="region1Name' + $newId + '" class="close">&#10006;</b></p>');
   }
   if ($tourKit[$newId].region2 != ""){
-    $('#regionSelect' + i).append('<p id="region2Name' + $newId + '">' + $tourKit[$newId].region2 + ' <b id="region2Name' + $newId + '" class="close">&#10006;</b></p>');
+    $('#regionSelect' + $newId).append('<p id="region2Name' + $newId + '">' + $tourKit[$newId].region2 + ' <b id="region2Name' + $newId + '" class="close">&#10006;</b></p>');
   }
   if ($tourKit[$newId].region3 != ""){
-     $('#regionSelect' + i).append('<p id="region3Name' + $newId + '">' + $tourKit[$newId].region3 + ' <b id="region3Name' + $newId + '" class="close">&#10006;</b></p>');
+     $('#regionSelect' + $newId).append('<p id="region3Name' + $newId + '">' + $tourKit[$newId].region3 + ' <b id="region3Name' + $newId + '" class="close">&#10006;</b></p>');
   }
-  $('#country' + i).append('<div id="selectedCountry' + $newId + '" class="countrySelected"></div>');
+  $('#country' + $newId).append('<div id="selectedCountry' + $newId + '" class="countrySelected"></div>');
 
 
     if ($tourKit[$newId].country1 != "") {
@@ -1316,6 +1327,16 @@ $('.kitName').on('input', function () {
   document.querySelector('#nameInput' + $newId).innerHTML = $newKitName;
   $tourKit[$kitNameId1].kitName = $newKitName;
 
+});
+$('.delKitBtn').on('click', function () {
+  $delId = this.id[9];
+  $('#mainBlock' + $delId).remove();
+  $('.kitBtnActive').remove();
+  $tourKit.splice($delId, 1);
+  $newIdKit = parseInt($delId) - 1;
+  $('#kit' + $newIdKit).removeClass("kitBtn").addClass("kitBtnActive");
+  $('#mainBlock' + $newIdKit).show();
+  console.log($tourKit);
 });
 
 //---------------------
