@@ -200,7 +200,7 @@ header {
   margin-left: 5%;
   font-size: 0.7em;
   color: #cccccc;
-  line-height: 3em;
+  line-height: 2em;
 }
 .kitHead .Input .kitNameBox {
   display: -ms-flexbox;
@@ -216,7 +216,6 @@ header {
   height: 45px;
   border: none;
   text-align: center;
-
 }
 .kitHead .spanDiv {
   width: 5%;
@@ -234,7 +233,7 @@ header {
   margin-left: 5%;
   font-size: 0.7em;
   color: #cccccc;
-  line-height: 1em;
+  line-height: 2em;
 }
 .select .cityBlock {
     display: -ms-flexbox;
@@ -856,4 +855,260 @@ header {
   padding-top: 3%;
   font-size: 90%;
   color: red;
+}
+.icoBar {
+  display: none;
+}
+@media screen and (max-width: 1450px) {
+  #kit #addKit {
+    font-size: 90%;
+  }
+  .SEDate1 {
+    font-size: 80%;
+  }
+  .nDays {
+    font-size: 80%;
+  }
+  .peopleNum {
+    font-size: 80%;
+  }
+  .costRangeI {
+    font-size: 80%;
+  }
+  .hotelDesc .hotels {
+    margin-left: 2%;
+    font-size: 0.5em;
+    color: #cccccc;
+    line-height: 1em;
+  }
+  .stars {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(100%, 100%, 1px, solid, #cccccc, 0px);
+  }
+  .stars p {
+    color: #cccccc;
+    text-align: center;
+    font-size: 120%;
+  }
+  .rateNum {
+    font-size: 80%;
+  }
+  .rate pre {
+    font-size: 80%;
+  }
+  .delKit {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(flex-end);
+    @include block(23%, 85px, 0px, solid, #cccccc, 0px);
+    padding-top: 3%;
+    font-size: 70%;
+    color: red;
+  }
+}
+@media screen and (max-width: 1290px){
+  #centralBlock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include block(80.0%, 890px, 1px, solid, black,0);
+    margin-left: 10.0%;
+  }
+  .tourDetails {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    @include block(100%, 85px, 0px, solid, #cccccc, 0px);
+    margin-top: 1%;
+  }
+}
+@media screen and (max-width: 1080px){
+  #centralBlock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include block(90.0%, 890px, 1px, solid, black,0);
+    margin-left: 5.0%;
+  }
+}
+@media screen and (max-width: 990px){
+  #centralBlock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include block(95.0%, 890px, 1px, solid, black,0);
+    margin-left: 2.5%;
+  }
+  #centralBlock #interests {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include block(80%, 80%, 0px, solid, black,0);
+    margin-left: 10%;
+    background-color: white;
+  }
+}
+@media screen and (max-width: 800px){
+  #centralBlock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include block(100%, 890px, 1px, solid, black,0);
+    margin-left: 0%;
+  }
+  #centralBlock #interests {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include block(95%, 80%, 0px, solid, black,0);
+    margin-left: 2.5%;
+    background-color: white;
+  }
+}
+// mobile ver
+@media screen and (max-width: 600px){
+  #topBar a {
+    display: none;
+  }
+  #topBar {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+  }
+  .icoBar {
+    display: block;
+    font-size: 2em;
+    color: white;
+  }
+  #kit {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  #kit #kitShow {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(centert);
+    @include block(98%, 100%, 0px, solid, black, 0);
+  }
+  .kitBtn {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include block(98%, 50px, 1px, solid, #cccccc, 5px);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  .kitBtnActive {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include block(98%, 50px, 1px, solid, #3399cc, 5px);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  #kit #addKit {
+    @include block(96%, 50px, 1px, solid, #cccccc, 5px);
+    margin-right: 0;
+    color: #3399cc;
+    text-align: center;
+  }
+  .kitHead {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(98%, auto, 1px, solid, #cccccc, 5px);
+  }
+  .kitHead .Input {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(98%, auto, 0px, solid, black, 0);
+  }
+  .kitHead .Input label {
+    margin-left: 0;
+    font-size: 0.7em;
+    color: #cccccc;
+    line-height: 1.5em;
+  }
+  .select {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(98%, auto, 0px, solid, black, 0);
+  }
+.select .cityBlock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    width: 98%;
+    height: 52px;
+    border: none;
+    box-shadow: none;
+  }
+  .kitHead .showResults {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(98%, 50px, 0px, solid, black, 5px);
+    text-align: center;
+    margin-left: 0;
+    margin-top: 1%;
+    background-color: #ff9933;
+    font-size: 90%;
+    color: white;
+  }
+  .kitHead .Input input[name="kitName"] {
+    width: 98%;
+    height: auto;
+    border: none;
+    text-align: center;
+  }
+
 }
