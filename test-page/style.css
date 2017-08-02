@@ -229,27 +229,6 @@ header {
   text-align: center;
 }
 
-#kitHead5 {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 95%;
-  height: 95px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 0;
-}
-
 .kitHead {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -265,27 +244,6 @@ header {
   justify-content: center;
   width: 95%;
   height: 95px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 0;
-}
-
-#kitHead .Input {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: flex-end;
-  justify-content: flex-end;
-  width: 25%;
-  height: 100%;
   border-width: 0px;
   border-style: solid;
   border-color: black;
@@ -320,25 +278,6 @@ header {
   line-height: 3em;
 }
 
-#kitHead .Input .kitNameBox {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 98%;
-  height: 50px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px black;
-}
-
 .kitHead .Input .kitNameBox {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -358,20 +297,6 @@ header {
   box-shadow: 1px 1px 2px black;
 }
 
-#kitHead .Input label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
-}
-
-#kitHead .Input input[name="kitName"] {
-  width: 98%;
-  height: 45px;
-  border: none;
-  text-align: center;
-}
-
 .kitHead .Input input[name="kitName"] {
   width: 98%;
   height: 45px;
@@ -379,39 +304,8 @@ header {
   text-align: center;
 }
 
-#kitHead .Input .cityBlock {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 90%;
-  height: 50px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px black;
-}
-
-#kitHead .spanDiv {
-  width: 5%;
-}
-
 .kitHead .spanDiv {
   width: 5%;
-}
-
-#kitHead .Input .cityBlock input[name="cityName1"] {
-  width: 90%;
-  height: 45px;
-  border-radius: 5px;
-  text-align: center;
-  border: none;
 }
 
 .select {
@@ -518,41 +412,11 @@ header {
   font-size: 80%;
 }
 
-#kitHead .Input .cityBlock p {
-  font-size: 2em;
-  color: #cccccc;
-  text-align: center;
-  margin-right: 1%;
-}
-
 .kitHead .Input .cityBlock p {
   font-size: 2em;
   color: #cccccc;
   text-align: center;
   margin-right: 1%;
-}
-
-#showResults {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 25%;
-  height: 50px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 5px;
-  text-align: center;
-  margin-left: 25%;
-  background-color: #ff9933;
-  font-size: 90%;
-  color: white;
 }
 
 .kitHead .showResults {
@@ -578,28 +442,6 @@ header {
   color: white;
 }
 
-#country5 {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 95%;
-  height: 135px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 0;
-  margin-top: 2%;
-}
-
 .country {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -622,27 +464,11 @@ header {
   margin-top: 2%;
 }
 
-#country5 h5 {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 1em;
-}
-
 .country h5 {
   margin-left: 5%;
   font-size: 0.7em;
   color: #cccccc;
   line-height: 1em;
-}
-
-#country #regionSelect {
-  width: 100%;
-  height: 35px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 5px;
 }
 
 .country .region {
@@ -669,15 +495,6 @@ header {
 
 .country .region h4 {
   display: inline;
-}
-
-#country #countrySelect {
-  width: 100%;
-  height: 115px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 5px;
 }
 
 .country .countrySelected {
@@ -755,68 +572,6 @@ header {
   margin-right: 1%;
 }
 
-#country #countrySelect h4 {
-  margin-left: 5%;
-  font-size: 1em;
-}
-
-#selectedCity {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 5px;
-}
-
-#selectedCity #firstCountry {
-  width: 20%;
-  height: 35px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 50px;
-  background-color: #f2f2f2;
-  margin-left: 5%;
-}
-
-#chengSelect {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 5px;
-  margin-top: 3%;
-}
-
 .chengeSelect {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -842,28 +597,6 @@ header {
   margin-top: 3%;
 }
 
-#chengSelect .btnSelect {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 20%;
-  height: 35px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #3399cc;
-  border-radius: 50px;
-  background-color: white;
-  margin-left: 5%;
-  color: #3399cc;
-  text-align: center;
-}
-
 .chengeSelect .btnSelect {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -885,65 +618,6 @@ header {
   color: #3399cc;
   text-align: center;
   font-size: 80%;
-}
-
-#chengSelect .btnSelect:hover {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 20%;
-  height: 35px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #3399cc;
-  border-radius: 50px;
-  background-color: #3399cc;
-  margin-left: 5%;
-  color: white;
-  text-align: center;
-}
-
-#chengSelect .btnSelect p {
-  color: #3399cc;
-  text-align: center;
-  margin: 0;
-}
-
-#chengSelect .btnSelect p:hover {
-  color: white;
-  text-align: center;
-  margin: 0;
-}
-
-#tourDetails {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-  margin-top: 1%;
 }
 
 .tourDetails {
@@ -971,27 +645,6 @@ header {
   margin-top: 1%;
 }
 
-#startEndDate {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 30%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
 .startEndDate {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1011,13 +664,6 @@ header {
   border-style: solid;
   border-color: #cccccc;
   border-radius: 0px;
-}
-
-#startEndDate label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
 }
 
 .startEndDate label {
@@ -1144,27 +790,6 @@ header {
   text-align: center;
 }
 
-#numOfDays {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 15%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
 .numOfDays {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1186,13 +811,6 @@ header {
   border-radius: 0px;
 }
 
-#numOfDays label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
-}
-
 .numOfDays label {
   margin-left: 5%;
   font-size: 0.7em;
@@ -1212,27 +830,6 @@ header {
   justify-content: space-around;
   width: 100%;
   height: 60%;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
-#people {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 20%;
-  height: 85px;
   border-width: 0px;
   border-style: solid;
   border-color: #cccccc;
@@ -1317,13 +914,6 @@ header {
   font-size: 120%;
   color: #3399cc;
   text-align: center;
-}
-
-#people label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
 }
 
 .people label {
@@ -1426,27 +1016,6 @@ header {
   border-bottom: 1px solid #cccccc;
 }
 
-#costRange {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 30%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
 .costRange {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1466,13 +1035,6 @@ header {
   border-style: solid;
   border-color: #cccccc;
   border-radius: 0px;
-}
-
-#costRange label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
 }
 
 .costRange label {
@@ -1520,24 +1082,6 @@ header {
   border: none;
 }
 
-#tourDetails .tourDetailsItems {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
 .tourDetails .tourDetailsItems {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1556,42 +1100,11 @@ header {
   border-radius: 0px;
 }
 
-#tourDetails .tourDetailsInput {
-  width: 96%;
-  height: 96%;
-  border: none;
-}
-
 .tourDetails Input {
   width: 96%;
   height: 96%;
   border: none;
   text-align: center;
-}
-
-#hotelDesc {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-  margin-top: 1%;
 }
 
 .hotelDesc {
@@ -1617,27 +1130,6 @@ header {
   border-color: #cccccc;
   border-radius: 0px;
   margin-top: 1%;
-}
-
-#hotelStar {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 18%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
 }
 
 .hotelStar {
@@ -1709,39 +1201,11 @@ header {
   text-align: center;
 }
 
-#hotelDesc .hotels {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 1em;
-}
-
 .hotelDesc .hotels {
   margin-left: 5%;
   font-size: 0.7em;
   color: #cccccc;
   line-height: 1em;
-}
-
-#stars {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
 }
 
 .stars {
@@ -1765,37 +1229,10 @@ header {
   border-radius: 0px;
 }
 
-#stars p {
-  color: #cccccc;
-  text-align: center;
-  font-size: 120%;
-}
-
 .stars p {
   color: #cccccc;
   text-align: center;
   font-size: 120%;
-}
-
-#hotelRate {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 15%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
 }
 
 .hotelRate {
@@ -1814,27 +1251,6 @@ header {
   width: 15%;
   height: 85px;
   border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
-#rate {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-width: 1px;
   border-style: solid;
   border-color: #cccccc;
   border-radius: 0px;
@@ -1887,10 +1303,6 @@ header {
   border-radius: 0px;
 }
 
-#rateNum {
-  color: #00a551;
-}
-
 .rateNum {
   color: #00a551;
   font-size: 90%;
@@ -1901,27 +1313,6 @@ header {
   color: #00a551;
   font-size: 90%;
   text-align: center;
-}
-
-#meal {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 12%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
 }
 
 .meal {
@@ -1990,27 +1381,6 @@ header {
   text-align: center;
 }
 
-#mealType {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
 .mealType {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -2040,27 +1410,6 @@ header {
   font-size: 80%;
 }
 
-#position {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 25%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
 .position {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -2077,27 +1426,6 @@ header {
   width: 20%;
   height: 85px;
   border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-}
-
-#positionType {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: raw;
-  -ms-flex-direction: raw;
-  flex-direction: raw;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-width: 1px;
   border-style: solid;
   border-color: #cccccc;
   border-radius: 0px;
@@ -2150,26 +1478,6 @@ header {
   height: 96%;
   border: none;
   text-align: center;
-}
-
-#delKit {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: flex-end;
-  justify-content: flex-end;
-  width: 28%;
-  height: 85px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #cccccc;
-  border-radius: 0px;
-  padding-top: 3%;
-  color: red;
 }
 
 .delKit {

@@ -170,12 +170,6 @@ header {
   @include block(58%, 100%, 0px, solid, black, 0);
   margin-left: 1%;
 }
-// #kit #kitShow .kitBtnActive {
-//   @include block(25%, 100%, 0px, solid, #cccccc, 0);
-// }
-// #kit #kitShow .kitBtn {
-//   @include block(25%, 100%, 0px, solid, #cccccc, 0);
-// }
 #kit #kitShow .kitBtn p {
   color: #cccccc;
   text-align: center;
@@ -183,15 +177,6 @@ header {
 #kit #kitShow .kitBtnActive p {
   color: #3399cc;
   text-align: center;
-}
-#kitHead5 {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(flex-end);
-  @include justify-content(center);
-  @include block(95%, 95px, 0px, solid, black, 0);
 }
 .kitHead {
   display: -ms-flexbox;
@@ -201,15 +186,6 @@ header {
   @include align-items(flex-end);
   @include justify-content(center);
   @include block(95%, 95px, 0px, solid, black, 0);
-}
-#kitHead .Input {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(flex-end);
-  @include block(25%, 100%, 0px, solid, black, 0);
 }
 .kitHead .Input {
   display: -ms-flexbox;
@@ -226,15 +202,6 @@ header {
   color: #cccccc;
   line-height: 3em;
 }
-#kitHead .Input .kitNameBox {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include block(98%, 50px, 1px, solid, #cccccc, 5px);
-  box-shadow: 1px 1px 2px black;
-}
 .kitHead .Input .kitNameBox {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -244,19 +211,6 @@ header {
   @include block(98%, 50px, 1px, solid, #cccccc, 5px);
   box-shadow: 1px 1px 2px black;
 }
-#kitHead .Input label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
-}
-#kitHead .Input input[name="kitName"] {
-  width: 98%;
-  height: 45px;
-  border: none;
-  text-align: center;
-
-}
 .kitHead .Input input[name="kitName"] {
   width: 98%;
   height: 45px;
@@ -264,36 +218,8 @@ header {
   text-align: center;
 
 }
-#kitHead .Input .cityBlock {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include block(90%, 50px, 1px, solid, #cccccc, 5px);
-  box-shadow: 1px 1px 2px black;
-}
-// .kitHead .Input .cityBlock {
-//   display: -ms-flexbox;
-//   display: -webkit-flex;
-//   display: flex;
-//   @include flex-direction(raw);
-//   @include align-items(center);
-//   @include block(90%, 50px, 1px, solid, #cccccc, 5px);
-//   box-shadow: 1px 1px 2px black;
-// }
-#kitHead .spanDiv {
-  width: 5%;
-}
 .kitHead .spanDiv {
   width: 5%;
-}
-#kitHead .Input .cityBlock input[name="cityName1"] {
-  width: 90%;
-  height: 45px;
-  border-radius: 5px;
-  text-align: center;
-  border: none;
 }
 .select {
   display: -ms-flexbox;
@@ -348,39 +274,18 @@ header {
   @include block(29%, 50px, 1px, solid, #cccccc, 5px);
   margin: 1%;
   color: #3399cc;
-
 }
-
 .overflow {
   width: 90%;
   height: 200px;
   background-color: white;
   font-size: 80%;
 }
-#kitHead .Input .cityBlock p {
-  font-size: 2em;
-  color: #cccccc;
-  text-align: center;
-  margin-right: 1%;
-}
 .kitHead .Input .cityBlock p {
   font-size: 2em;
   color: #cccccc;
   text-align: center;
   margin-right: 1%;
-}
-#showResults {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include align-items(center);
-  @include justify-content(center);
-  @include block(25%, 50px, 0px, solid, black, 5px);
-  text-align: center;
-  margin-left: 25%;
-  background-color: #ff9933;
-  font-size: 90%;
-  color: white;
 }
 .kitHead .showResults {
   display: -ms-flexbox;
@@ -395,16 +300,6 @@ header {
   font-size: 90%;
   color: white;
 }
-#country5 {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(95%, 135px, 0px, solid, black, 0);
-  margin-top: 2%;
-}
 .country {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -415,20 +310,11 @@ header {
   @include block(95%, 135px, 0px, solid, black, 0);
   margin-top: 2%;
 }
-#country5 h5 {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 1em;
-}
 .country h5 {
   margin-left: 5%;
   font-size: 0.7em;
   color: #cccccc;
   line-height: 1em;
-}
-#country #regionSelect {
-  @include block(100%, 35px, 1px, solid, #cccccc, 5px);
 }
 .country .region {
   display: -ms-flexbox;
@@ -442,9 +328,6 @@ header {
 }
 .country .region h4 {
   display: inline;
-}
-#country #countrySelect {
-  @include block(100%, 115px, 1px, solid, #cccccc, 5px);
 }
 .country .countrySelected {
   display: -ms-flexbox;
@@ -484,35 +367,6 @@ header {
   text-align: center;
   margin-right: 1%;
 }
-#country #countrySelect h4 {
-  margin-left: 5%;
-  font-size: 1em;
-}
-#selectedCity {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(flex-start);
-  @include flex-wrap(wrap);
-  @include block(100%, 85px, 0px, solid, #cccccc, 5px);
-}
-#selectedCity #firstCountry {
-  @include block(20%, 35px, 0px, solid, #cccccc, 50px);
-  background-color: #f2f2f2;
-  margin-left: 5%;
-}
-#chengSelect {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include justify-content(flex-start);
-  @include flex-wrap(wrap);
-  @include block(100%, 85px, 0px, solid, #cccccc, 5px);
-  margin-top: 3%;
-}
 .chengeSelect {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -523,18 +377,6 @@ header {
   @include flex-wrap(wrap);
   @include block(100%, 85px, 0px, solid, #cccccc, 5px);
   margin-top: 3%;
-}
-#chengSelect .btnSelect {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include align-items(center);
-    @include justify-content(center);
-  @include block(20%, 35px, 1px, solid, #3399cc, 50px);
-  background-color: white;
-  margin-left: 5%;
-  color: #3399cc;
-  text-align: center;
 }
 .chengeSelect .btnSelect {
   display: -ms-flexbox;
@@ -549,39 +391,6 @@ header {
   text-align: center;
   font-size: 80%;
 }
-#chengSelect .btnSelect:hover {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include align-items(center);
-  @include justify-content(center);
-  @include block(20%, 35px, 1px, solid, #3399cc, 50px);
-  background-color: #3399cc;
-  margin-left: 5%;
-  color: white;
-  text-align: center;
-}
-#chengSelect .btnSelect p {
-  color: #3399cc;
-  text-align: center;
-  margin: 0;
-}
-#chengSelect .btnSelect p:hover {
-  color: white;
-  text-align: center;
-  margin: 0;
-}
-#tourDetails {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex-wrap(wrap);
-  @include block(100%, 85px, 0px, solid, #cccccc, 0px);
-  margin-top: 1%;
-}
 .tourDetails {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -593,15 +402,6 @@ header {
   @include block(100%, 85px, 0px, solid, #cccccc, 0px);
   margin-top: 1%;
 }
-#startEndDate {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(30%, 85px, 0px, solid, #cccccc, 0px);
-}
 .startEndDate {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -610,12 +410,6 @@ header {
   @include align-items(flex-start);
   @include justify-content(center);
   @include block(30%, 85px, 0px, solid, #cccccc, 0px);
-}
-#startEndDate label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
 }
 .startEndDate label {
   margin-left: 5%;
@@ -688,16 +482,6 @@ header {
   color: #3399cc;
   text-align: center;
 }
-
-#numOfDays {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(15%, 85px, 0px, solid, #cccccc, 0px);
-}
 .numOfDays {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -706,12 +490,6 @@ header {
   @include align-items(flex-start);
   @include justify-content(center);
   @include block(15%, 85px, 0px, solid, #cccccc, 0px);
-}
-#numOfDays label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
 }
 .numOfDays label {
   margin-left: 5%;
@@ -726,15 +504,6 @@ header {
   @include align-items(center);
   @include justify-content(space-around);
   @include block(100%, 60%, 0px, solid, #cccccc, 0px);
-}
-#people {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(20%, 85px, 0px, solid, #cccccc, 0px);
 }
 .people {
   display: -ms-flexbox;
@@ -777,12 +546,6 @@ header {
   font-size: 120%;
   color: #3399cc;
   text-align: center;
-}
-#people label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
 }
 .people label {
   margin-left: 5%;
@@ -845,16 +608,6 @@ header {
   @include block(100%, 60%, 0px, solid, #cccccc, 0px);
   border-bottom: 1px solid #cccccc;
 }
-
-#costRange {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(30%, 85px, 0px, solid, #cccccc, 0px);
-}
 .costRange {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -863,12 +616,6 @@ header {
   @include align-items(flex-start);
   @include justify-content(center);
   @include block(30%, 85px, 0px, solid, #cccccc, 0px);
-}
-#costRange label {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 3em;
 }
 .costRange label {
   margin-left: 5%;
@@ -899,14 +646,6 @@ header {
   font-weight: bold;
   border: none;
 }
-#tourDetails .tourDetailsItems {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include align-items(center);
-  @include justify-content(center);
-  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
-}
 .tourDetails .tourDetailsItems {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -915,27 +654,11 @@ header {
   @include justify-content(center);
   @include block(100%, 100%, 1px, solid, #cccccc, 0px);
 }
-#tourDetails .tourDetailsInput {
-  width: 96%;
-  height: 96%;
-  border: none;
-}
 .tourDetails Input {
   width: 96%;
   height: 96%;
   border: none;
   text-align: center;
-}
-#hotelDesc {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex-wrap(wrap);
-  @include block(100%, 85px, 0px, solid, #cccccc, 0px);
-  margin-top: 1%;
 }
 .hotelDesc {
   display: -ms-flexbox;
@@ -947,15 +670,6 @@ header {
   @include flex-wrap(wrap);
   @include block(100%, 85px, 0px, solid, #cccccc, 0px);
   margin-top: 1%;
-}
-#hotelStar {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(18%, 85px, 0px, solid, #cccccc, 0px);
 }
 .hotelStar {
   display: -ms-flexbox;
@@ -990,26 +704,11 @@ header {
   font-size: 1em;
   text-align: center;
 }
-#hotelDesc .hotels {
-  margin-left: 5%;
-  font-size: 0.7em;
-  color: #cccccc;
-  line-height: 1em;
-}
 .hotelDesc .hotels {
   margin-left: 5%;
   font-size: 0.7em;
   color: #cccccc;
   line-height: 1em;
-}
-#stars {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include justify-content(center);
-  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
 }
 .stars {
   display: -ms-flexbox;
@@ -1020,24 +719,10 @@ header {
   @include justify-content(center);
   @include block(100%, 100%, 1px, solid, #cccccc, 0px);
 }
-#stars p {
-  color: #cccccc;
-  text-align: center;
-  font-size: 120%;
-}
 .stars p {
   color: #cccccc;
   text-align: center;
   font-size: 120%;
-}
-#hotelRate {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(15%, 85px, 0px, solid, #cccccc, 0px);
 }
 .hotelRate {
   display: -ms-flexbox;
@@ -1047,15 +732,6 @@ header {
   @include align-items(flex-start);
   @include justify-content(center);
   @include block(15%, 85px, 0px, solid, #cccccc, 0px);
-}
-#rate {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include justify-content(center);
-  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
 }
 .rate {
   display: -ms-flexbox;
@@ -1079,9 +755,6 @@ header {
   @include justify-content(center);
   @include block(80%, 50%, 1px, solid, #cccccc, 0px);
 }
-#rateNum {
-  color: #00a551;
-}
 .rateNum {
   color: #00a551;
   font-size: 90%;
@@ -1091,16 +764,6 @@ header {
   color: #00a551;
   font-size: 90%;
   text-align: center;
-}
-
-#meal {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(12%, 85px, 0px, solid, #cccccc, 0px);
 }
 .meal {
   display: -ms-flexbox;
@@ -1134,15 +797,6 @@ header {
   color: #3399cc;
   text-align: center;
 }
-#mealType {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include justify-content(center);
-  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
-}
 .mealType {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1159,15 +813,6 @@ header {
   text-align: center;
   font-size: 80%;
 }
-#position {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(column);
-  @include align-items(flex-start);
-  @include justify-content(center);
-  @include block(25%, 85px, 0px, solid, #cccccc, 0px);
-}
 .position {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1176,15 +821,6 @@ header {
   @include align-items(flex-start);
   @include justify-content(center);
   @include block(20%, 85px, 0px, solid, #cccccc, 0px);
-}
-#positionType {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include flex-direction(raw);
-  @include align-items(center);
-  @include justify-content(center);
-  @include block(100%, 100%, 1px, solid, #cccccc, 0px);
 }
 .positionType {
   display: -ms-flexbox;
@@ -1209,16 +845,6 @@ header {
   height: 96%;
   border: none;
   text-align: center;
-}
-#delKit {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  @include align-items(center);
-  @include justify-content(flex-end);
-  @include block(28%, 85px, 0px, solid, #cccccc, 0px);
-  padding-top: 3%;
-  color: red;
 }
 .delKit {
   display: -ms-flexbox;
