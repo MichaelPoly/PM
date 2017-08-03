@@ -56,6 +56,53 @@ header {
   padding-left: 5%;
 }
 
+.navMobile {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+  background-color: white;
+  margin-left: 10%;
+}
+
+.navMobile a {
+  position: relative;
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: bolder;
+  color: #3399cc;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 2em;
+}
+
+.navMobile a:hover {
+  position: relative;
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: bolder;
+  color: #ff9933;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 2em;
+}
+
 #centralBlock {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -75,25 +122,6 @@ header {
 #centralBlock h3 {
   font-size: 1.5em;
   margin-left: 15%;
-}
-
-#mainBlock5 {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
 }
 
 #interests .mainBlock {

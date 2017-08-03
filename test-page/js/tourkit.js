@@ -5,6 +5,7 @@ var $cityes = [];
 var $regions = [];
 var $countries = [];
 $('#mainBlock5').hide();
+$('.navMobile').hide();
 $.ajax({
       type: 'GET',
       url: './citys.json',
@@ -715,7 +716,12 @@ $.ajax({
 
 
 //---------------------
-
+$('.icoBar').on('click', function () {
+  $('.navMobile').fadeIn();
+  $('.navHref').on('click', function () {
+    $('.navMobile').fadeOut();
+  });
+});
 
 
 });
