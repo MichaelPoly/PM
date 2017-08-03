@@ -932,6 +932,29 @@ header {
     @include block(100%, 85px, 0px, solid, #cccccc, 0px);
     margin-top: 1%;
   }
+  .dialog {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(75%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+  }
+  .countrySelectedBtn1 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include block(25%, auto, 0px, solid, #cccccc, 50px);
+    background-color: #f2f2f2;
+    margin-left: 0%;
+    margin-top: 1%;
+  }
 }
 @media screen and (max-width: 1080px){
   #centralBlock {
@@ -941,6 +964,29 @@ header {
     @include flex-direction(column);
     @include block(90.0%, 890px, 1px, solid, black,0);
     margin-left: 5.0%;
+  }
+  .dialog {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(80%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+  }
+  .countrySelectedBtn1 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include block(25%, auto, 0px, solid, #cccccc, 50px);
+    background-color: #f2f2f2;
+    margin-left: 0%;
+    margin-top: 2%;
   }
 }
 @media screen and (max-width: 990px){
@@ -962,6 +1008,65 @@ header {
     margin-left: 10%;
     background-color: white;
   }
+  .dialog {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(80%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+  }
+  .countrySelectedBtn1 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include block(25%, auto, 0px, solid, #cccccc, 50px);
+    background-color: #f2f2f2;
+    margin-left: 0%;
+    margin-top: 2%;
+  }
+  .dialogDate {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include block(50%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+    @include align-items(center);
+    @include justify-content(space-around);
+  }
+  .dialogDate .dialogDateBtn {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(35%, 30px, 1px, solid, #cccccc, 5px);
+    box-shadow: 1px 1px 2px black;
+    margin: 2%;
+  }
+  .dialogPeople {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include block(70%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+    @include align-items(center);
+    @include justify-content(space-around);
+  }
+  .dialogCost {
+    margin: 2%;
+  }
 }
 @media screen and (max-width: 800px){
   #centralBlock {
@@ -981,6 +1086,65 @@ header {
     @include block(95%, 80%, 0px, solid, black,0);
     margin-left: 2.5%;
     background-color: white;
+  }
+  .dialog {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(80%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+  }
+  .dialogDate {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include block(60%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+    @include align-items(center);
+    @include justify-content(space-around);
+  }
+  .dialogDate .dialogDateBtn {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(35%, 30px, 1px, solid, #cccccc, 5px);
+    box-shadow: 1px 1px 2px black;
+    margin: 2%;
+  }
+  .countrySelectedBtn1 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include block(25%, auto, 0px, solid, #cccccc, 50px);
+    background-color: #f2f2f2;
+    margin-left: 0%;
+    margin-top: 2%;
+  }
+  .dialogPeople {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include block(70%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+    @include align-items(center);
+    @include justify-content(space-around);
+  }
+  .dialogCost {
+    margin: 2%;
   }
 }
 // mobile ver
@@ -1099,7 +1263,7 @@ header {
     @include block(98%, 50px, 0px, solid, black, 5px);
     text-align: center;
     margin-left: 0;
-    margin-top: 1%;
+    margin-top: 2%;
     background-color: #ff9933;
     font-size: 90%;
     color: white;
@@ -1109,6 +1273,334 @@ header {
     height: auto;
     border: none;
     text-align: center;
+  }
+  .country {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(95%, auto, 0px, solid, black, 0);
+    margin-top: 2%;
+  }
+  .country h5 {
+    text-align: center;
+    font-size: 0.7em;
+    color: #cccccc;
+    line-height: 1em;
+  }
+  .country .region {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(100%, auto, 1px, solid, #cccccc, 5px);
+    border-bottom: none;
+  }
+  .country .region .regMob {
+    font-size: 1em;
+    line-height: 1em;
+    margin: 0;
+    margin-top: 1%;
+    display: inline;
+  }
+  .country .countrySelected {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(100%, auto, 1px, solid, #cccccc, 5px);
+    border-top: none;
+  }
+  .country .countrySelected .countrySelectedBtn {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include block(90%, 50px, 0px, solid, #cccccc, 50px);
+    background-color: #f2f2f2;
+    margin: 2%;
+  }
+  .country .countrySelected .countrySelectedBtn .close {
+    font-size: 100%;
+    color: #cccccc;
+    text-align: center;
+    margin-right: 1%;
+  }
+  .chengeSelect {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+    @include block(100%, auto, 0px, solid, #cccccc, 5px);
+    margin-top: 3%;
+  }
+  .chengeSelect .btnSelect {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(40%, 35px, 1px, solid, #3399cc, 50px);
+    background-color: white;
+    margin-left: 0%;
+    color: #3399cc;
+    text-align: center;
+    font-size: 80%;
+  }
+  .dialog {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(90%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+  }
+  .dialog h2 {
+    width: 100%;
+    font-size: auto;
+    color: #3399cc;
+    text-align: center;
+  }
+  .dialog .regionId {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(40%, 50px, 1px, solid, #cccccc, 5px);
+    margin: 1%;
+    color: #3399cc;
+  }
+  .countrySelectedBtn1 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(space-around);
+    @include block(40%, auto, 0px, solid, #cccccc, 50px);
+    background-color: #f2f2f2;
+    margin-left: 0%;
+    margin-top: 1%;
+  }
+  .tourDetails {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    // @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    @include block(100%, auto, 0px, solid, #cccccc, 0px);
+    margin-top: 1%;
+  }
+  .startEndDate {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .startEndDate label {
+    margin-left: 0%;
+    font-size: 0.7em;
+    color: #cccccc;
+    text-align: center;
+    line-height: 2em;
+  }
+  .numOfDays {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .numOfDays label {
+    margin-left: 0%;
+    font-size: 0.7em;
+    color: #cccccc;
+    text-align: center;
+    line-height: 2em;
+  }
+  .people {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .people label {
+    margin-left: 0%;
+    font-size: 0.7em;
+    color: #cccccc;
+    text-align: center;
+    line-height: 2em;
+  }
+  .costRange {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .costRange label {
+    margin-left: 0%;
+    font-size: 0.7em;
+    color: #cccccc;
+    text-align: center;
+    line-height: 2em;
+  }
+  #centralBlock {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include block(100%, auto, 1px, solid, black,0);
+    margin-left: 0%;
+  }
+  #centralBlock #interests {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include block(90%, 90%, 0px, solid, black,0);
+    margin-left: 5%;
+    background-color: white;
+  }
+  .hotelDesc {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    // @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    @include block(100%, auto, 0px, solid, #cccccc, 0px);
+    margin-top: 1%;
+  }
+  .hotelStar {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .hotelRate {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .meal {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .position {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include block(40%, 70px, 0px, solid, #cccccc, 0px);
+  }
+  .dialogDate {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include block(80%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+    @include align-items(center);
+    @include justify-content(space-around);
+  }
+  .dialogDate .dialogDateBox {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(35%, 80px, 0px, solid, #cccccc, 5px);
+    margin-left: 1%;
+  }
+  .dialogDate .dialogDateBtn {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(35%, 30px, 1px, solid, #cccccc, 5px);
+    box-shadow: 1px 1px 2px black;
+    margin: 2%;
+  }
+  .dialogPeople {
+    position: absolute;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-wrap(wrap);
+    @include block(80%, auto, 1px, solid, #cccccc, 5px);
+    background-color: white;
+    @include align-items(center);
+    @include justify-content(space-around);
+  }
+  .dialogCostInput {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(raw);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(95%, 30%, 1px, solid, #cccccc, 0px);
+    margin: 2%;
+  }
+  .delKit {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(95%, auto, 1px, solid, red, 5px);
+    padding-top: 0;
+    margin: 2%;
+    font-size: 90%;
+    color: red;
   }
 
 }

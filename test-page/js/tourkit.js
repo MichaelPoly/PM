@@ -63,13 +63,13 @@ $.ajax({
              $('#country' + i).append('<h5>Вы можете задать несколько стран или регионов для одной подборки</h5>');
              $('#country' + i).append('<div id="regionSelect' + i + '" class="region"></div>');
              if ($tourKit[i].region1 != ""){
-               $('#regionSelect' + i).append('<p id="region1Name' + i + '">' + $tourKit[i].region1 + ' <b id="region1Name' + i + '" class="close">&#10006;</b></p>');
+               $('#regionSelect' + i).append('<p id="region1Name' + i + '" class="regMob">' + $tourKit[i].region1 + ' <b id="region1Name' + i + '" class="close">&#10006;</b></p>');
              }
              if ($tourKit[i].region2 != ""){
-               $('#regionSelect' + i).append('<p id="region2Name' + i + '">' + $tourKit[i].region2 + ' <b id="region2Name' + i + '" class="close">&#10006;</b></p>');
+               $('#regionSelect' + i).append('<p id="region2Name' + i + '" class="regMob">' + $tourKit[i].region2 + ' <b id="region2Name' + i + '" class="close">&#10006;</b></p>');
              }
              if ($tourKit[i].region3 != ""){
-                $('#regionSelect' + i).append('<p id="region3Name' + i + '">' + $tourKit[i].region3 + ' <b id="region3Name' + i + '" class="close">&#10006;</b></p>');
+                $('#regionSelect' + i).append('<p id="region3Name' + i + '" class="regMob">' + $tourKit[i].region3 + ' <b id="region3Name' + i + '" class="close">&#10006;</b></p>');
              }
              $('#country' + i).append('<div id="selectedCountry' + i + '" class="countrySelected"></div>');
 
@@ -209,7 +209,7 @@ $.ajax({
 
 
                    if ($tourKit[$nt].region1 == ""){
-                     $('#regionSelect' + $nt).append('<p id="region1Name' + $nt + '">' + $regions[content].region + ' <b id="region1Name' + $nt + '" class="close">&#10006;</b></p>');
+                     $('#regionSelect' + $nt).append('<p id="region1Name' + $nt + '" class="regMob">' + $regions[content].region + ' <b id="region1Name' + $nt + '" class="close">&#10006;</b></p>');
                      $('#region1Name' + $nt).on('click', function () {
                      $('#' + this.id).remove();
                      $tourKit[$nt].region1 = "";
@@ -217,7 +217,7 @@ $.ajax({
                      $tourKit[$nt].region1 = $regions[content].region;
                      $('.dialog').remove();
                    } else if ($tourKit[$nt].region2 == "") {
-                     $('#regionSelect' + $nt).append('<p id="region2Name' + $nt + '">' + $regions[content].region + ' <b id="region2Name' + $nt + '" class="close">&#10006;</b></p>');
+                     $('#regionSelect' + $nt).append('<p id="region2Name' + $nt + '" class="regMob">' + $regions[content].region + ' <b id="region2Name' + $nt + '" class="close">&#10006;</b></p>');
                      $('#region2Name' + $nt).on('click', function () {
                      $('#' + this.id).remove();
                      $tourKit[$nt].region2 = "";
@@ -225,7 +225,7 @@ $.ajax({
                      $tourKit[$nt].region2 = $regions[content].region;
                      $('.dialog').remove();
                    } else if ($tourKit[$nt].region3 == "") {
-                     $('#regionSelect' + $nt).append('<p id="region3Name' + $nt + '">' + $regions[content].region + ' <b id="region3Name' + $nt + '" class="close">&#10006;</b></p>');
+                     $('#regionSelect' + $nt).append('<p id="region3Name' + $nt + '" class="regMob">' + $regions[content].region + ' <b id="region3Name' + $nt + '" class="close">&#10006;</b></p>');
                      $('#region3Name' + $nt).on('click', function () {
                      $('#' + this.id).remove();
                      $tourKit[$nt].region3 = "";
