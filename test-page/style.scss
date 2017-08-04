@@ -85,6 +85,44 @@ header {
   background-color: white;
   margin-left: 10%;
 }
+.navMobile1 {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include block(80%, auto, 1px, solid, black,5px);
+  box-shadow: 1px 1px 2px black;
+  background-color: white;
+  margin-left: 10%;
+  transform: translateY(-300px);
+}
+.infoBlockMob p {
+  font-size: 90%;
+  font-weight: normal;
+  color: #999999;
+  line-height: auto;
+}
+.infoBlockMob a {
+  @include reference(none, 90%, normal, #999999);
+  border-bottom-style: dotted;
+  border-bottom-width: thin;
+  border-bottom-color: #999999;
+  line-height: auto;
+}
+.infoBlockMob a:hover {
+  color: #ff9933;
+}
+.infoBlockMob a[class="nets"] {
+    @include reference(none, 90%, normal, #999999);
+    border: none;
+    line-height: 1.5em;
+}
+.infoBlockMob a[class="nets"]:hover {
+  color: #ff9933;
+}
 .navMobile a {
   position: relative;
   @include reference(none, 100%, bolder, #3399cc);
@@ -307,11 +345,11 @@ header {
   display: flex;
   @include align-items(center);
   @include justify-content(center);
-  @include block(25%, 50px, 0px, solid, black, 5px);
+  @include block(27%, 50px, 0px, solid, black, 5px);
   text-align: center;
   margin-left: 25%;
   background-color: #ff9933;
-  font-size: 90%;
+  font-size: 80%;
   color: white;
 }
 .country {
@@ -874,6 +912,9 @@ header {
 .icoBar {
   display: none;
 }
+.icoBar1 {
+  display: none;
+}
 @media screen and (max-width: 1450px) {
   #kit #addKit {
     font-size: 90%;
@@ -1179,6 +1220,29 @@ header {
     display: block;
     font-size: 2em;
     color: white;
+  }
+  .icoBar1 {
+    display: block;
+    font-size: 2em;
+    color: #999999;
+  }
+  .info {
+    display: none;
+  }
+  .info .infoBlock {
+    display: none;
+  }
+  .info .infoBlock p {
+    display: none;
+  }
+  .info .infoBlock a {
+    display: none;
+  }
+  .infoTop {
+    display: none;
+  }
+  .infoTop p {
+    display: none;
   }
   #kit {
     display: -ms-flexbox;
@@ -1616,6 +1680,16 @@ header {
     margin: 2%;
     font-size: 90%;
     color: red;
+  }
+  footer {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include block(100%, 50px, 0px, solid, #cccccc, 0px);
+    background-color: white;
   }
 
 }

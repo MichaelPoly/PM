@@ -6,9 +6,11 @@ var $regions = [];
 var $countries = [];
 $('#mainBlock5').hide();
 $('.navMobile').hide();
+$('.navMobile1').hide();
 $.ajax({
       type: 'GET',
       url: './citys.json',
+      async: false,
       dataType: 'json',
       success: function (data) {
         $cityes = data;
@@ -720,6 +722,12 @@ $('.icoBar').on('click', function () {
   $('.navMobile').fadeIn();
   $('.navHref').on('click', function () {
     $('.navMobile').fadeOut();
+  });
+});
+$('.icoBar1').on('click', function () {
+  $('.navMobile1').fadeIn();
+  $('.navMobile1').on('click', function () {
+    $('.navMobile1').fadeOut();
   });
 });
 
